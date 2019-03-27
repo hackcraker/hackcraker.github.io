@@ -100,7 +100,7 @@
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo的奇技淫巧">
-<meta property="og:url" content="http://yoursite.com/2019/03/27/Hexo的奇技淫巧/index.html">
+<meta property="og:url" content="http://hackcraker.github.io/2019/03/27/Hexo的奇技淫巧/index.html">
 <meta property="og:site_name" content="源泉">
 <meta property="og:description" content="Hexo添加文章时自动打开编辑器mac下修改文件夹权限：  sudo -i进入root模式 chown -R 用户名 /文件夹名  操作步骤：  首先在Hexo目录下的scripts目录中创建一个JavaScript脚本文件。 如果没有这个scripts目录，则新建一个。 scripts目录新建的JavaScript脚本文件可以任意取名。  通过这个脚本，我们用其来监听hexo new这个动作，并">
 <meta property="og:locale" content="zh-CN">
@@ -114,7 +114,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/27/Hexo的奇技淫巧/"/>
+  <link rel="canonical" href="http://hackcraker.github.io/2019/03/27/Hexo的奇技淫巧/"/>
 
 
 
@@ -344,7 +344,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/Hexo的奇技淫巧/"/>
+    <link itemprop="mainEntityOfPage" href="http://hackcraker.github.io/2019/03/27/Hexo的奇技淫巧/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lucas Chan"/>
@@ -401,6 +401,19 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/03/27/Hexo的奇技淫巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/27/Hexo的奇技淫巧/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -506,7 +519,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://yoursite.com/2019/03/27/Hexo的奇技淫巧/" title="Hexo的奇技淫巧">http://yoursite.com/2019/03/27/Hexo的奇技淫巧/</a>
+    <a href="http://hackcraker.github.io/2019/03/27/Hexo的奇技淫巧/" title="Hexo的奇技淫巧">http://hackcraker.github.io/2019/03/27/Hexo的奇技淫巧/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -561,6 +574,10 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
 
   
 
@@ -880,6 +897,35 @@
 
   
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'L5gR7yTYP8X0caW0Hie6bbev-gzGzoHsz',
+    appKey: 'nWnbI4oH07bE20wyQ8mq9zVO',
+    placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
 
 
   

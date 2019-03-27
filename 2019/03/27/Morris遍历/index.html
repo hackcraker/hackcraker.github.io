@@ -100,7 +100,7 @@
 <meta name="keywords" content="树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Morris遍历">
-<meta property="og:url" content="http://yoursite.com/2019/03/27/Morris遍历/index.html">
+<meta property="og:url" content="http://hackcraker.github.io/2019/03/27/Morris遍历/index.html">
 <meta property="og:site_name" content="源泉">
 <meta property="og:description" content="##Morris遍历   利用Morris遍历实现二叉树的先序，中序，后续遍历，时间复杂度O(N)，额外空间复杂度O(1)。   算法描述 来到的当前节点记为cur（cur是一个引用），如果cur无左孩子，cur向右移动。 如果cur有左孩子，找到cur左子树上最右的节点，记为mostright。 如果mostright的右指针指向空，则让其指向cur，cur向左移动。 如果mostright的右">
 <meta property="og:locale" content="zh-CN">
@@ -117,7 +117,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/27/Morris遍历/"/>
+  <link rel="canonical" href="http://hackcraker.github.io/2019/03/27/Morris遍历/"/>
 
 
 
@@ -347,7 +347,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/Morris遍历/"/>
+    <link itemprop="mainEntityOfPage" href="http://hackcraker.github.io/2019/03/27/Morris遍历/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lucas Chan"/>
@@ -422,6 +422,19 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/03/27/Morris遍历/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/27/Morris遍历/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -529,7 +542,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://yoursite.com/2019/03/27/Morris遍历/" title="Morris遍历">http://yoursite.com/2019/03/27/Morris遍历/</a>
+    <a href="http://hackcraker.github.io/2019/03/27/Morris遍历/" title="Morris遍历">http://hackcraker.github.io/2019/03/27/Morris遍历/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -588,6 +601,10 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
 
   
 
@@ -907,6 +924,35 @@
 
   
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'L5gR7yTYP8X0caW0Hie6bbev-gzGzoHsz',
+    appKey: 'nWnbI4oH07bE20wyQ8mq9zVO',
+    placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
 
 
   

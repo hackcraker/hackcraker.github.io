@@ -99,7 +99,7 @@
   <meta name="description" content="满地都是六便士,他却抬头看到了月亮。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="文章分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:url" content="http://hackcraker.github.io/categories/index.html">
 <meta property="og:site_name" content="源泉">
 <meta property="og:description" content="满地都是六便士,他却抬头看到了月亮。">
 <meta property="og:locale" content="zh-CN">
@@ -113,7 +113,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://hackcraker.github.io/categories/"/>
 
 
 
@@ -410,6 +410,10 @@
           
 
   
+    <div class="comments" id="comments">
+    </div>
+
+  
 
 
 
@@ -701,6 +705,35 @@
 
   
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'L5gR7yTYP8X0caW0Hie6bbev-gzGzoHsz',
+    appKey: 'nWnbI4oH07bE20wyQ8mq9zVO',
+    placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
 
 
   
