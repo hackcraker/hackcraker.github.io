@@ -105,8 +105,8 @@
 <meta property="og:description" content="算法解析栈底到栈顶是由大到小排列，则使栈顶数弹出的是右边离它最近的比它大的数，新的栈顶数是左边离原栈顶数最近的比它大的数。反之亦然。 图解栈底到栈顶是由小到大排列，则使栈顶数弹出的是右边离它最近的比它小的数，新的栈顶数是左边离原栈顶数最近的比它小的数。 Code12345678910111213141516171819202122class Solution(object):    def lar">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/95f277a2gy1g1lzrgno1yj21kw16o16l.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/95f277a2gy1g1lyt4je1sj21uo1b644b.jpg">
-<meta property="og:updated_time" content="2019-03-31T07:10:40.001Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/95f277a2gy1g1m038kpf9j21fs1auaq0.jpg">
+<meta property="og:updated_time" content="2019-03-31T07:18:56.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单调栈(Monotonic Stack)">
 <meta name="twitter:description" content="算法解析栈底到栈顶是由大到小排列，则使栈顶数弹出的是右边离它最近的比它大的数，新的栈顶数是左边离原栈顶数最近的比它大的数。反之亦然。 图解栈底到栈顶是由小到大排列，则使栈顶数弹出的是右边离它最近的比它小的数，新的栈顶数是左边离原栈顶数最近的比它小的数。 Code12345678910111213141516171819202122class Solution(object):    def lar">
@@ -421,7 +421,7 @@
                 
               
 
-              <time title="创建时间：2019-03-31 14:33:26 / 修改时间：15:10:40" itemprop="dateCreated datePublished" datetime="2019-03-31T14:33:26+08:00">2019-03-31</time>
+              <time title="创建时间：2019-03-31 14:33:26 / 修改时间：15:18:56" itemprop="dateCreated datePublished" datetime="2019-03-31T14:33:26+08:00">2019-03-31</time>
             
 
             
@@ -520,7 +520,7 @@
 
       
         <h4 id="算法解析"><a href="#算法解析" class="headerlink" title="算法解析"></a>算法解析</h4><p>栈底到栈顶是由大到小排列，则使栈顶数弹出的是右边离它最近的比它大的数，新的栈顶数是左边离原栈顶数最近的比它大的数。反之亦然。<br><img src="https://ws1.sinaimg.cn/large/95f277a2gy1g1lzrgno1yj21kw16o16l.jpg" alt=""></p>
-<h4 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h4><p>栈底到栈顶是由小到大排列，则使栈顶数弹出的是右边离它最近的比它小的数，新的栈顶数是左边离原栈顶数最近的比它小的数。<br><img src="https://ws1.sinaimg.cn/large/95f277a2gy1g1lyt4je1sj21uo1b644b.jpg" alt=""></p>
+<h4 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h4><p>栈底到栈顶是由小到大排列，则使栈顶数弹出的是右边离它最近的比它小的数，新的栈顶数是左边离原栈顶数最近的比它小的数。<br><img src="https://ws1.sinaimg.cn/large/95f277a2gy1g1m038kpf9j21fs1auaq0.jpg" alt=""></p>
 <h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">largestRectangleArea</span><span class="params">(self, heights)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type heights: List[int]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        stack = []</span><br><span class="line">        max_area = <span class="number">0</span></span><br><span class="line">        index = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> index &lt; len(heights):</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> stack <span class="keyword">or</span> heights[stack[<span class="number">-1</span>]] &lt; heights[index]:</span><br><span class="line">                stack.append(index)</span><br><span class="line">                index += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                top = stack.pop()</span><br><span class="line">                area = heights[top] * ((index - stack[<span class="number">-1</span>] - <span class="number">1</span>) <span class="keyword">if</span> stack <span class="keyword">else</span> index)</span><br><span class="line">                max_area = max(max_area, area)</span><br><span class="line">        <span class="keyword">while</span> stack:</span><br><span class="line">            top = stack.pop()</span><br><span class="line">            area = heights[top] * ((index - stack[<span class="number">-1</span>] - <span class="number">1</span>) <span class="keyword">if</span> stack <span class="keyword">else</span> index)</span><br><span class="line">            max_area = max(max_area, area)</span><br><span class="line">        <span class="keyword">return</span> max_area</span><br></pre></td></tr></table></figure>
       
     </div>
