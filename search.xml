@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[单调栈(Monotonic Stack)]]></title>
+    <url>%2F2019%2F03%2F31%2F%E5%8D%95%E8%B0%83%E6%A0%88-Monotonic-Stack%2F</url>
+    <content type="text"><![CDATA[算法解析栈底到栈顶是由小到大排列，则使栈顶数弹出的是右边离它最近的比它小的数，新的栈顶数是左边离原栈顶数最近的比它小的数。 图解 Code12345678910111213141516171819202122class Solution(object): def largestRectangleArea(self, heights): """ :type heights: List[int] :rtype: int """ stack = [] max_area = 0 index = 0 while index &lt; len(heights): if not stack or heights[stack[-1]] &lt; heights[index]: stack.append(index) index += 1 else: top = stack.pop() area = heights[top] * ((index - stack[-1] - 1) if stack else index) max_area = max(max_area, area) while stack: top = stack.pop() area = heights[top] * ((index - stack[-1] - 1) if stack else index) max_area = max(max_area, area) return max_area]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Lecture 2 (Is Learning Feasible?)]]></title>
     <url>%2F2019%2F03%2F30%2FLecture-2-Is-Learning-Feasible%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[\( E_{in}\)]]></content>
       <categories>
         <category>Learning from Data</category>
       </categories>
