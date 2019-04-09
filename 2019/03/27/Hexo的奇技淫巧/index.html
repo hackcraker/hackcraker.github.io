@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="Hexo添加文章时自动打开编辑器mac下修改文件夹权限：  sudo -i进入root模式 chown -R 用户名 /文件夹名  操作步骤：  首先在Hexo目录下的scripts目录中创建一个JavaScript脚本文件。 如果没有这个scripts目录，则新建一个。 scripts目录新建的JavaScript脚本文件可以任意取名。  通过这个脚本，我们用其来监听hexo new这个动作，并">
+  <meta name="description" content="Hexo添加文章时自动打开编辑器 mac下修改文件夹权限：  sudo -i进入root模式 chown -R 用户名 /文件夹名  操作步骤：  首先在Hexo目录下的scripts目录中创建一个JavaScript脚本文件。 如果没有这个scripts目录，则新建一个。 scripts目录新建的JavaScript脚本文件可以任意取名。  通过这个脚本，我们用其来监听hexo new这个动作，">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo的奇技淫巧">
 <meta property="og:url" content="http://hackcraker.github.io/2019/03/27/Hexo的奇技淫巧/index.html">
 <meta property="og:site_name" content="源泉">
-<meta property="og:description" content="Hexo添加文章时自动打开编辑器mac下修改文件夹权限：  sudo -i进入root模式 chown -R 用户名 /文件夹名  操作步骤：  首先在Hexo目录下的scripts目录中创建一个JavaScript脚本文件。 如果没有这个scripts目录，则新建一个。 scripts目录新建的JavaScript脚本文件可以任意取名。  通过这个脚本，我们用其来监听hexo new这个动作，并">
+<meta property="og:description" content="Hexo添加文章时自动打开编辑器 mac下修改文件夹权限：  sudo -i进入root模式 chown -R 用户名 /文件夹名  操作步骤：  首先在Hexo目录下的scripts目录中创建一个JavaScript脚本文件。 如果没有这个scripts目录，则新建一个。 scripts目录新建的JavaScript脚本文件可以任意取名。  通过这个脚本，我们用其来监听hexo new这个动作，">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-04-03T14:55:20.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo的奇技淫巧">
-<meta name="twitter:description" content="Hexo添加文章时自动打开编辑器mac下修改文件夹权限：  sudo -i进入root模式 chown -R 用户名 /文件夹名  操作步骤：  首先在Hexo目录下的scripts目录中创建一个JavaScript脚本文件。 如果没有这个scripts目录，则新建一个。 scripts目录新建的JavaScript脚本文件可以任意取名。  通过这个脚本，我们用其来监听hexo new这个动作，并">
+<meta name="twitter:description" content="Hexo添加文章时自动打开编辑器 mac下修改文件夹权限：  sudo -i进入root模式 chown -R 用户名 /文件夹名  操作步骤：  首先在Hexo目录下的scripts目录中创建一个JavaScript脚本文件。 如果没有这个scripts目录，则新建一个。 scripts目录新建的JavaScript脚本文件可以任意取名。  通过这个脚本，我们用其来监听hexo new这个动作，">
 
 
 
@@ -508,8 +508,9 @@
       
 
       
-        <h3 id="Hexo添加文章时自动打开编辑器"><a href="#Hexo添加文章时自动打开编辑器" class="headerlink" title="Hexo添加文章时自动打开编辑器"></a>Hexo添加文章时自动打开编辑器</h3><p>mac下修改文件夹权限：</p>
-<ol>
+        <h3 id="hexo添加文章时自动打开编辑器">Hexo添加文章时自动打开编辑器</h3>
+<p>mac下修改文件夹权限：</p>
+<ol type="1">
 <li>sudo -i进入root模式</li>
 <li>chown -R 用户名 /文件夹名</li>
 </ol>
@@ -525,31 +526,34 @@
 <p>保存并退出脚本之后，在命令行中键入：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"auto open editor test"</span></span><br></pre></td></tr></table></figure>
 <p>是不是就顺利的自动打开了自动生成的md文件啦~</p>
-<h3 id="Hexo添加评论区"><a href="#Hexo添加评论区" class="headerlink" title="Hexo添加评论区"></a>Hexo添加评论区</h3><p>参考:<br><a href="https://valine.js.org/quickstart.html" target="_blank" rel="noopener">Valine</a><br><a href="https://leancloud.cn" target="_blank" rel="noopener">leancloud</a></p>
-<h3 id="Hexo内嵌pdf文档"><a href="#Hexo内嵌pdf文档" class="headerlink" title="Hexo内嵌pdf文档"></a>Hexo内嵌pdf文档</h3><center><embed src="https://bitcoin.org/bitcoin.pdf" width="850" height="600"></center>
-
+<h3 id="hexo添加评论区">Hexo添加评论区</h3>
+<p>参考: <a href="https://valine.js.org/quickstart.html" target="_blank" rel="noopener">Valine</a> <a href="https://leancloud.cn" target="_blank" rel="noopener">leancloud</a></p>
+<h3 id="hexo内嵌pdf文档">Hexo内嵌pdf文档</h3>
+<center>
+<embed src="https://bitcoin.org/bitcoin.pdf" width="850" height="600">
+</center>
 <ul>
 <li>安装插件<code>https://github.com/superalsrk/hexo-pdf</code></li>
 <li>修改主题配置文件</li>
 </ul>
-<pre><code class="python"><span class="comment"># PDF Support</span>
-<span class="comment"># Dependencies: https://github.com/theme-next/theme-next-pdf</span>
-pdf:
-  enable: true
-  <span class="comment"># Default (true) will load PDFObject / PDF.js script on demand.</span>
-  <span class="comment"># That is it only render those page which has `pdf: true` in Front Matter.</span>
-  <span class="comment"># If you set it to false, it will load PDFObject / PDF.js srcipt EVERY PAGE.</span>
-  per_page: true
-  height: <span class="number">500</span>px
-</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># PDF Support</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co"># Dependencies: https://github.com/theme-next/theme-next-pdf</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">pdf:</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">  enable: true</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">  <span class="co"># Default (true) will load PDFObject / PDF.js script on demand.</span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">  <span class="co"># That is it only render those page which has `pdf: true` in Front Matter.</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">  <span class="co"># If you set it to false, it will load PDFObject / PDF.js srcipt EVERY PAGE.</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">  per_page: true</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">  height: 500px</a></code></pre></div>
 <ul>
-<li>其他选择  <ul>
+<li>其他选择
+<ul>
 <li><code>&lt;center&gt;&lt;embed src=&quot;/pdf/mou.pdf&quot; width=&quot;850&quot; height=&quot;600&quot;&gt;&lt;/center&gt;</code></li>
 <li><code>&lt;iframe src=&quot;/pdf/mou.pdf&quot; style=&quot;width:850px; height:600px;&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="Hexo显示数学公式"><a href="#Hexo显示数学公式" class="headerlink" title="Hexo显示数学公式"></a>Hexo显示数学公式</h3><ul>
+<h3 id="hexo显示数学公式">Hexo显示数学公式</h3>
+<ul>
 <li><a href="https://monkey0105.github.io/2017/09/21/hexo-mathjax/" target="_blank" rel="noopener">Hexo博客数学公式显示</a></li>
 <li><a href="http://fitzeng.org/2018/01/23/LaTexFormula/" target="_blank" rel="noopener">MarkDown 插入数学公式实验大集合</a></li>
 </ul>
@@ -852,7 +856,7 @@ pdf:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo添加文章时自动打开编辑器"><span class="nav-number">1.</span> <span class="nav-text">Hexo添加文章时自动打开编辑器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo添加评论区"><span class="nav-number">2.</span> <span class="nav-text">Hexo添加评论区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo内嵌pdf文档"><span class="nav-number">3.</span> <span class="nav-text">Hexo内嵌pdf文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo显示数学公式"><span class="nav-number">4.</span> <span class="nav-text">Hexo显示数学公式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo添加文章时自动打开编辑器"><span class="nav-number">1.</span> <span class="nav-text">Hexo添加文章时自动打开编辑器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo添加评论区"><span class="nav-number">2.</span> <span class="nav-text">Hexo添加评论区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo内嵌pdf文档"><span class="nav-number">3.</span> <span class="nav-text">Hexo内嵌pdf文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo显示数学公式"><span class="nav-number">4.</span> <span class="nav-text">Hexo显示数学公式</span></a></li></ol></div>
             
 
           </div>
@@ -885,7 +889,7 @@ pdf:
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">11k</span>
+    <span title="站点总字数">10k</span>
   
 
   
@@ -894,7 +898,7 @@ pdf:
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">10 分钟</span>
+    <span title="站点阅读时长">9 分钟</span>
   
 </div>
 

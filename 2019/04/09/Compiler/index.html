@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="First SetsDefination: $\text { First }(\mathrm{X})=\left{\mathrm{t} | \mathrm{X} \rightarrow^{} \mathrm{t} \alpha\right} \cup\left{\varepsilon | \mathrm{X} \rightarrow^{} \varepsilon\right}$    Algori">
+  <meta name="description" content="First Sets Defination: \[ \text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{*} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{*} \varepsilon\right\} ​">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Compiler">
 <meta property="og:url" content="http://hackcraker.github.io/2019/04/09/Compiler/index.html">
 <meta property="og:site_name" content="源泉">
-<meta property="og:description" content="First SetsDefination: $\text { First }(\mathrm{X})=\left{\mathrm{t} | \mathrm{X} \rightarrow^{} \mathrm{t} \alpha\right} \cup\left{\varepsilon | \mathrm{X} \rightarrow^{} \varepsilon\right}$    Algori">
+<meta property="og:description" content="First Sets Defination: \[ \text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{*} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{*} \varepsilon\right\} ​">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-09T13:49:27.809Z">
+<meta property="og:updated_time" content="2019-04-09T15:41:29.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Compiler">
-<meta name="twitter:description" content="First SetsDefination: $\text { First }(\mathrm{X})=\left{\mathrm{t} | \mathrm{X} \rightarrow^{} \mathrm{t} \alpha\right} \cup\left{\varepsilon | \mathrm{X} \rightarrow^{} \varepsilon\right}$    Algori">
+<meta name="twitter:description" content="First Sets Defination: \[ \text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{*} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{*} \varepsilon\right\} ​">
 
 
 
@@ -415,7 +415,7 @@
                 
               
 
-              <time title="创建时间：2019-04-09 16:48:07 / 修改时间：21:49:27" itemprop="dateCreated datePublished" datetime="2019-04-09T16:48:07+08:00">2019-04-09</time>
+              <time title="创建时间：2019-04-09 16:48:07 / 修改时间：23:41:29" itemprop="dateCreated datePublished" datetime="2019-04-09T16:48:07+08:00">2019-04-09</time>
             
 
             
@@ -461,7 +461,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.1k</span>
+                <span title="本文字数">451</span>
               
 
               
@@ -495,16 +495,18 @@
       
 
       
-        <h3 id="First-Sets"><a href="#First-Sets" class="headerlink" title="First Sets"></a>First Sets</h3><p><strong>Defination</strong>: $<br>\text { First }(\mathrm{X})=\left{\mathrm{t} | \mathrm{X} \rightarrow^{<em>} \mathrm{t} \alpha\right} \cup\left{\varepsilon | \mathrm{X} \rightarrow^{</em>} \varepsilon\right}<br>$   </p>
+        <h3 id="first-sets">First Sets</h3>
+<p><strong>Defination</strong>: <span class="math display">\[
+\text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{*} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{*} \varepsilon\right\}
+​\]</span></p>
 <p><strong>Algorithm sketch</strong>:</p>
-<ol>
-<li>$ \text { First }(\mathrm{t})={\mathrm{t}}$</li>
-<li>$<br>\varepsilon \in \mathrm{First}(\mathrm{X})<br>$<br> $<br> \begin{array}{l}{\text { if } X \rightarrow \varepsilon} \ {\text { if } X \rightarrow A<em>{1} \dots A</em>{n} \text { and } \varepsilon \in \text { First }\left(A_{i}\right) \text { for } 1 \leq i \leq n}\end{array}<br> $</li>
-<li>$<br>\text { First }(\alpha) \subseteq \text { First }(\mathrm{X}) \text { if } \mathrm{X} \rightarrow \mathrm{A}<em>{1} \ldots \mathrm{A}</em>{\mathrm{n}} \alpha\text { and } \varepsilon \in \text { First }\left(A_{i}\right) \text { for } 1 \leq i \leq n<br>$</li>
+<ol type="1">
+<li>$ ()={}​$</li>
+<li>$ () ​$ $ \begin{array}{l}{ X } \ { X A_{1} A_{n}  (A_{i})  1 i n}\end{array} ​$</li>
+<li>$ () ()   <em>{1} </em>{}  (A_{i})  1 i n ​$</li>
 </ol>
-<h3 id="Follow-Sets"><a href="#Follow-Sets" class="headerlink" title="Follow Sets"></a>Follow Sets</h3><p><strong>Defination</strong>: $\text { Follow }(x)=\left{t | s \rightarrow^{*} \beta x+\delta\right}$</p>
-<p>$a = b + c$</p>
-<p>$\begin{array}{c|lcr}<br>n &amp; \text{Left} &amp; \text{Center} &amp; \text{Right} \\<br>\hline<br>1 &amp; 1.97 &amp; 5 &amp; 12 \\<br>2 &amp; -11 &amp; 19 &amp; -80 \\<br>3 &amp; 70 &amp; 209 &amp; 1+i \\<br>\end{array}​$</p>
+<h3 id="follow-sets">Follow Sets</h3>
+<p><strong>Defination</strong>: <span class="math inline">\(\text { Follow }(x)=\left\{t | s \rightarrow^{*} \beta x+\delta\right\}​\)</span></p>
 
       
     </div>
@@ -794,7 +796,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#First-Sets"><span class="nav-number">1.</span> <span class="nav-text">First Sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Follow-Sets"><span class="nav-number">2.</span> <span class="nav-text">Follow Sets</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#first-sets"><span class="nav-number">1.</span> <span class="nav-text">First Sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#follow-sets"><span class="nav-number">2.</span> <span class="nav-text">Follow Sets</span></a></li></ol></div>
             
 
           </div>
@@ -827,7 +829,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">11k</span>
+    <span title="站点总字数">10k</span>
   
 
   
@@ -836,7 +838,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">10 分钟</span>
+    <span title="站点阅读时长">9 分钟</span>
   
 </div>
 
@@ -1318,7 +1320,67 @@
         onPopupClose();
       }
     });
-  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+</style><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
@@ -1337,20 +1399,7 @@
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
 
-
-
-
-
-  
-
-  
-
-  
-  
-
-  
-  
-
+    
   
 
 
