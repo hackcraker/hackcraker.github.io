@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Compiler]]></title>
     <url>%2F2019%2F04%2F09%2FCompiler%2F</url>
-    <content type="text"><![CDATA[First Sets Defination: \[ \text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{*} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{*} \varepsilon\right\} ​\] Algorithm sketch: $ ()={}​$ $ () ​$ $ \begin{array}{l}{ X } \ { X A_{1} A_{n} (A_{i}) 1 i n}\end{array} ​$ $ () () {1} {} (A_{i}) 1 i n ​$ Follow Sets Defination: \(\text { Follow }(x)=\left\{t | s \rightarrow^{*} \beta x+\delta\right\}​\)]]></content>
+    <content type="text"><![CDATA[First Sets Defination: \(\text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{*} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{*} \varepsilon\right\}\) Algorithm sketch: $ ()={}​$ $ () ​$ $ \begin{array}{l}{ X } \ { X A_{1} A_{n} (A_{i}) 1 i n}\end{array} ​$ $ () () {1} {} (A_{i}) 1 i n ​$ Follow Sets Defination: \(\text { Follow }(x)=\left\{t | s \rightarrow^{*} \beta x+\delta\right\}​\) $ ()={}$]]></content>
   </entry>
   <entry>
     <title><![CDATA[Lecture 4 (Error and Noise)]]></title>
