@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="Compiler notes First Sets Defination \(\text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{*} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{*} \varepsi">
+  <meta name="description" content="Compiler notesFirst SetsDefination$\text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{} \varepsilon\ri">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Compiler">
 <meta property="og:url" content="http://hackcraker.github.io/2019/04/09/Compiler/index.html">
 <meta property="og:site_name" content="源泉">
-<meta property="og:description" content="Compiler notes First Sets Defination \(\text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{*} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{*} \varepsi">
+<meta property="og:description" content="Compiler notesFirst SetsDefination$\text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{} \varepsilon\ri">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-10T07:34:26.228Z">
+<meta property="og:updated_time" content="2019-04-10T07:38:22.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Compiler">
-<meta name="twitter:description" content="Compiler notes First Sets Defination \(\text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{*} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{*} \varepsi">
+<meta name="twitter:description" content="Compiler notesFirst SetsDefination$\text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{} \varepsilon\ri">
 
 
 
@@ -432,7 +432,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-10 15:34:26" itemprop="dateModified" datetime="2019-04-10T15:34:26+08:00">2019-04-10</time>
+                <time title="修改时间：2019-04-10 15:38:22" itemprop="dateModified" datetime="2019-04-10T15:38:22+08:00">2019-04-10</time>
               
             
           </span>
@@ -473,7 +473,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">897</span>
+                <span title="本文字数">875</span>
               
 
               
@@ -507,21 +507,14 @@
       
 
       
-        <h1 id="compiler-notes">Compiler notes</h1>
-<h2 id="first-sets">First Sets</h2>
-<h3 id="defination">Defination</h3>
-<p><span class="math inline">\(\text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{*} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{*} \varepsilon\right\}\)</span></p>
-<h3 id="algorithm-sketch">Algorithm sketch:</h3>
-<ol type="1">
-<li><span class="math inline">\(\text { First }(\mathrm{t})=\{\mathrm{t}\}\)</span></li>
-<li><span class="math inline">\(\varepsilon \in \mathrm{First}(\mathrm{X})\)</span><br>
-<span class="math inline">\(\begin{array}{l}{\text { if } X \rightarrow \varepsilon} \\ {\text { if } X \rightarrow A_{1} \dots A_{n} \text { and } \varepsilon \in \text { First }\left(A_{i}\right) \text { for } 1 \leq i \leq n}\end{array}\)</span></li>
-<li><span class="math inline">\(\text { First }(\alpha) \subseteq \text { First }(\mathrm{X})\)</span><br>
-<span class="math inline">\(\text { if } \mathrm{X} \rightarrow \mathrm{A}_{1} \ldots \mathrm{A}_{\mathrm{n}} \alpha \text { and } \varepsilon \in \text { First }\left(A_{i}\right) \text { for } 1 \leq i \leq n\)</span></li>
+        <h1 id="Compiler-notes"><a href="#Compiler-notes" class="headerlink" title="Compiler notes"></a>Compiler notes</h1><h2 id="First-Sets"><a href="#First-Sets" class="headerlink" title="First Sets"></a>First Sets</h2><h3 id="Defination"><a href="#Defination" class="headerlink" title="Defination"></a>Defination</h3><p>$\text { First }(\mathrm{X})=\left\{\mathrm{t} | \mathrm{X} \rightarrow^{<em>} \mathrm{t} \alpha\right\} \cup\left\{\varepsilon | \mathrm{X} \rightarrow^{</em>} \varepsilon\right\}​$</p>
+<h3 id="Algorithm-sketch"><a href="#Algorithm-sketch" class="headerlink" title="Algorithm sketch:"></a>Algorithm sketch:</h3><ol>
+<li>$\text { First }(\mathrm{t})=\{\mathrm{t}\}$</li>
+<li>$\varepsilon \in \mathrm{First}(\mathrm{X})$<br>$\begin{array}{l}{\text { if } X \rightarrow \varepsilon} \\ {\text { if } X \rightarrow A_{1} \dots A_{n} \text { and } \varepsilon \in \text { First }\left(A_{i}\right) \text { for } 1 \leq i \leq n}\end{array}$</li>
+<li>$\text { First }(\alpha) \subseteq \text { First }(\mathrm{X})$<br>$\text { if } \mathrm{X} \rightarrow \mathrm{A}_{1} \ldots \mathrm{A}_{\mathrm{n}} \alpha \text { and } \varepsilon \in \text { First }\left(A_{i}\right) \text { for } 1 \leq i \leq n$</li>
 </ol>
-<h2 id="follow-sets">Follow Sets</h2>
-<h3 id="defination-1">Defination:</h3>
-<p><span class="math inline">\(\text { Follow }(x)=\left\{t | s \rightarrow^{*} \beta x+\delta\right\}\)</span></p>
+<hr>
+<h2 id="Follow-Sets"><a href="#Follow-Sets" class="headerlink" title="Follow Sets"></a>Follow Sets</h2><h3 id="Defination-1"><a href="#Defination-1" class="headerlink" title="Defination:"></a>Defination:</h3><p>$\text { Follow }(x)=\left\{t | s \rightarrow^{*} \beta x+\delta\right\}$</p>
 
       
     </div>
@@ -811,7 +804,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#compiler-notes"><span class="nav-number">1.</span> <span class="nav-text">Compiler notes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#first-sets"><span class="nav-number">1.1.</span> <span class="nav-text">First Sets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#defination"><span class="nav-number">1.1.1.</span> <span class="nav-text">Defination</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#algorithm-sketch"><span class="nav-number">1.1.2.</span> <span class="nav-text">Algorithm sketch:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#follow-sets"><span class="nav-number">1.2.</span> <span class="nav-text">Follow Sets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#defination-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Defination:</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Compiler-notes"><span class="nav-number">1.</span> <span class="nav-text">Compiler notes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#First-Sets"><span class="nav-number">1.1.</span> <span class="nav-text">First Sets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Defination"><span class="nav-number">1.1.1.</span> <span class="nav-text">Defination</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Algorithm-sketch"><span class="nav-number">1.1.2.</span> <span class="nav-text">Algorithm sketch:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Follow-Sets"><span class="nav-number">1.2.</span> <span class="nav-text">Follow Sets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Defination-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Defination:</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -844,7 +837,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">11k</span>
+    <span title="站点总字数">10k</span>
   
 
   
