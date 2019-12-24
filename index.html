@@ -2181,7 +2181,7 @@ class TreeNode:    def __init__(self, val=0):        self.val = val        self.
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-26 13:35:05" itemprop="dateModified" datetime="2019-04-26T13:35:05+08:00">2019-04-26</time>
+                <time title="修改时间：2019-12-25 00:27:12" itemprop="dateModified" datetime="2019-12-25T00:27:12+08:00">2019-12-25</time>
               
             
           </span>
@@ -2222,7 +2222,7 @@ class TreeNode:    def __init__(self, val=0):        self.val = val        self.
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2k</span>
+                <span title="本文字数">2.3k</span>
               
 
               
@@ -2259,8 +2259,7 @@ class TreeNode:    def __init__(self, val=0):        self.val = val        self.
         
           
             <p>
-              Hexo添加文章时自动打开编辑器
-mac下修改文件夹权限：
+              Hexo添加文章时自动打开编辑器mac下修改文件夹权限：
 
 sudo -i进入root模式
 chown -R 用户名 /文件夹名
@@ -2269,7 +2268,7 @@ chown -R 用户名 /文件夹名
 
 首先在Hexo目录下的scripts目录中创建一个JavaScript脚本文件。
 如果没有这个scripts目录，则新建一个。
-scripts目录新建的
+scripts目录新建的J
               ...
             </p>
           <!--noindex-->
@@ -2808,16 +2807,7 @@ scripts目录新建的
 
 
 
-  
-    
-    
-  
-  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
-
-
-  
-  
 
 
 
@@ -2837,12 +2827,6 @@ scripts目录新建的
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/three/three.min.js"></script>
-
-  
-  <script src="/lib/three/three-waves.min.js"></script>
 
 
   
@@ -3224,94 +3208,9 @@ scripts目录新建的
         onPopupClose();
       }
     });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-  
-
-  
-  
-    
-      
-    
-      
-        
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  
-
-  
-    
-      <script type="text/x-mathjax-config">
-  
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
-        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
-      }
-    });
-  });
-</script>
-
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-      for (i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<style>
-.MathJax_Display {
-  overflow: auto hidden;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-</style><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -3323,13 +3222,20 @@ scripts目录新建的
   });
 </script>
 
-<script type="text/javascript" src="custom_mathjax_source">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-    
+
+
+
+
+
   
 
+  
+
+  
 
   
   
