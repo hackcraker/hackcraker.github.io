@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Greedyai NLP Camp Notes]]></title>
+    <title><![CDATA[【贪心学院nlp】01 笔记总结]]></title>
     <url>%2F2019%2F12%2F25%2F%E8%B4%AA%E5%BF%83%E5%AD%A6%E9%99%A2nlp%E7%AC%94%E8%AE%B0%2F</url>
-    <content type="text"><![CDATA[Greedyai NLP Camp Notes 本文是学习贪心学院NLP自然语言处理集训营2（任课教师：李文哲）的总结学习笔记。 一 从一道入门题说起http://www.lintcode.com/problem/strstr/Returns the position of the first occurrence of string target in string source, or -1 if target is not part of source.]]></content>
+    <content type="text"><![CDATA[Greedyai NLP Camp Notes 本文是学习贪心学院NLP自然语言处理集训营2（任课教师：李文哲）的总结学习笔记。 目前本文价值已达 ¥21998.00 6 (108) ¥21998.00 5(93) ¥15998.00 4(68) ¥15998.00 3(55) ¥15998.00 2(47) ¥12998.00 Logistics NLP定义以及歧义性 实现一个机器翻译系统 传统做法：给定语料库，在其中做统计，语料少的可以用排除法，根据大概的匹配结果返回给用户。 答案：jjat arrat vat mat hilat oloat at-yurp 传统翻译系统缺陷： 训练速度慢(使用AI模型) 语法不正确(重点，语法要让人可以理解) 规则统计 语义 上下文 如何保证生成的语句合理通顺？ 步骤：中文分词 -&gt; 逐词翻译 -&gt; 罗列所有可能组合 -&gt; 选择最合适的句子(Language Model) 问题：两步的模型计算量过大，时间复杂度太高(指数级) 解决方案：两个模型同时考虑，维特比算法直接计算出 argmax P(e) * P(c|e) Translation Model + Language Model —&gt; Decoding Algorithm, Viterbi Algorithm(DP) 语言模型分类：(计算每一个概率) Unigram Model：独立 Bigram Model：考虑前一个单词 Trigram Model：考虑前两个单词 …… N-gram Model 马尔科夫假设 一点公式推导：使精度可以接受且又容易计算 中国的机器翻译难度较大，美国的较容易 NLP的经典应用场景 Named-entity recognition (NER) Relation Extraction NLP的关键技术 词性标注（Part-of-Speech tagging 或POS tagging) 多去阅读state-of-art paper，了解nlp领域内的最新进展。看项目中涉及到哪些技术，知道这些技术的实现难度，评估项目可行性 。 https://www.quora.com/What-are-the-major-open-problems-in-natural-language-understanding I will classify the problems in Natural Language Processing into 3 categories : 1. Easy or mostly solved Spam detection Part of Speech Tagging - ExampleINPUT:Profits soared at Boeing Co., easily topping forecasts on Wall Street, astheir CEO Alan Mulally announced first quarter results.OUTPUT:Profits/N soared/V at/P Boeing/N Co./N ,/, easily/ADV topping/V forecasts/N on/P Wall/N Street/N ,/, as/P their/POSS CEO/N Alan/N Mulally/N announced/V first/ADJ quarter/N results/N ./.KEY: N = Noun, V = Verb, P = Preposition, Adv = Adverb Named Entity Recognition - Example ​ INPUT: ​ Profits soared at Boeing Co., easily topping forecasts on Wall Street, as ​ their CEO Alan Mulally announced first quarter results. ​ OUTPUT: ​ Profits/NA soared/NA at/NA Boeing/SC Co./CC ,/NA easily/NA topping/ ​ NA forecasts/NA on/NA Wall/SL Street/CL ,/NA as/NA their/NA CEO/NA ​ Alan/SP Mulally/CP announced/NA first/NA quarter/NA results/NA ./NA ​ KEY: NA = No entity, SC = Start Company, CC = Continue Company, SL = Start Location, CL = Continue Location 2. Intermediate or making good progress Sentiment analysis- Example: ​ Best roast chicken in San Francisco! — Positive ​ The waiter ignored us for 20 minutes. — Negative Coreference resolution - Example: “Carter told Mubarak he shouldn’t run again.” To solve whether “he” is related to “Carter” or “Mubarak”. Word sense disambiguation - Example : ​ I need new batteries for my mouse. - “mouse” is ambiguous here. Parsing - the basic problem of parsing sentences. Machine Translation - translating sentences from one language to another, best example would be Google translate. Information Translation - to take a text as input and represent it in a structured form like a database entries. 3. Hard or still need lot of work Text Summarization - to take input as text document(s) and try to condense them into a summary. Machine dialog system - Example: ​ User - I need a flight from New York to London, arriving at 10 pm ? ​ System - What day are you leaving? ​ User - Tomorrow. System detects the missing information in your sentences.]]></content>
       <categories>
         <category>nlp</category>
+        <category>贪心学院</category>
       </categories>
+      <tags>
+        <tag>机器翻译</tag>
+        <tag>NLP技术</tag>
+        <tag>NLP场景</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[presentation]]></title>
