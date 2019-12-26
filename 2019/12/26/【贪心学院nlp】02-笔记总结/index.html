@@ -97,13 +97,13 @@
 
 
 
-  <meta name="description" content="Overview  nlpcamp_l2-01   nlpcamp_l2-02  算法复杂度 这是任何AI工程师必须要深入理解的概念。对于每一个设计出来的算法都需要从这两个方面来分析。 例子1 123456789int a = 0, b = 0; for (i = 0; i &amp;lt; N; i++) &amp;#123; # O(N)+O(N)=2*O(N)=O(N)    a = a + rand();">
+  <meta name="description" content="Overview  算法复杂度这是任何AI工程师必须要深入理解的概念。对于每一个设计出来的算法都需要从这两个方面来分析。 例子1123456789int a = 0, b = 0; for (i = 0; i &amp;lt; N; i++) &amp;#123; # O(N)+O(N)=2*O(N)=O(N)    a = a + rand(); # N*1个操作 = O(N)    b = b + rand(">
 <meta name="keywords" content="自动问答">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【贪心学院nlp】02 笔记总结">
 <meta property="og:url" content="http://hackcraker.github.io/2019/12/26/【贪心学院nlp】02-笔记总结/index.html">
 <meta property="og:site_name" content="源泉">
-<meta property="og:description" content="Overview  nlpcamp_l2-01   nlpcamp_l2-02  算法复杂度 这是任何AI工程师必须要深入理解的概念。对于每一个设计出来的算法都需要从这两个方面来分析。 例子1 123456789int a = 0, b = 0; for (i = 0; i &amp;lt; N; i++) &amp;#123; # O(N)+O(N)=2*O(N)=O(N)    a = a + rand();">
+<meta property="og:description" content="Overview  算法复杂度这是任何AI工程师必须要深入理解的概念。对于每一个设计出来的算法都需要从这两个方面来分析。 例子1123456789int a = 0, b = 0; for (i = 0; i &amp;lt; N; i++) &amp;#123; # O(N)+O(N)=2*O(N)=O(N)    a = a + rand(); # N*1个操作 = O(N)    b = b + rand(">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://hackcraker.github.io/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-01.jpg">
 <meta property="og:image" content="http://hackcraker.github.io/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-02.jpg">
@@ -124,7 +124,7 @@
 <meta property="og:updated_time" content="2019-12-26T04:07:32.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【贪心学院nlp】02 笔记总结">
-<meta name="twitter:description" content="Overview  nlpcamp_l2-01   nlpcamp_l2-02  算法复杂度 这是任何AI工程师必须要深入理解的概念。对于每一个设计出来的算法都需要从这两个方面来分析。 例子1 123456789int a = 0, b = 0; for (i = 0; i &amp;lt; N; i++) &amp;#123; # O(N)+O(N)=2*O(N)=O(N)    a = a + rand();">
+<meta name="twitter:description" content="Overview  算法复杂度这是任何AI工程师必须要深入理解的概念。对于每一个设计出来的算法都需要从这两个方面来分析。 例子1123456789int a = 0, b = 0; for (i = 0; i &amp;lt; N; i++) &amp;#123; # O(N)+O(N)=2*O(N)=O(N)    a = a + rand(); # N*1个操作 = O(N)    b = b + rand(">
 <meta name="twitter:image" content="http://hackcraker.github.io/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-01.jpg">
 
 
@@ -498,7 +498,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.5k</span>
+                <span title="本文字数">1.3k</span>
               
 
               
@@ -532,71 +532,31 @@
       
 
       
-        <h2 id="overview">Overview</h2>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-01.jpg" alt="nlpcamp_l2-01"><figcaption>nlpcamp_l2-01</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-02.jpg" alt="nlpcamp_l2-02"><figcaption>nlpcamp_l2-02</figcaption>
-</figure>
-<h2 id="算法复杂度">算法复杂度</h2>
-<p>这是任何AI工程师必须要深入理解的概念。对于每一个设计出来的算法都需要从这两个方面来分析。</p>
-<h3 id="例子1">例子1</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int a = <span class="number">0</span>, b = <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; N; i++) &#123; <span class="comment"># O(N)+O(N)=2*O(N)=O(N)</span></span><br><span class="line">    a = a + rand(); <span class="comment"># N*1个操作 = O(N)</span></span><br><span class="line">    b = b + rand(); <span class="comment"># N*1个操作 = O(N)</span></span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; N/<span class="number">2</span>; j++) &#123; </span><br><span class="line">    b = b + rand(); <span class="comment"># N/2*1个操作 = 1/2*O(N)=O(N)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>时间复杂度：O(N) 空间复杂度：2个单位的内存空间 = O(1) # constant space complexity</p>
-<h3 id="例子2">例子2</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">int a = <span class="number">0</span>, i, j;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; N; i++) &#123;      </span><br><span class="line">    <span class="keyword">for</span> (j = N; j &gt; i; j--) &#123; </span><br><span class="line">        a = a + i + j; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">i=<span class="number">0</span>: j=N..<span class="number">.1</span>   N</span><br><span class="line">i=<span class="number">1</span>: j=N..<span class="number">.2</span>   N<span class="number">-1</span></span><br><span class="line">i=<span class="number">2</span>: j=N..<span class="number">.3</span>   N<span class="number">-2</span></span><br><span class="line">i=N<span class="number">-1</span>: j=N      <span class="number">1</span></span><br><span class="line"></span><br><span class="line">total = <span class="number">1</span>+<span class="number">2</span>+<span class="number">3</span>,...+N = N*(N+<span class="number">1</span>)/<span class="number">2</span> = N*N/<span class="number">2</span> + N/<span class="number">2</span> </span><br><span class="line">= <span class="number">1</span>/<span class="number">2</span>*O(N^<span class="number">2</span>) + <span class="number">1</span>/<span class="number">2</span>*O(N) = O(N^<span class="number">2</span>) + O(N) = O(N^<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-<p>时间复杂度：O(N^2); 空间复杂度:O(1)</p>
-<h3 id="例子3">例子3</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int a = <span class="number">0</span>, i = N; </span><br><span class="line"><span class="keyword">while</span> (i &gt; <span class="number">0</span>) &#123; </span><br><span class="line">    a += i;  <span class="comment"># 1个操作</span></span><br><span class="line">    i /= <span class="number">2</span>;  <span class="comment"># 1个操作</span></span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">N = <span class="number">40</span>;  i=<span class="number">40</span></span><br><span class="line"></span><br><span class="line">i=<span class="number">20</span>  <span class="number">2</span></span><br><span class="line">i=<span class="number">10</span>  <span class="number">2</span></span><br><span class="line">i=<span class="number">5</span>   <span class="number">2</span></span><br><span class="line">i=<span class="number">2</span>   <span class="number">2</span></span><br><span class="line">i=<span class="number">1</span>   <span class="number">2</span></span><br><span class="line">i=<span class="number">0</span>   <span class="number">2</span></span><br><span class="line">terminate</span><br><span class="line"><span class="number">2</span>*log(N) = <span class="number">2</span>* O(log N) = O(log N)</span><br></pre></td></tr></table></figure>
-<h3 id="例子4">例子4</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int i, j, k = <span class="number">0</span>; </span><br><span class="line"><span class="keyword">for</span> (i = n / <span class="number">2</span>; i &lt;= n; i++) &#123; </span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">2</span>; j &lt;= n; j = j * <span class="number">2</span>) &#123; </span><br><span class="line">        k = k + n / <span class="number">2</span>; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">O(n*log n)</span><br></pre></td></tr></table></figure>
-<h3 id="复杂度总结">复杂度总结</h3>
-<p>我们每当说算法X的效率要高于Y时指的是？ 时间复杂度 X: o(log n) &gt; Y: o(n) o(n log n) &gt; Y: o(n^2) 定理： 如果x的时间复杂度要优于y的时间复杂度，那么，假设存在一个足够大的数M，当 n&gt;M时，我们可以保证X的实际效率要优于Y的实际效率</p>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-03.jpg" alt="nlpcamp_l2-03"><figcaption>nlpcamp_l2-03</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-04.jpg" alt="nlpcamp_l2-04"><figcaption>nlpcamp_l2-04</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-05.jpg" alt="nlpcamp_l2-05"><figcaption>nlpcamp_l2-05</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-06.jpg" alt="nlpcamp_l2-06"><figcaption>nlpcamp_l2-06</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-07.jpg" alt="nlpcamp_l2-07"><figcaption>nlpcamp_l2-07</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-08.jpg" alt="nlpcamp_l2-08"><figcaption>nlpcamp_l2-08</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-09.jpg" alt="nlpcamp_l2-09"><figcaption>nlpcamp_l2-09</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-10.jpg" alt="nlpcamp_l2-10"><figcaption>nlpcamp_l2-10</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-11.jpg" alt="nlpcamp_l2-11"><figcaption>nlpcamp_l2-11</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-12.jpg" alt="nlpcamp_l2-12"><figcaption>nlpcamp_l2-12</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-13.jpg" alt="nlpcamp_l2-13"><figcaption>nlpcamp_l2-13</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-14.jpg" alt="nlpcamp_l2-14"><figcaption>nlpcamp_l2-14</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-15.jpg" alt="nlpcamp_l2-15"><figcaption>nlpcamp_l2-15</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-16.jpg" alt="nlpcamp_l2-16"><figcaption>nlpcamp_l2-16</figcaption>
-</figure>
-<h2 id="参考链接">参考链接</h2>
-<ol type="1">
+        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-01.jpg" alt="nlpcamp_l2-01"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-02.jpg" alt="nlpcamp_l2-02"></p>
+<h2 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h2><p>这是任何AI工程师必须要深入理解的概念。对于每一个设计出来的算法都需要从这两个方面来分析。</p>
+<h3 id="例子1"><a href="#例子1" class="headerlink" title="例子1"></a>例子1</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int a = <span class="number">0</span>, b = <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; N; i++) &#123; <span class="comment"># O(N)+O(N)=2*O(N)=O(N)</span></span><br><span class="line">    a = a + rand(); <span class="comment"># N*1个操作 = O(N)</span></span><br><span class="line">    b = b + rand(); <span class="comment"># N*1个操作 = O(N)</span></span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; N/<span class="number">2</span>; j++) &#123; </span><br><span class="line">    b = b + rand(); <span class="comment"># N/2*1个操作 = 1/2*O(N)=O(N)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：O(N)<br>空间复杂度：2个单位的内存空间 = O(1)  # constant space complexity</p>
+<h3 id="例子2"><a href="#例子2" class="headerlink" title="例子2"></a>例子2</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">int a = <span class="number">0</span>, i, j;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; N; i++) &#123;      </span><br><span class="line">    <span class="keyword">for</span> (j = N; j &gt; i; j--) &#123; </span><br><span class="line">        a = a + i + j; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">i=<span class="number">0</span>: j=N..<span class="number">.1</span>   N</span><br><span class="line">i=<span class="number">1</span>: j=N..<span class="number">.2</span>   N<span class="number">-1</span></span><br><span class="line">i=<span class="number">2</span>: j=N..<span class="number">.3</span>   N<span class="number">-2</span></span><br><span class="line">i=N<span class="number">-1</span>: j=N      <span class="number">1</span></span><br><span class="line"></span><br><span class="line">total = <span class="number">1</span>+<span class="number">2</span>+<span class="number">3</span>,...+N = N*(N+<span class="number">1</span>)/<span class="number">2</span> = N*N/<span class="number">2</span> + N/<span class="number">2</span> </span><br><span class="line">= <span class="number">1</span>/<span class="number">2</span>*O(N^<span class="number">2</span>) + <span class="number">1</span>/<span class="number">2</span>*O(N) = O(N^<span class="number">2</span>) + O(N) = O(N^<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：O(N^2);<br>空间复杂度:O(1)</p>
+<h3 id="例子3"><a href="#例子3" class="headerlink" title="例子3"></a>例子3</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int a = <span class="number">0</span>, i = N; </span><br><span class="line"><span class="keyword">while</span> (i &gt; <span class="number">0</span>) &#123; </span><br><span class="line">    a += i;  <span class="comment"># 1个操作</span></span><br><span class="line">    i /= <span class="number">2</span>;  <span class="comment"># 1个操作</span></span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">N = <span class="number">40</span>;  i=<span class="number">40</span></span><br><span class="line"></span><br><span class="line">i=<span class="number">20</span>  <span class="number">2</span></span><br><span class="line">i=<span class="number">10</span>  <span class="number">2</span></span><br><span class="line">i=<span class="number">5</span>   <span class="number">2</span></span><br><span class="line">i=<span class="number">2</span>   <span class="number">2</span></span><br><span class="line">i=<span class="number">1</span>   <span class="number">2</span></span><br><span class="line">i=<span class="number">0</span>   <span class="number">2</span></span><br><span class="line">terminate</span><br><span class="line"><span class="number">2</span>*log(N) = <span class="number">2</span>* O(log N) = O(log N)</span><br></pre></td></tr></table></figure>
+<h3 id="例子4"><a href="#例子4" class="headerlink" title="例子4"></a>例子4</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int i, j, k = <span class="number">0</span>; </span><br><span class="line"><span class="keyword">for</span> (i = n / <span class="number">2</span>; i &lt;= n; i++) &#123; </span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">2</span>; j &lt;= n; j = j * <span class="number">2</span>) &#123; </span><br><span class="line">        k = k + n / <span class="number">2</span>; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">O(n*log n)</span><br></pre></td></tr></table></figure>
+<h3 id="复杂度总结"><a href="#复杂度总结" class="headerlink" title="复杂度总结"></a>复杂度总结</h3><p>我们每当说算法X的效率要高于Y时指的是？  时间复杂度<br>X: o(log n) &gt;  Y: o(n)<br>    o(n log n) &gt; Y: o(n^2)<br>定理： 如果x的时间复杂度要优于y的时间复杂度，那么，假设存在一个足够大的数M，当<br>n&gt;M时，我们可以保证X的实际效率要优于Y的实际效率</p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-03.jpg" alt="nlpcamp_l2-03"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-04.jpg" alt="nlpcamp_l2-04"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-05.jpg" alt="nlpcamp_l2-05"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-06.jpg" alt="nlpcamp_l2-06"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-07.jpg" alt="nlpcamp_l2-07"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-08.jpg" alt="nlpcamp_l2-08"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-09.jpg" alt="nlpcamp_l2-09"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-10.jpg" alt="nlpcamp_l2-10"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-11.jpg" alt="nlpcamp_l2-11"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-12.jpg" alt="nlpcamp_l2-12"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-13.jpg" alt="nlpcamp_l2-13"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-14.jpg" alt="nlpcamp_l2-14"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-15.jpg" alt="nlpcamp_l2-15"></p>
+<p><img src="/2019/12/26/【贪心学院nlp】02-笔记总结/nlpcamp_l2-16.jpg" alt="nlpcamp_l2-16"></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
 <li><a href="https://www.jianshu.com/p/f4cca5ce055a" target="_blank" rel="noopener">时间复杂度</a></li>
 <li></li>
 </ol>
@@ -905,7 +865,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法复杂度"><span class="nav-number">2.</span> <span class="nav-text">算法复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例子1"><span class="nav-number">2.1.</span> <span class="nav-text">例子1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子2"><span class="nav-number">2.2.</span> <span class="nav-text">例子2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子3"><span class="nav-number">2.3.</span> <span class="nav-text">例子3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子4"><span class="nav-number">2.4.</span> <span class="nav-text">例子4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度总结"><span class="nav-number">2.5.</span> <span class="nav-text">复杂度总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法复杂度"><span class="nav-number">2.</span> <span class="nav-text">算法复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例子1"><span class="nav-number">2.1.</span> <span class="nav-text">例子1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子2"><span class="nav-number">2.2.</span> <span class="nav-text">例子2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子3"><span class="nav-number">2.3.</span> <span class="nav-text">例子3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子4"><span class="nav-number">2.4.</span> <span class="nav-text">例子4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度总结"><span class="nav-number">2.5.</span> <span class="nav-text">复杂度总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
@@ -938,7 +898,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">29k</span>
+    <span title="站点总字数">28k</span>
   
 
   
@@ -947,7 +907,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">26 分钟</span>
+    <span title="站点阅读时长">25 分钟</span>
   
 </div>
 
