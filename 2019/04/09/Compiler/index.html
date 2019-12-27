@@ -97,17 +97,17 @@
 
 
 
-  <meta name="description" content="Compiler notes First Sets Defination \(\text { First }(X)=\left\{t | X \rightarrow^{*} t \alpha\right\} \cup\left\{\varepsilon | X \rightarrow^{*} \varepsilon\right\}\) Algorithm sketch:  \(\text { Fi">
+  <meta name="description" content="Compiler notesFirst SetsDefination$\text { First }(X)=\left{t | X \rightarrow^{} t \alpha\right} \cup\left{\varepsilon | X \rightarrow^{} \varepsilon\right}$ Algorithm sketch: $\text { First }(t)=(t)$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Compiler">
 <meta property="og:url" content="http://hackcraker.github.io/2019/04/09/Compiler/index.html">
 <meta property="og:site_name" content="源泉">
-<meta property="og:description" content="Compiler notes First Sets Defination \(\text { First }(X)=\left\{t | X \rightarrow^{*} t \alpha\right\} \cup\left\{\varepsilon | X \rightarrow^{*} \varepsilon\right\}\) Algorithm sketch:  \(\text { Fi">
+<meta property="og:description" content="Compiler notesFirst SetsDefination$\text { First }(X)=\left{t | X \rightarrow^{} t \alpha\right} \cup\left{\varepsilon | X \rightarrow^{} \varepsilon\right}$ Algorithm sketch: $\text { First }(t)=(t)$">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-04-10T13:23:27.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Compiler">
-<meta name="twitter:description" content="Compiler notes First Sets Defination \(\text { First }(X)=\left\{t | X \rightarrow^{*} t \alpha\right\} \cup\left\{\varepsilon | X \rightarrow^{*} \varepsilon\right\}\) Algorithm sketch:  \(\text { Fi">
+<meta name="twitter:description" content="Compiler notesFirst SetsDefination$\text { First }(X)=\left{t | X \rightarrow^{} t \alpha\right} \cup\left{\varepsilon | X \rightarrow^{} \varepsilon\right}$ Algorithm sketch: $\text { First }(t)=(t)$">
 
 
 
@@ -474,7 +474,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.3k</span>
+                <span title="本文字数">2.2k</span>
               
 
               
@@ -508,42 +508,29 @@
       
 
       
-        <h1 id="compiler-notes">Compiler notes</h1>
-<h2 id="first-sets">First Sets</h2>
-<h3 id="defination">Defination</h3>
-<p><span class="math inline">\(\text { First }(X)=\left\{t | X \rightarrow^{*} t \alpha\right\} \cup\left\{\varepsilon | X \rightarrow^{*} \varepsilon\right\}\)</span></p>
-<h3 id="algorithm-sketch">Algorithm sketch:</h3>
-<ol type="1">
-<li><span class="math inline">\(\text { First }(t)=(t)\)</span></li>
-<li><span class="math inline">\(\varepsilon \in \mathrm{First}(X)\)</span><br>
-<span class="math inline">\(\begin{array}{l}{\text { if } X \rightarrow \varepsilon} \\ {\text { if } X \rightarrow A_{1} \dots A_{n} \text { and } \varepsilon \in \text { First }\left(A_{i}\right) \text { for } 1 \leq i \leq n}\end{array}\)</span></li>
-<li><span class="math inline">\(\text { First }(\alpha) \subseteq \text { First }(X)\)</span><br>
-<span class="math inline">\(\text { if } X \rightarrow A_{1} \ldots A_{n} \alpha \text { and } \varepsilon \in \text { First }\left(A_{i}\right) \text { for } 1 \leq i \leq n\)</span></li>
+        <h1 id="Compiler-notes"><a href="#Compiler-notes" class="headerlink" title="Compiler notes"></a>Compiler notes</h1><h2 id="First-Sets"><a href="#First-Sets" class="headerlink" title="First Sets"></a>First Sets</h2><h3 id="Defination"><a href="#Defination" class="headerlink" title="Defination"></a>Defination</h3><p>$\text { First }(X)=\left{t | X \rightarrow^{<em>} t \alpha\right} \cup\left{\varepsilon | X \rightarrow^{</em>} \varepsilon\right}$</p>
+<h3 id="Algorithm-sketch"><a href="#Algorithm-sketch" class="headerlink" title="Algorithm sketch:"></a>Algorithm sketch:</h3><ol>
+<li>$\text { First }(t)=(t)$</li>
+<li>$\varepsilon \in \mathrm{First}(X)$<br>$\begin{array}{l}{\text { if } X \rightarrow \varepsilon} \ {\text { if } X \rightarrow A<em>{1} \dots A</em>{n} \text { and } \varepsilon \in \text { First }\left(A_{i}\right) \text { for } 1 \leq i \leq n}\end{array}$</li>
+<li>$\text { First }(\alpha) \subseteq \text { First }(X)$<br>$\text { if } X \rightarrow A<em>{1} \ldots A</em>{n} \alpha \text { and } \varepsilon \in \text { First }\left(A_{i}\right) \text { for } 1 \leq i \leq n$</li>
 </ol>
 <hr>
-<h2 id="follow-sets">Follow Sets</h2>
-<h3 id="defination-1">Defination:</h3>
-<p><span class="math inline">\(\text { Follow }(X)=\left\{t | S \rightarrow^{*} \beta Xt\delta\right\}​\)</span></p>
-<h3 id="intuition">Intuition</h3>
-<ul>
-<li><span class="math inline">\(\begin{array}{c}{\text { If } X \rightarrow A B \text { then First }(B) \subseteq \text { Follow }(A) \text { and }} \ {\text { Follow }(X) \subseteq \text { Follow }(B)}\end{array}\)</span> <span class="math inline">\(\text { if } B \rightarrow^{*} \varepsilon \text { then Follow }(X) \subseteq \text { Follow }(A)\)</span></li>
-<li><span class="math inline">\(\text { If } S \text { is the start symbol then } \$ \in \text { Follow }(S)​\)</span></li>
+<h2 id="Follow-Sets"><a href="#Follow-Sets" class="headerlink" title="Follow Sets"></a>Follow Sets</h2><h3 id="Defination-1"><a href="#Defination-1" class="headerlink" title="Defination:"></a>Defination:</h3><p>  $\text { Follow }(X)=\left{t | S \rightarrow^{*} \beta Xt\delta\right}​$</p>
+<h3 id="Intuition"><a href="#Intuition" class="headerlink" title="Intuition"></a>Intuition</h3><ul>
+<li>$\begin{array}{c}{\text { If } X \rightarrow A B \text { then First }(B) \subseteq \text { Follow }(A) \text { and }} \ {\text { Follow }(X) \subseteq \text { Follow }(B)}\end{array}$<br>$\text { if } B \rightarrow^{*} \varepsilon \text { then Follow }(X) \subseteq \text { Follow }(A)$</li>
+<li>$\text { If } S \text { is the start symbol then } $ \in \text { Follow }(S)​$</li>
 </ul>
-<h3 id="algorithm-sketch-1">Algorithm sketch:</h3>
-<ol type="1">
-<li><span class="math inline">\(\$ \in \text { Follow }(S)\)</span></li>
-<li><span class="math inline">\(\begin{array}{l}{\text { First }(\beta)-\{\varepsilon\} \subseteq \text { Follow }(X)} {\text { - For each production } A \rightarrow \alpha X \beta}\end{array}​\)</span></li>
-<li><span class="math inline">\(\begin{array}{l}{\text { Follow }(A) \subseteq \text { Follow }(X)} {\text { - For each production } A \rightarrow \alpha X \beta \text { where }\varepsilon \in \text { First }(\beta)}\end{array}\)</span></li>
+<h3 id="Algorithm-sketch-1"><a href="#Algorithm-sketch-1" class="headerlink" title="Algorithm sketch:"></a>Algorithm sketch:</h3><ol>
+<li>$$ \in \text { Follow }(S)$</li>
+<li>$\begin{array}{l}{\text { First }(\beta)-{\varepsilon} \subseteq \text { Follow }(X)}  {\text { - For each production } A \rightarrow \alpha X \beta}\end{array}​$</li>
+<li>$\begin{array}{l}{\text { Follow }(A)  \subseteq \text { Follow }(X)}  {\text { - For each production } A \rightarrow \alpha X \beta \text { where }\varepsilon \in \text { First }(\beta)}\end{array}$</li>
 </ol>
 <hr>
-<h2 id="select-sets">Select Sets</h2>
-<h3 id="defination-2">Defination:</h3>
-<p><span class="math inline">\(\text { Select }(A \rightarrow \alpha)=\left\{t\right\}\)</span></p>
-<h3 id="algorithm-sketch-2">Algorithm sketch:</h3>
-<p><span class="math inline">\(\text { For each production } A \rightarrow \alpha \text { in G do: }\)</span></p>
-<p><span class="math inline">\(\begin{array}{l}{-\text { For each terminal } t \in \text { First }(\alpha) \text { do }} \\ {\quad \cdot \mathrm{T}[A, t]=\alpha}\end{array}\)</span></p>
-<p><span class="math inline">\(\begin{array}{l}{-\text { If } \varepsilon \in \text { First }(\alpha), \text { for each } t \in \text { Follow }(A) \mathrm{do}} \\ {\quad \cdot \mathrm{T}[A,t]=\alpha}\end{array}\)</span></p>
-<p><span class="math inline">\(\begin{array}{l}{-\text { If } \varepsilon \in \text { First }(\alpha) \text { and } \$ \in \text { Follow }(A) \text { do }} \\ {\quad \cdot \mathrm{T}[A, \$]=\alpha}\end{array}\)</span></p>
+<h2 id="Select-Sets"><a href="#Select-Sets" class="headerlink" title="Select Sets"></a>Select Sets</h2><h3 id="Defination-2"><a href="#Defination-2" class="headerlink" title="Defination:"></a>Defination:</h3><p>  $\text { Select }(A \rightarrow \alpha)=\left{t\right}$</p>
+<h3 id="Algorithm-sketch-2"><a href="#Algorithm-sketch-2" class="headerlink" title="Algorithm sketch:"></a>Algorithm sketch:</h3><p>$\text { For each production } A \rightarrow \alpha \text { in G do: }$</p>
+<p>$\begin{array}{l}{-\text { For each terminal } t \in \text { First }(\alpha) \text { do }} \ {\quad \cdot \mathrm{T}[A, t]=\alpha}\end{array}$</p>
+<p>$\begin{array}{l}{-\text { If } \varepsilon \in \text { First }(\alpha), \text { for each } t \in \text { Follow }(A) \mathrm{do}} \ {\quad \cdot \mathrm{T}[A,t]=\alpha}\end{array}$</p>
+<p>$\begin{array}{l}{-\text { If } \varepsilon \in \text { First }(\alpha) \text { and } $ \in \text { Follow }(A) \text { do }} \ {\quad \cdot \mathrm{T}[A, $]=\alpha}\end{array}$</p>
 
       
     </div>
@@ -714,7 +701,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -847,7 +834,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#compiler-notes"><span class="nav-number">1.</span> <span class="nav-text">Compiler notes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#first-sets"><span class="nav-number">1.1.</span> <span class="nav-text">First Sets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#defination"><span class="nav-number">1.1.1.</span> <span class="nav-text">Defination</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#algorithm-sketch"><span class="nav-number">1.1.2.</span> <span class="nav-text">Algorithm sketch:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#follow-sets"><span class="nav-number">1.2.</span> <span class="nav-text">Follow Sets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#defination-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Defination:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#intuition"><span class="nav-number">1.2.2.</span> <span class="nav-text">Intuition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#algorithm-sketch-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">Algorithm sketch:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#select-sets"><span class="nav-number">1.3.</span> <span class="nav-text">Select Sets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#defination-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">Defination:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#algorithm-sketch-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">Algorithm sketch:</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Compiler-notes"><span class="nav-number">1.</span> <span class="nav-text">Compiler notes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#First-Sets"><span class="nav-number">1.1.</span> <span class="nav-text">First Sets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Defination"><span class="nav-number">1.1.1.</span> <span class="nav-text">Defination</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Algorithm-sketch"><span class="nav-number">1.1.2.</span> <span class="nav-text">Algorithm sketch:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Follow-Sets"><span class="nav-number">1.2.</span> <span class="nav-text">Follow Sets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Defination-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Defination:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Intuition"><span class="nav-number">1.2.2.</span> <span class="nav-text">Intuition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Algorithm-sketch-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">Algorithm sketch:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Select-Sets"><span class="nav-number">1.3.</span> <span class="nav-text">Select Sets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Defination-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">Defination:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Algorithm-sketch-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">Algorithm sketch:</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -880,7 +867,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">30k</span>
+    <span title="站点总字数">29k</span>
   
 
   
@@ -889,7 +876,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">27 分钟</span>
+    <span title="站点阅读时长">26 分钟</span>
   
 </div>
 
