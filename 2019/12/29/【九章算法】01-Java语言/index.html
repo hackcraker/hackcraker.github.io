@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="google-site-verification" content="HXu59hqpozjMzWqFIp85wO31_osshLx4K2kU9vB0GaA">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="本文是学习Java入门与基础算法（任课教师：林平之）的总结学习笔记。如果有不会的算法题，请参考题解:smiley:  第二讲 变量，数组和循环(Java基础 I)变量ASCII &amp;amp; Unicode编码    字符 对应整数     0 48   A 65   a 97     123456// 小写转大写，避免hard codechar a = &apos;a&apos;;System.out.printl">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【九章算法】01 Java语言">
+<meta property="og:url" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/index.html">
+<meta property="og:site_name" content="源泉">
+<meta property="og:description" content="本文是学习Java入门与基础算法（任课教师：林平之）的总结学习笔记。如果有不会的算法题，请参考题解:smiley:  第二讲 变量，数组和循环(Java基础 I)变量ASCII &amp;amp; Unicode编码    字符 对应整数     0 48   A 65   a 97     123456// 小写转大写，避免hard codechar a = &apos;a&apos;;System.out.printl">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/image-20191228111006457.png">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-23.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-24.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-25.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-26.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-27.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-28.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-29.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-30.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-31.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-32.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-33.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-35.jpg">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/image-20191228135641121.png">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/image-20191228135917559.png">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/image-20191228135954662.png">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/image-20191229125632239.png">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/image-20191229144920273.png">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/image-20191229145002330.png">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/image-20191229153329531.png">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/image-20191229153719344.png">
+<meta property="og:updated_time" content="2019-12-29T09:58:51.640Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【九章算法】01 Java语言">
+<meta name="twitter:description" content="本文是学习Java入门与基础算法（任课教师：林平之）的总结学习笔记。如果有不会的算法题，请参考题解:smiley:  第二讲 变量，数组和循环(Java基础 I)变量ASCII &amp;amp; Unicode编码    字符 对应整数     0 48   A 65   a 97     123456// 小写转大写，避免hard codechar a = &apos;a&apos;;System.out.printl">
+<meta name="twitter:image" content="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/image-20191228111006457.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>【九章算法】01 Java语言 | 源泉</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">源泉</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">You can't leave this world to the people you despise.</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lucas Chan">
+      <meta itemprop="description" content="满地都是六便士,他却抬头看到了月亮。">
+      <meta itemprop="image" content="/images/morty.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="源泉">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">【九章算法】01 Java语言
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-29 17:50:44 / 修改时间：17:58:51" itemprop="dateCreated datePublished" datetime="2019-12-29T17:50:44+08:00">2019-12-29</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/九章算法/" itemprop="url" rel="index"><span itemprop="name">九章算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/12/29/【九章算法】01-Java语言/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/29/【九章算法】01-Java语言/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">12k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">11 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本文是学习<a href="https://www.jiuzhang.com/course/23/" target="_blank" rel="noopener"><strong>Java</strong>入门与基础算法</a>（任课教师：林平之）的总结学习笔记。<br>如果有不会的算法题，请参考<a href="https://www.jiuzhang.com/solutions/" target="_blank" rel="noopener">题解</a>:smiley:</p>
+</blockquote>
+<h1 id="第二讲-变量，数组和循环-Java基础-I"><a href="#第二讲-变量，数组和循环-Java基础-I" class="headerlink" title="第二讲 变量，数组和循环(Java基础 I)"></a>第二讲 变量，数组和循环(Java基础 I)</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="ASCII-amp-Unicode编码"><a href="#ASCII-amp-Unicode编码" class="headerlink" title="ASCII &amp; Unicode编码"></a><strong>ASCII &amp; Unicode</strong>编码</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>对应整数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>48</td>
+</tr>
+<tr>
+<td>A</td>
+<td>65</td>
+</tr>
+<tr>
+<td>a</td>
+<td>97</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 小写转大写，避免hard code</span></span><br><span class="line"><span class="keyword">char</span> a = <span class="string">'a'</span>;</span><br><span class="line">System.out.println((<span class="keyword">char</span>)(a - <span class="string">'a'</span> + <span class="string">'A'</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者直接调用写好的函数</span></span><br><span class="line">Character.toUpperCase(a);</span><br></pre></td></tr></table></figure>
+<h3 id="数组-Array"><a href="#数组-Array" class="headerlink" title="数组 Array"></a>数组 Array</h3><p>数组<br>用一个变量来表示一组连续的相同类型的变量。 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义方式1</span></span><br><span class="line"><span class="keyword">int</span>[] array = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;<span class="number">90</span>, <span class="number">95</span>, <span class="number">92</span>, <span class="number">89</span>, <span class="number">100</span>, <span class="number">98</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义方式2</span></span><br><span class="line"><span class="keyword">int</span>[] array2 = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">6</span>];</span><br><span class="line">array2[<span class="number">0</span>] = <span class="number">90</span>;</span><br><span class="line">array2[<span class="number">1</span>] = <span class="number">95</span>;</span><br><span class="line">array2[<span class="number">2</span>] = <span class="number">92</span>;</span><br><span class="line">array2[<span class="number">3</span>] = <span class="number">89</span>;</span><br><span class="line">array2[<span class="number">4</span>] = <span class="number">100</span>;</span><br><span class="line">array2[<span class="number">5</span>] = <span class="number">98</span>;</span><br></pre></td></tr></table></figure>
+<p>二维数组和多维数组</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义方式1</span></span><br><span class="line"><span class="keyword">int</span>[][] matrix = <span class="keyword">new</span> <span class="keyword">int</span>[][] &#123;</span><br><span class="line">  &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">10</span>&#125;,</span><br><span class="line">  &#123;<span class="number">2</span>, <span class="number">6</span>, <span class="number">12</span>, <span class="number">15</span>&#125;,</span><br><span class="line">  &#123;<span class="number">6</span>, <span class="number">8</span>, <span class="number">13</span>, <span class="number">20</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义方式2</span></span><br><span class="line"><span class="keyword">int</span>[][] matrix2 = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>][<span class="number">4</span>];</span><br></pre></td></tr></table></figure>
+<h2 id="程序的三大结构"><a href="#程序的三大结构" class="headerlink" title="程序的三大结构"></a>程序的三大结构</h2><ul>
+<li>顺序结构</li>
+<li>控制结构</li>
+<li>循环结构 </li>
+</ul>
+<h3 id="控制结构"><a href="#控制结构" class="headerlink" title="控制结构"></a>控制结构</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// max number of 3 numbers</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>, b = <span class="number">20</span>, c = <span class="number">15</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> max = a;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (b &gt; max) &#123;</span><br><span class="line">  max = b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (c &gt; max) &#123;</span><br><span class="line">  max = c;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(max);</span><br></pre></td></tr></table></figure>
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 找第二大的数</span></span><br><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;<span class="number">90</span>, <span class="number">95</span>, <span class="number">92</span>, <span class="number">89</span>, <span class="number">100</span>, <span class="number">98</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> len = array.length;</span><br><span class="line"><span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> sMax = <span class="number">0</span>;</span><br><span class="line"><span class="comment">// 1[ ], 2[ ]</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i) &#123;</span><br><span class="line">  <span class="keyword">if</span> (max &lt; arr[i]) &#123;</span><br><span class="line">    sMax = max;</span><br><span class="line">    max = arr[i];</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sMax &lt; arr[i]) &#123;</span><br><span class="line">    sMax = arr[i]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(max);</span><br><span class="line">System.out.println(sMax);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 遍历二维数组</span></span><br><span class="line"><span class="keyword">int</span>[][] matrix = <span class="keyword">new</span> <span class="keyword">int</span>[][] &#123;</span><br><span class="line">  &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>&#125;,</span><br><span class="line">  &#123;<span class="number">2</span>, <span class="number">6</span>&#125;,</span><br><span class="line">  &#123;<span class="number">6</span>, <span class="number">8</span>, <span class="number">13</span>, <span class="number">20</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt; matrix.length; ++i) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j&lt; matrix[i].length; ++j) &#123;</span><br><span class="line">    System.out.println(matrix[i][j]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// loop</span></span><br><span class="line"><span class="keyword">int</span>[] array = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> num: array) &#123;</span><br><span class="line">  System.out.println(num);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="第三讲-字符串，函数，类和对象-Java基础-II"><a href="#第三讲-字符串，函数，类和对象-Java基础-II" class="headerlink" title="第三讲 字符串，函数，类和对象(Java基础 II)"></a>第三讲 字符串，函数，类和对象(Java基础 II)</h1><h2 id="String及其常用操作"><a href="#String及其常用操作" class="headerlink" title="String及其常用操作"></a>String及其常用操作</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串的长度</span></span><br><span class="line">String a = <span class="string">"hello"</span>;</span><br><span class="line">String b = <span class="keyword">new</span> String(<span class="string">"hello"</span>);</span><br><span class="line">System.out.println(a.length());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 字符串的遍历</span></span><br><span class="line"><span class="comment">// 1</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length(); ++i) &#123;</span><br><span class="line">  System.out.println(a.charAt(i));</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line"><span class="keyword">char</span>[] chars = <span class="keyword">new</span> <span class="keyword">char</span>[] &#123;<span class="string">'h'</span>, <span class="string">'e'</span>, <span class="string">'l'</span>, <span class="string">'l'</span>, <span class="string">'o'</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">char</span> c: a.toCharArray()) &#123;</span><br><span class="line">  System.out.println(c);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 字符串的运算:连接</span></span><br><span class="line">String str = <span class="string">"My name is"</span>;</span><br><span class="line">str += <span class="string">" Guojing"</span>; <span class="comment">// str: "My name is Guojing"</span></span><br><span class="line"><span class="keyword">int</span> age = <span class="number">18</span>;</span><br><span class="line">str = <span class="string">"I am "</span> + age + <span class="string">" years old"</span>; <span class="comment">// str: "I am 18 years old"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 字符串 子串的查找indexOf (返回子串作为位置的下标。)</span></span><br><span class="line">String source = <span class="string">"jiuzhang"</span>;</span><br><span class="line"><span class="keyword">int</span> index = source.indexOf(<span class="string">"zhang"</span>); System.out.println(index);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 字符串的比较(大部分情况都是用方法比较内容的)</span></span><br><span class="line">String a = <span class="string">"hello"</span>;</span><br><span class="line">String b = <span class="keyword">new</span> String(<span class="string">"hello"</span>);</span><br><span class="line">String c = <span class="string">"hello"</span>;</span><br><span class="line">String d = <span class="keyword">new</span> String(<span class="string">"hello"</span>);</span><br><span class="line">System.out.println(a == b);  <span class="comment">// false,不是指向同一个对象</span></span><br><span class="line">System.out.println(a.equals(b);  <span class="comment">// true,同一个内容</span></span><br><span class="line">System.out.println(a == c);  <span class="comment">// true,指向同一个对象,常量表   </span></span><br><span class="line">System.out.println(b == d);  <span class="comment">// false,new创建了两个对象</span></span><br></pre></td></tr></table></figure>
+<h2 id="LintCode-Valid-Palindrome"><a href="#LintCode-Valid-Palindrome" class="headerlink" title="LintCode: Valid Palindrome"></a><a href="https://www.lintcode.com/problem/valid-palindrome/" target="_blank" rel="noopener">LintCode: Valid Palindrome</a></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> s: A string</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: Whether the string is a valid palindrome</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = s.length() - <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">            <span class="keyword">while</span> (left &lt; right &amp;&amp; !isValid(s.charAt(left))) &#123;</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">while</span> (left &lt; right &amp;&amp; !isValid(s.charAt(right))) &#123;</span><br><span class="line">                right--;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(Character.toLowerCase(s.charAt(left)) != </span><br><span class="line">               Character.toLowerCase(s.charAt(right))) &#123;</span><br><span class="line">                   <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                left++;</span><br><span class="line">                right--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(<span class="keyword">char</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Character.isLetter(c) || Character.isDigit(c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><img src="/2019/12/29/【九章算法】01-Java语言/image-20191228111006457.png" alt="image-20191228111006457"></p>
+<h2 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h2><p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-23.jpg" alt="Lecture_3_Java_Basic_II_20170709-23"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-24.jpg" alt="Lecture_3_Java_Basic_II_20170709-24"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-25.jpg" alt="Lecture_3_Java_Basic_II_20170709-25"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-26.jpg" alt="Lecture_3_Java_Basic_II_20170709-26"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-27.jpg" alt="Lecture_3_Java_Basic_II_20170709-27"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-28.jpg" alt="Lecture_3_Java_Basic_II_20170709-28"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-29.jpg" alt="Lecture_3_Java_Basic_II_20170709-29"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-30.jpg" alt="Lecture_3_Java_Basic_II_20170709-30"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-31.jpg" alt="Lecture_3_Java_Basic_II_20170709-31"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-32.jpg" alt="Lecture_3_Java_Basic_II_20170709-32"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-33.jpg" alt="Lecture_3_Java_Basic_II_20170709-33"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/Lecture_3_Java_Basic_II_20170709-35.jpg" alt="Lecture_3_Java_Basic_II_20170709-35"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/image-20191228135641121.png" alt="image-20191228135641121"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/image-20191228135917559.png" alt="image-20191228135917559"></p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/image-20191228135954662.png" alt="image-20191228135954662"></p>
+<h2 id="LintCode-Student-ID-Design-a-Student-class"><a href="#LintCode-Student-ID-Design-a-Student-class" class="headerlink" title="LintCode: Student ID(Design a Student class)"></a>LintCode: Student ID(Design a Student class)</h2><p>Description</p>
+<p>Implement a class Class with the following attributes and methods:</p>
+<ol>
+<li>A public attribute students which is an array of Student instances.</li>
+<li>A constructor with a parameter n, which is the total number of students in this class. The constructor should create n Student instances and initialized with student id from 0 ~ n-1</li>
+</ol>
+<p>Example</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Java: </span><br><span class="line">  Class cls = new Class(3)</span><br><span class="line">  cls.students[0]; // should be a student instance with id = 0</span><br><span class="line">  cls.students[1]; // should be a student instance with id = 1</span><br><span class="line">  cls.students[2]; // should be a student instance with id = 2</span><br><span class="line"></span><br><span class="line">Python:</span><br><span class="line">  cls = new Class(3)</span><br><span class="line">  cls.students[0] # should be a student instance with id = 0</span><br><span class="line">  cls.students[1] # should be a student instance with id = 1</span><br><span class="line">  cls.students[2] # should be a student instance with id = 2</span><br></pre></td></tr></table></figure>
+<hr>
+<p>Solution</p>
+<p>Java:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> id;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Class</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> Student[] students; <span class="comment">// 声明Student类型数组，即创建一个引用</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Class</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.students = <span class="keyword">new</span> Student[n]; <span class="comment">// 创建Student类型数组，将引用（students）指向此数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            students[i] = <span class="keyword">new</span> Student(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Python:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, id)</span>:</span></span><br><span class="line">        self.id = id;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Class</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">     * Declare a constructor with a parameter n which is the total number of</span></span><br><span class="line"><span class="string">     * students in the *class*. The constructor should create n Student</span></span><br><span class="line"><span class="string">     * instances and initialized with student id from 0 ~ n-1</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="comment"># write your code here</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        self.students = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            self.students.append(Student(i))</span><br></pre></td></tr></table></figure>
+<h2 id="LintCode-Student-Level"><a href="#LintCode-Student-Level" class="headerlink" title="LintCode: Student Level"></a>LintCode: Student Level</h2><p>Description<br>Implement a class Student, including the following attributes and methods:</p>
+<ol>
+<li>Two public attributes name(string) and score(int).</li>
+<li>A constructor expect a name as a parameter.</li>
+<li>A method getLevel to get the level(char) of the student.</li>
+</ol>
+<p>score – level table:</p>
+<ol>
+<li>A: score &gt;= 90</li>
+<li>B: score &gt;= 80 and &lt; 90</li>
+<li>C: score &gt;= 60 and &lt; 80</li>
+<li>D: score &lt; 60</li>
+</ol>
+<p>Example</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Java:</span><br><span class="line">    Student student = new Student(&quot;Zuck&quot;);</span><br><span class="line">    student.score = 10;</span><br><span class="line">    student.getLevel(); // should be &apos;D&apos;</span><br><span class="line">    student.score = 60;</span><br><span class="line">    student.getLevel(); // should be &apos;C&apos;</span><br><span class="line"></span><br><span class="line">Python:</span><br><span class="line">    student = Student(&quot;Zuck&quot;)</span><br><span class="line">    student.score = 10</span><br><span class="line">    student.getLevel() # should be &apos;D&apos;</span><br><span class="line">    student.score = 60</span><br><span class="line">    student.getLevel() # should be &apos;C&apos;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>Solution:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">## Basic Ideas:</span><br><span class="line">## Complexity: Time O(1), Space O(1)</span><br><span class="line">class Student:</span><br><span class="line"></span><br><span class="line">    <span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">     * Declare a constructor expect a name as a parameter.</span></span><br><span class="line"><span class="string">    '</span><span class="string">''</span></span><br><span class="line">        # write your code here</span><br><span class="line">    <span class="function">def <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line"><span class="function">        self.name </span>= name</span><br><span class="line">        self.score = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">     * Declare a public method `getLevel` to get the level(char) of this student.</span></span><br><span class="line"><span class="string">    '</span><span class="string">''</span></span><br><span class="line">    # write your code here</span><br><span class="line">    <span class="function">def <span class="title">getLevel</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="function">        <span class="keyword">if</span> self.score &gt;</span>= <span class="number">90</span>: <span class="keyword">return</span> <span class="string">'A'</span></span><br><span class="line">        <span class="keyword">if</span> self.score&gt;=<span class="number">80</span> and self.score&lt;<span class="number">90</span>: <span class="keyword">return</span> <span class="string">'B'</span></span><br><span class="line">        <span class="keyword">if</span> self.score&gt;=<span class="number">60</span> and self.score&lt;<span class="number">80</span>: <span class="keyword">return</span> <span class="string">'C'</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'D'</span></span><br></pre></td></tr></table></figure>
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><a href="https://code.dennyzhang.com/review-oodesign" target="_blank" rel="noopener">Object-Oriented Design Problems</a></li>
+<li><a href="https://cheatsheet.dennyzhang.com/cheatsheet-leetcode-A4" target="_blank" rel="noopener">LEETCODE COMMON TEMPLATES</a></li>
+</ul>
+<h1 id="第四讲-Reference-LinkedList-引用-amp-链表"><a href="#第四讲-Reference-LinkedList-引用-amp-链表" class="headerlink" title="第四讲 Reference LinkedList 引用 &amp; 链表"></a>第四讲 Reference LinkedList 引用 &amp; 链表</h1><h2 id="引用-Reference"><a href="#引用-Reference" class="headerlink" title="引用 Reference"></a>引用 Reference</h2><h3 id="对象去哪儿了"><a href="#对象去哪儿了" class="headerlink" title="对象去哪儿了?"></a>对象去哪儿了?</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Integer&gt; intList = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br></pre></td></tr></table></figure>
+<p>intList不是对象本身，是对象的引用<br>new出来的对象，存储在堆空间(heap space)上 </p>
+<ul>
+<li>堆空间 heap space </li>
+<li>栈空间 stack space </li>
+<li>注意区别于数据结构的heap &amp; stack </li>
+</ul>
+<h3 id="引用的赋值"><a href="#引用的赋值" class="headerlink" title="引用的赋值"></a>引用的赋值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Student student1 = new Student(&quot;Jack&quot;);</span><br><span class="line">Student student2 = new Student(&quot;Rose&quot;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>new出来两个对象</li>
+<li>student1和student2是这两个对象的引用 </li>
+</ul>
+<h3 id="演示对比-int-和-IntegerWrapper"><a href="#演示对比-int-和-IntegerWrapper" class="headerlink" title="演示对比 int 和 IntegerWrapper"></a>演示对比 int 和 IntegerWrapper</h3><p>Ps: int, double等都是基础类型</p>
+<p>IntegerWrapper对象作为函数参数</p>
+<ul>
+<li>对比Increment(int) 和 Increment(IntegerWrapper)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IntegerWrapper</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">int</span> value;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">IntegerWrapper</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">    value = val;</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">increment</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">    a++;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">increment</span><span class="params">(IntergerWrapper intW)</span> </span>&#123;</span><br><span class="line">    intW.value++; <span class="comment">// 指向同一个对象，可以修改</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    IntegerWrapper intW = <span class="keyword">new</span> IntegerWrapper(<span class="number">10</span>);</span><br><span class="line">    </span><br><span class="line">    increment(a);</span><br><span class="line">    increment(intW);</span><br><span class="line">    </span><br><span class="line">    System.out.println(<span class="string">"a: "</span> + a);</span><br><span class="line">    System.out.println(<span class="string">"intW.value: "</span> + inW.value);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/image-20191229125632239.png" alt="image-20191229125632239"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IntegerWrapper</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> value;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">IntegerWrapper</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        value = val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">increment</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">        a++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">increment</span><span class="params">(IntegerWrapper intW)</span> </span>&#123;</span><br><span class="line">        intW = <span class="keyword">new</span> IntegerWrapper(<span class="number">20</span>); <span class="comment">// 指向新创建的对象</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">        IntegerWrapper intW = <span class="keyword">new</span> IntegerWrapper(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">        increment(a);</span><br><span class="line">        increment(intW);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"a: "</span> + a);</span><br><span class="line">        System.out.println(<span class="string">"intW.value: "</span> + intW.value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/image-20191229144920273.png" alt="image-20191229144920273"></p>
+<p>原因分析：</p>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/image-20191229145002330.png" alt="image-20191229145002330"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>传递引用</li>
+<li>修改引用所指向对象的数据，修改引用没有任何效果(举例) </li>
+</ul>
+<h3 id="引用的好处与用处"><a href="#引用的好处与用处" class="headerlink" title="引用的好处与用处"></a>引用的好处与用处</h3><ul>
+<li>引用也存的是数据，存的是指向这个对象的地址</li>
+<li>使得数据更加的整齐</li>
+<li>需要传递引用去修改数据</li>
+</ul>
+<h3 id="什么是null"><a href="#什么是null" class="headerlink" title="什么是null"></a>什么是null</h3><p>空的引用，没有引用任何对象。 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">list.add(<span class="number">1</span>);</span><br><span class="line">list = <span class="keyword">null</span>; <span class="comment">// list变成了空引用</span></span><br><span class="line">list.add(<span class="number">1</span>); <span class="comment">// NullPointerException</span></span><br></pre></td></tr></table></figure>
+<h3 id="引用中的NULL值问题"><a href="#引用中的NULL值问题" class="headerlink" title="引用中的NULL值问题"></a>引用中的NULL值问题</h3><p>Student ID问题:  </p>
+<ul>
+<li><a href="http://www.lintcode.com/en/problem/student-id/" target="_blank" rel="noopener">http://www.lintcode.com/en/problem/student-id/</a> </li>
+</ul>
+<p>Note:构造一个Student的数组，对象数组(非基础类型的数组)new出来后， 每个对象都是NULL </p>
+<h2 id="链表-Linked-List"><a href="#链表-Linked-List" class="headerlink" title="链表 Linked List"></a>链表 <strong>Linked List</strong></h2><h3 id="什么是数据结构-data-structure"><a href="#什么是数据结构-data-structure" class="headerlink" title="什么是数据结构(data structure)"></a>什么是数据结构(data structure)</h3><p>● 数据</p>
+<pre><code> ○ 存储数据的功能 
+</code></pre><p>● 结构 </p>
+<pre><code>○ 如何组织排列存储的数据 
+</code></pre><p>● 操作 </p>
+<pre><code>○ 如何查询，添加，删除维护存在的数据 
+</code></pre><h3 id="什么是链表-linked-list"><a href="#什么是链表-linked-list" class="headerlink" title="什么是链表(linked list)"></a>什么是链表(linked list)</h3><ul>
+<li>由节点构成的列表</li>
+<li>线性的数据结构</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">int</span> val;</span><br><span class="line">  <span class="keyword">public</span> ListNode next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/29/【九章算法】01-Java语言/image-20191229153329531.png" alt="image-20191229153329531"></p>
+<h3 id="哨兵节点"><a href="#哨兵节点" class="headerlink" title="哨兵节点"></a>哨兵节点</h3><p>不得不提的dummy Node:伟大的哨兵节点: </p>
+<ul>
+<li>dummyNode -&gt; null  <img src="/2019/12/29/【九章算法】01-Java语言/image-20191229153719344.png" alt="image-20191229153719344"></li>
+</ul>
+<p>作用(前驱节点的重要性):</p>
+<ul>
+<li>使得每一个元素都有前驱节点 (好处：操作一致，程序逻辑更简单，容易找到头结点)</li>
+</ul>
+<h3 id="Coding-基于ListNode实现一个Linked-List"><a href="#Coding-基于ListNode实现一个Linked-List" class="headerlink" title="Coding:基于ListNode实现一个Linked List"></a>Coding:基于ListNode实现一个Linked List</h3><p><strong>LinkedList Class的接口:</strong> </p>
+<ul>
+<li>读取操作 get(location) // 获取location位置上的node的value </li>
+<li>查找操作 contains(val) // 判断链表中是否含有val值的node </li>
+<li>插入操作 add(location, val) // 在location的位置上插入一个值为val的node </li>
+<li>删除操作 remove(location) // 删除location位置上的元素 </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">int</span> val;</span><br><span class="line">  <span class="keyword">public</span> ListNode next;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">ListNode</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.val = value;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Location 0 是dummy的下一个节点</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkedList</span> </span>&#123;</span><br><span class="line">  ListNode dummy;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">LinkedList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    dummy = <span class="keyword">new</span> ListNode(-<span class="number">1</span>);</span><br><span class="line">    <span class="comment">// dummy.next = null;</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> location)</span> </span>&#123;</span><br><span class="line">    ListNode cur = dummy.next;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; location; ++i) &#123;</span><br><span class="line">      cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> cur.val;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">    ListNode head = dummy.next;</span><br><span class="line">    <span class="keyword">while</span> (head != <span class="keyword">null</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (head.val == val) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> location, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">    ListNode pre = dummy;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; location; ++i) &#123;</span><br><span class="line">      pre = pre.next;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    ListNode node = <span class="keyword">new</span> ListNode(val);</span><br><span class="line">    </span><br><span class="line">    node.next = pre.next;</span><br><span class="line">    pre.next = node;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">remove</span><span class="params">(<span class="keyword">int</span> location)</span> </span>&#123;</span><br><span class="line">    ListNode pre = dummy;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; location; ++i) &#123;</span><br><span class="line">      pre = pre.next;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    pre.next = pre.next.next;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ListNode head = dummy.next;</span><br><span class="line">    <span class="keyword">while</span> (head != <span class="keyword">null</span>) &#123;</span><br><span class="line">      System.out.println(head.val + <span class="string">"-&gt;"</span>);</span><br><span class="line">      head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">"null"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="时间复杂度对比"><a href="#时间复杂度对比" class="headerlink" title="时间复杂度对比"></a>时间复杂度对比</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作</th>
+<th>ArrayList</th>
+<th>LinkedList</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Add/Remove at end</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td style="text-align:left">Add/Remove at begin</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td style="text-align:left">Add/Remove at any where</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td style="text-align:left">Add/Remove at specified place</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td style="text-align:left">Read/Find By position</td>
+<td>O(1)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td style="text-align:left">Read/Find By target (value)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>捧个钱场？</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Lucas Chan 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Lucas Chan 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Lucas Chan</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/" title="【九章算法】01 Java语言">http://hackcraker.github.io/2019/12/29/【九章算法】01-Java语言/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/27/【贪心学院nlp】03-笔记总结/" rel="next" title="【贪心学院nlp】03 笔记总结">
+                <i class="fa fa-chevron-left"></i> 【贪心学院nlp】03 笔记总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/morty.png" alt="Lucas Chan">
+            
+              <p class="site-author-name" itemprop="name">Lucas Chan</p>
+              <p class="site-description motion-element" itemprop="description">满地都是六便士,他却抬头看到了月亮。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/hackcraker" title="GitHub &rarr; https://github.com/hackcraker" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://instagram.com/hackcraker" title="Instagram &rarr; https://instagram.com/hackcraker" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.douban.com/people/hackcraker" title="豆瓣 &rarr; https://www.douban.com/people/hackcraker" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第二讲-变量，数组和循环-Java基础-I"><span class="nav-number">1.</span> <span class="nav-text">第二讲 变量，数组和循环(Java基础 I)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">1.1.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ASCII-amp-Unicode编码"><span class="nav-number">1.1.1.</span> <span class="nav-text">ASCII &amp; Unicode编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组-Array"><span class="nav-number">1.1.2.</span> <span class="nav-text">数组 Array</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序的三大结构"><span class="nav-number">1.2.</span> <span class="nav-text">程序的三大结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#控制结构"><span class="nav-number">1.2.1.</span> <span class="nav-text">控制结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环结构"><span class="nav-number">1.2.2.</span> <span class="nav-text">循环结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三讲-字符串，函数，类和对象-Java基础-II"><span class="nav-number">2.</span> <span class="nav-text">第三讲 字符串，函数，类和对象(Java基础 II)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#String及其常用操作"><span class="nav-number">2.1.</span> <span class="nav-text">String及其常用操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LintCode-Valid-Palindrome"><span class="nav-number">2.2.</span> <span class="nav-text">LintCode: Valid Palindrome</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">2.3.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类和对象"><span class="nav-number">2.4.</span> <span class="nav-text">类和对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LintCode-Student-ID-Design-a-Student-class"><span class="nav-number">2.5.</span> <span class="nav-text">LintCode: Student ID(Design a Student class)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LintCode-Student-Level"><span class="nav-number">2.6.</span> <span class="nav-text">LintCode: Student Level</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐阅读"><span class="nav-number">2.7.</span> <span class="nav-text">推荐阅读</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四讲-Reference-LinkedList-引用-amp-链表"><span class="nav-number">3.</span> <span class="nav-text">第四讲 Reference LinkedList 引用 &amp; 链表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引用-Reference"><span class="nav-number">3.1.</span> <span class="nav-text">引用 Reference</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对象去哪儿了"><span class="nav-number">3.1.1.</span> <span class="nav-text">对象去哪儿了?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用的赋值"><span class="nav-number">3.1.2.</span> <span class="nav-text">引用的赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#演示对比-int-和-IntegerWrapper"><span class="nav-number">3.1.3.</span> <span class="nav-text">演示对比 int 和 IntegerWrapper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">3.1.4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用的好处与用处"><span class="nav-number">3.1.5.</span> <span class="nav-text">引用的好处与用处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是null"><span class="nav-number">3.1.6.</span> <span class="nav-text">什么是null</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用中的NULL值问题"><span class="nav-number">3.1.7.</span> <span class="nav-text">引用中的NULL值问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链表-Linked-List"><span class="nav-number">3.2.</span> <span class="nav-text">链表 Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是数据结构-data-structure"><span class="nav-number">3.2.1.</span> <span class="nav-text">什么是数据结构(data structure)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是链表-linked-list"><span class="nav-number">3.2.2.</span> <span class="nav-text">什么是链表(linked list)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哨兵节点"><span class="nav-number">3.2.3.</span> <span class="nav-text">哨兵节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-基于ListNode实现一个Linked-List"><span class="nav-number">3.2.4.</span> <span class="nav-text">Coding:基于ListNode实现一个Linked List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间复杂度对比"><span class="nav-number">3.2.5.</span> <span class="nav-text">时间复杂度对比</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">京ICP备 - 1321131714 </a>&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lucas Chan</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">41k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">38 分钟</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'L5gR7yTYP8X0caW0Hie6bbev-gzGzoHsz',
+    appKey: 'nWnbI4oH07bE20wyQ8mq9zVO',
+    placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
