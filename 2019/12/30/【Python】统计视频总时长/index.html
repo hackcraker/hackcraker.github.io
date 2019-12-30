@@ -97,70 +97,24 @@
 
 
 
-  <meta name="description" content="banner-top-logo   本文是学习贪心学院NLP自然语言处理集训营2（任课教师：李文哲）的总结学习笔记，对于一部分内容根据个人理解做了升级和优化。 视频总共时长为：119小时8分钟48秒 **  Logistics  nlpcamp_l1-01   nlpcamp_l1-02   nlpcamp_l1-03   nlpcamp_l1-04   nlpcamp_l1-05   nlpc">
-<meta name="keywords" content="机器翻译,NLP技术,NLP场景">
+  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384import osfrom moviepy.editor import Video">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【贪心学院nlp】01 笔记总结">
-<meta property="og:url" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/index.html">
+<meta property="og:title" content="【Python】统计视频总时长">
+<meta property="og:url" content="http://hackcraker.github.io/2019/12/30/【Python】统计视频总时长/index.html">
 <meta property="og:site_name" content="源泉">
-<meta property="og:description" content="banner-top-logo   本文是学习贪心学院NLP自然语言处理集训营2（任课教师：李文哲）的总结学习笔记，对于一部分内容根据个人理解做了升级和优化。 视频总共时长为：119小时8分钟48秒 **  Logistics  nlpcamp_l1-01   nlpcamp_l1-02   nlpcamp_l1-03   nlpcamp_l1-04   nlpcamp_l1-05   nlpc">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384import osfrom moviepy.editor import Video">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://smallpay.greedyai.com/skin/index/images/banner-top-logo.png">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-01.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-02.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-03.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-04.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-05.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-06.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-07.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-08.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-09.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-10.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-11.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-12.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-13.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-14.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-15.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-16.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-17.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-18.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-19.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-20.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-21.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-22.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-23.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/BF5F2B8FC48F801D851CAE00C695C6E0.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-24.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-25.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-26.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-27.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-28.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-29.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-30.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-31.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-32.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-33.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-34.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-35.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-36.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-37.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-38.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-39.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-40.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-41.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-42.jpg">
-<meta property="og:updated_time" content="2019-12-30T13:54:54.928Z">
+<meta property="og:updated_time" content="2019-12-30T13:45:34.152Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【贪心学院nlp】01 笔记总结">
-<meta name="twitter:description" content="banner-top-logo   本文是学习贪心学院NLP自然语言处理集训营2（任课教师：李文哲）的总结学习笔记，对于一部分内容根据个人理解做了升级和优化。 视频总共时长为：119小时8分钟48秒 **  Logistics  nlpcamp_l1-01   nlpcamp_l1-02   nlpcamp_l1-03   nlpcamp_l1-04   nlpcamp_l1-05   nlpc">
-<meta name="twitter:image" content="http://smallpay.greedyai.com/skin/index/images/banner-top-logo.png">
+<meta name="twitter:title" content="【Python】统计视频总时长">
+<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384import osfrom moviepy.editor import Video">
 
 
 
 
 
 
-  <link rel="canonical" href="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/">
+  <link rel="canonical" href="http://hackcraker.github.io/2019/12/30/【Python】统计视频总时长/">
 
 
 
@@ -170,7 +124,7 @@
   };
 </script>
 
-  <title>【贪心学院nlp】01 笔记总结 | 源泉</title>
+  <title>【Python】统计视频总时长 | 源泉</title>
   
 
 
@@ -419,7 +373,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/">
+    <link itemprop="mainEntityOfPage" href="http://hackcraker.github.io/2019/12/30/【Python】统计视频总时长/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lucas Chan">
@@ -436,7 +390,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【贪心学院nlp】01 笔记总结
+          <h1 class="post-title" itemprop="name headline">【Python】统计视频总时长
 
               
             
@@ -462,46 +416,16 @@
                 
               
 
-              <time title="创建时间：2019-12-25 19:31:17" itemprop="dateCreated datePublished" datetime="2019-12-25T19:31:17+08:00">2019-12-25</time>
+              <time title="创建时间：2019-12-30 21:44:18 / 修改时间：21:45:34" itemprop="dateCreated datePublished" datetime="2019-12-30T21:44:18+08:00">2019-12-30</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-12-30 21:54:54" itemprop="dateModified" datetime="2019-12-30T21:54:54+08:00">2019-12-30</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/贪心学院nlp/" itemprop="url" rel="index"><span itemprop="name">贪心学院nlp</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -515,8 +439,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/12/25/【贪心学院nlp】01-笔记总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/25/【贪心学院nlp】01-笔记总结/" itemprop="commentCount"></span>
+                <a href="/2019/12/30/【Python】统计视频总时长/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/30/【Python】统计视频总时长/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -538,7 +462,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.8k</span>
+                <span title="本文字数">2.5k</span>
               
 
               
@@ -552,7 +476,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -572,221 +496,7 @@
       
 
       
-        <figure>
-<img src="http://smallpay.greedyai.com/skin/index/images/banner-top-logo.png" alt="banner-top-logo"><figcaption>banner-top-logo</figcaption>
-</figure>
-<blockquote>
-<p>本文是学习<a href="https://www.greedyai.com/archive/course/47/lesson/744" target="_blank" rel="noopener">贪心学院NLP自然语言处理集训营2</a>（任课教师：李文哲）的总结学习笔记，对于一部分内容根据个人理解做了升级和优化。 视频总共时长为：119小时8分钟48秒 <!--6 (108) ¥**21998.00**    5(93) ¥**15998.00**    4(68) ¥**15998.00**    3(55) ¥**15998.00**    2(47) ¥**12998.00-->**</p>
-</blockquote>
-<h2 id="logistics">Logistics</h2>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-01.jpg" alt="nlpcamp_l1-01"><figcaption>nlpcamp_l1-01</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-02.jpg" alt="nlpcamp_l1-02"><figcaption>nlpcamp_l1-02</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-03.jpg" alt="nlpcamp_l1-03"><figcaption>nlpcamp_l1-03</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-04.jpg" alt="nlpcamp_l1-04"><figcaption>nlpcamp_l1-04</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-05.jpg" alt="nlpcamp_l1-05"><figcaption>nlpcamp_l1-05</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-06.jpg" alt="nlpcamp_l1-06"><figcaption>nlpcamp_l1-06</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-07.jpg" alt="nlpcamp_l1-07"><figcaption>nlpcamp_l1-07</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-08.jpg" alt="nlpcamp_l1-08"><figcaption>nlpcamp_l1-08</figcaption>
-</figure>
-<h2 id="nlp定义以及歧义性">NLP定义以及歧义性</h2>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-09.jpg" alt="nlpcamp_l1-09"><figcaption>nlpcamp_l1-09</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-10.jpg" alt="nlpcamp_l1-10"><figcaption>nlpcamp_l1-10</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-11.jpg" alt="nlpcamp_l1-11"><figcaption>nlpcamp_l1-11</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-12.jpg" alt="nlpcamp_l1-12"><figcaption>nlpcamp_l1-12</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-13.jpg" alt="nlpcamp_l1-13"><figcaption>nlpcamp_l1-13</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-14.jpg" alt="nlpcamp_l1-14"><figcaption>nlpcamp_l1-14</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-15.jpg" alt="nlpcamp_l1-15"><figcaption>nlpcamp_l1-15</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-16.jpg" alt="nlpcamp_l1-16"><figcaption>nlpcamp_l1-16</figcaption>
-</figure>
-<h2 id="实现一个机器翻译系统">实现一个机器翻译系统</h2>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-17.jpg" alt="nlpcamp_l1-17"><figcaption>nlpcamp_l1-17</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-18.jpg" alt="nlpcamp_l1-18"><figcaption>nlpcamp_l1-18</figcaption>
-</figure>
-<blockquote>
-<p>传统做法：给定语料库，在其中做统计，语料少的可以用排除法，根据大概的匹配结果返回给用户。</p>
-</blockquote>
-<p>答案：jjat arrat vat mat hilat oloat at-yurp</p>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-19.jpg" alt="nlpcamp_l1-19"><figcaption>nlpcamp_l1-19</figcaption>
-</figure>
-<p>传统翻译系统缺陷：</p>
-<ul>
-<li>训练速度慢(使用AI模型)</li>
-<li>语法不正确(重点，语法要让人可以理解)</li>
-<li>规则统计</li>
-<li>语义</li>
-<li>上下文</li>
-</ul>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-20.jpg" alt="nlpcamp_l1-20"><figcaption>nlpcamp_l1-20</figcaption>
-</figure>
-<p>如何保证生成的语句合理通顺？</p>
-<p>步骤：中文分词 -&gt; 逐词翻译 -&gt; 罗列所有可能组合 -&gt; 选择最合适的句子(Language Model)</p>
-<p>问题：两步的模型计算量过大，时间复杂度太高(指数级)</p>
-<p>解决方案：两个模型同时考虑，维特比算法直接计算出 argmax P(e) * P(c|e)</p>
-<p>Translation Model + Language Model —&gt; Decoding Algorithm, Viterbi Algorithm(DP)</p>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-21.jpg" alt="nlpcamp_l1-21"><figcaption>nlpcamp_l1-21</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-22.jpg" alt="nlpcamp_l1-22"><figcaption>nlpcamp_l1-22</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-23.jpg" alt="nlpcamp_l1-23"><figcaption>nlpcamp_l1-23</figcaption>
-</figure>
-<p>语言模型分类：(计算每一个概率)</p>
-<ul>
-<li><p>Unigram Model：独立</p></li>
-<li><p>Bigram Model：考虑前一个单词</p></li>
-<li><p>Trigram Model：考虑前两个单词</p></li>
-<li><p>……</p></li>
-<li><p>N-gram Model</p></li>
-</ul>
-<p>马尔科夫假设</p>
-<p>一点公式推导：使精度可以接受且又容易计算</p>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/BF5F2B8FC48F801D851CAE00C695C6E0.jpg" alt="BF5F2B8FC48F801D851CAE00C695C6E0"><figcaption>BF5F2B8FC48F801D851CAE00C695C6E0</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-24.jpg" alt="nlpcamp_l1-24"><figcaption>nlpcamp_l1-24</figcaption>
-</figure>
-<p>中国的机器翻译难度较大，美国的较容易</p>
-<h2 id="nlp的经典应用场景">NLP的经典应用场景</h2>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-25.jpg" alt="nlpcamp_l1-25"><figcaption>nlpcamp_l1-25</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-26.jpg" alt="nlpcamp_l1-26"><figcaption>nlpcamp_l1-26</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-27.jpg" alt="nlpcamp_l1-27"><figcaption>nlpcamp_l1-27</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-28.jpg" alt="nlpcamp_l1-28"><figcaption>nlpcamp_l1-28</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-29.jpg" alt="nlpcamp_l1-29"><figcaption>nlpcamp_l1-29</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-30.jpg" alt="nlpcamp_l1-30"><figcaption>nlpcamp_l1-30</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-31.jpg" alt="nlpcamp_l1-31"><figcaption>nlpcamp_l1-31</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-32.jpg" alt="nlpcamp_l1-32"><figcaption>nlpcamp_l1-32</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-33.jpg" alt="nlpcamp_l1-33"><figcaption>nlpcamp_l1-33</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-34.jpg" alt="nlpcamp_l1-34"><figcaption>nlpcamp_l1-34</figcaption>
-</figure>
-<ul>
-<li><em>Named-entity recognition</em> (<em>NER</em>)</li>
-<li><em>Relation Extraction</em></li>
-</ul>
-<h2 id="nlp的关键技术">NLP的关键技术</h2>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-35.jpg" alt="nlpcamp_l1-35"><figcaption>nlpcamp_l1-35</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-36.jpg" alt="nlpcamp_l1-36"><figcaption>nlpcamp_l1-36</figcaption>
-</figure>
-<p><em>词性标注</em>（Part-of-Speech tagging 或POS tagging)</p>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-37.jpg" alt="nlpcamp_l1-37"><figcaption>nlpcamp_l1-37</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-38.jpg" alt="nlpcamp_l1-38"><figcaption>nlpcamp_l1-38</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-39.jpg" alt="nlpcamp_l1-39"><figcaption>nlpcamp_l1-39</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-40.jpg" alt="nlpcamp_l1-40"><figcaption>nlpcamp_l1-40</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-41.jpg" alt="nlpcamp_l1-41"><figcaption>nlpcamp_l1-41</figcaption>
-</figure>
-<figure>
-<img src="/2019/12/25/【贪心学院nlp】01-笔记总结/nlpcamp_l1-42.jpg" alt="nlpcamp_l1-42"><figcaption>nlpcamp_l1-42</figcaption>
-</figure>
-<p>多去阅读state-of-art paper，了解nlp领域内的最新进展。 看项目中涉及到哪些技术，知道这些技术的实现难度，评估项目可行性 。</p>
-<p><a href="https://www.quora.com/What-are-the-major-open-problems-in-natural-language-understanding" class="uri" target="_blank" rel="noopener">https://www.quora.com/What-are-the-major-open-problems-in-natural-language-understanding</a></p>
-<p>I will classify the problems in Natural Language Processing into 3 categories :</p>
-<h3 id="easy-or-mostly-solved"><strong>1. Easy or mostly solved</strong></h3>
-<ul>
-<li><strong>Spam detection</strong></li>
-<li><p><strong>Part of Speech Tagging</strong> - Example <em>INPUT:</em> Profits soared at Boeing Co., easily topping forecasts on Wall Street, as their CEO Alan Mulally announced first quarter results. <em>OUTPUT:</em> Profits/N soared/V at/P Boeing/N Co./N ,/, easily/ADV topping/V forecasts/ N on/P Wall/N Street/N ,/, as/P their/POSS CEO/N Alan/N Mulally/ N announced/V first/ADJ quarter/N results/N ./. <em>KEY: N = Noun, V = Verb, P = Preposition, Adv = Adverb</em></p></li>
-<li><p><strong>Named Entity Recognition</strong> - Example</p></li>
-</ul>
-<p>​ INPUT:</p>
-<p>​ Profits soared at Boeing Co., easily topping forecasts on Wall Street, as</p>
-<p>​ their CEO Alan Mulally announced first quarter results.</p>
-<p>​ OUTPUT:</p>
-<p>​ Profits/NA soared/NA at/NA Boeing/SC Co./CC ,/NA easily/NA topping/</p>
-<p>​ NA forecasts/NA on/NA Wall/SL Street/CL ,/NA as/NA their/NA CEO/NA</p>
-<p>​ Alan/SP Mulally/CP announced/NA first/NA quarter/NA results/NA ./NA</p>
-<p>​ KEY: NA = No entity, SC = Start Company, CC = Continue Company, SL = Start Location, CL = Continue Location</p>
-<h3 id="intermediate-or-making-good-progress"><strong>2. Intermediate or making good progress</strong></h3>
-<ul>
-<li><strong>Sentiment analysis</strong>- Example:</li>
-</ul>
-<p>​ Best roast chicken in San Francisco! -- Positive</p>
-<p>​ The waiter ignored us for 20 minutes. -- Negative</p>
-<ul>
-<li><strong>Coreference resolution</strong> - Example: &quot;Carter told Mubarak he shouldn't run again.&quot; To solve whether &quot;he&quot; is related to &quot;Carter&quot; or &quot;Mubarak&quot;.</li>
-<li><strong>Word sense disambiguation</strong> - Example :</li>
-</ul>
-<p>​ I need new batteries for my mouse. - &quot;mouse&quot; is ambiguous here.</p>
-<ul>
-<li><strong>Parsing</strong> - the basic problem of parsing sentences.</li>
-<li><strong>Machine Translation</strong> - translating sentences from one language to another, best example would be Google translate.</li>
-<li><strong>Information Translation</strong> - to take a text as input and represent it in a structured form like a database entries.</li>
-</ul>
-<h3 id="hard-or-still-need-lot-of-work"><strong>3. Hard or still need lot of work</strong></h3>
-<ul>
-<li><strong>Text Summarization</strong> - to take input as text document(s) and try to condense them into a summary.</li>
-<li><strong>Machine dialog system</strong> - Example:</li>
-</ul>
-<p>​ User - I need a flight from New York to London, arriving at 10 pm ?</p>
-<p>​ System - What day are you leaving?</p>
-<p>​ User - Tomorrow.</p>
-<p>​ System detects the missing information in your sentences.</p>
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> moviepy.editor <span class="keyword">import</span> VideoFileClip</span><br><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MovieDirUtil</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,file_dir)</span>:</span></span><br><span class="line">        self.file_dir = file_dir</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_filesize</span><span class="params">(self, filename)</span>:</span></span><br><span class="line">        <span class="string">u"""</span></span><br><span class="line"><span class="string">        获取文件大小（M: 兆）</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        file_byte = os.path.getsize(filename)</span><br><span class="line">        <span class="keyword">return</span> self.sizeConvert(file_byte)</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_file_times</span><span class="params">(self, filename)</span>:</span></span><br><span class="line">        <span class="string">u"""</span></span><br><span class="line"><span class="string">        获取视频时长（s:秒）</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        file_time = <span class="number">0</span></span><br><span class="line">        clip = <span class="keyword">None</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            clip = VideoFileClip(filename)</span><br><span class="line">            file_time = clip.duration</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            traceback.print_exc()</span><br><span class="line">        <span class="keyword">finally</span>:</span><br><span class="line">            <span class="keyword">if</span> clip:</span><br><span class="line">                clip.close()</span><br><span class="line">        <span class="keyword">return</span> file_time</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sizeConvert</span><span class="params">(self, size)</span>:</span>  <span class="comment"># 文件大小单位换算</span></span><br><span class="line">        K, M, G = <span class="number">1024</span>, <span class="number">1024</span> ** <span class="number">2</span>, <span class="number">1024</span> ** <span class="number">3</span></span><br><span class="line">        <span class="keyword">if</span> size &gt;= G:</span><br><span class="line">            <span class="keyword">return</span> str(size / G) + <span class="string">'G Bytes'</span></span><br><span class="line">        <span class="keyword">elif</span> size &gt;= M:</span><br><span class="line">            <span class="keyword">return</span> str(size / M) + <span class="string">'M Bytes'</span></span><br><span class="line">        <span class="keyword">elif</span> size &gt;= K:</span><br><span class="line">            <span class="keyword">return</span> str(size / K) + <span class="string">'K Bytes'</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> str(size) + <span class="string">'Bytes'</span></span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">timeConvert</span><span class="params">(self, size)</span>:</span>  <span class="comment"># 时间单位换算</span></span><br><span class="line">        M, H = <span class="number">60</span>, <span class="number">60</span> ** <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> size &lt; M:</span><br><span class="line">            <span class="keyword">return</span> str(size) + <span class="string">u'秒'</span></span><br><span class="line">        <span class="keyword">if</span> size &lt; H:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">u'%s分钟%s秒'</span> % (int(size / M), int(size % M))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            hour = int(size / H)</span><br><span class="line">            mine = int(size % H / M)</span><br><span class="line">            second = int(size % H % M)</span><br><span class="line">            tim_srt = <span class="string">u'%s小时%s分钟%s秒'</span> % (hour, mine, second)</span><br><span class="line">            <span class="keyword">return</span> tim_srt</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_all_file</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">u"""</span></span><br><span class="line"><span class="string">        获取目录下下所有的文件</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        file_list = []</span><br><span class="line">        <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(file_dir):</span><br><span class="line">            <span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line">                <span class="comment"># begin</span></span><br><span class="line">                <span class="comment">#print(os.path.join(root, file))</span></span><br><span class="line">                file_list.append(os.path.join(root, file))</span><br><span class="line">                <span class="comment"># end</span></span><br><span class="line">        <span class="keyword">return</span> file_list</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_all_file_duration</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">u"""</span></span><br><span class="line"><span class="string">        获取目录下下所有的文件的播放总时长，单位s</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        fileList = self.get_all_file()</span><br><span class="line">        file_duration = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> f <span class="keyword">in</span> fileList:</span><br><span class="line">            <span class="comment"># print(f)</span></span><br><span class="line">            print(f, mdu.timeConvert(self.get_file_times(f)))</span><br><span class="line">            file_duration += self.get_file_times(f)</span><br><span class="line">        <span class="keyword">return</span> file_duration</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    file_dir = <span class="string">u"/Volumes/sed"</span>  <span class="comment"># 定义目录地址</span></span><br><span class="line">    mdu = MovieDirUtil(file_dir)</span><br><span class="line">    print(<span class="string">"目录里面包含的视频总共时长为：&#123;duration&#125;"</span>.format(duration=mdu.timeConvert(mdu.get_all_file_duration())))</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -850,7 +560,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/" title="【贪心学院nlp】01 笔记总结">http://hackcraker.github.io/2019/12/25/【贪心学院nlp】01-笔记总结/</a>
+    <a href="http://hackcraker.github.io/2019/12/30/【Python】统计视频总时长/" title="【Python】统计视频总时长">http://hackcraker.github.io/2019/12/30/【Python】统计视频总时长/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -861,16 +571,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/机器翻译/" rel="tag"># 机器翻译</a>
-          
-            <a href="/tags/NLP技术/" rel="tag"># NLP技术</a>
-          
-            <a href="/tags/NLP场景/" rel="tag"># NLP场景</a>
-          
-        </div>
-      
 
       
       
@@ -880,8 +580,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/10/assets/" rel="next" title="presentation">
-                <i class="fa fa-chevron-left"></i> presentation
+              <a href="/2019/12/30/【九章算法】02-Java语言/" rel="next" title="【九章算法】02 Java语言">
+                <i class="fa fa-chevron-left"></i> 【九章算法】02 Java语言
               </a>
             
           </div>
@@ -889,10 +589,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/26/【贪心学院nlp】02-笔记总结/" rel="prev" title="【贪心学院nlp】02 笔记总结">
-                【贪心学院nlp】02 笔记总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
