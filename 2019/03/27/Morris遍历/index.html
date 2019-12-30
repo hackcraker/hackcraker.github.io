@@ -97,20 +97,20 @@
 
 
 
-  <meta name="description" content="Morris遍历 问题描述：利用Morris遍历实现二叉树的先序，中序，后续遍历，时间复杂度O(N)，额外空间复杂度O(1)。   算法描述 来到的当前节点记为cur（cur是一个引用），如果cur无左孩子，cur向右移动。 如果cur有左孩子，找到cur左子树上最右的节点，记为mostright。 如果mostright的右指针指向空，则让其指向cur，cur向左移动。 如果mostright的">
+  <meta name="description" content="Morris遍历  问题描述：利用Morris遍历实现二叉树的先序，中序，后续遍历，时间复杂度O(N)，额外空间复杂度O(1)。   算法描述  来到的当前节点记为cur（cur是一个引用），如果cur无左孩子，cur向右移动。 如果cur有左孩子，找到cur左子树上最右的节点，记为mostright。  如果mostright的右指针指向空，则让其指向cur，cur向左移动。 如果mostrig">
 <meta name="keywords" content="树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Morris遍历">
 <meta property="og:url" content="http://hackcraker.github.io/2019/03/27/Morris遍历/index.html">
 <meta property="og:site_name" content="源泉">
-<meta property="og:description" content="Morris遍历 问题描述：利用Morris遍历实现二叉树的先序，中序，后续遍历，时间复杂度O(N)，额外空间复杂度O(1)。   算法描述 来到的当前节点记为cur（cur是一个引用），如果cur无左孩子，cur向右移动。 如果cur有左孩子，找到cur左子树上最右的节点，记为mostright。 如果mostright的右指针指向空，则让其指向cur，cur向左移动。 如果mostright的">
+<meta property="og:description" content="Morris遍历  问题描述：利用Morris遍历实现二叉树的先序，中序，后续遍历，时间复杂度O(N)，额外空间复杂度O(1)。   算法描述  来到的当前节点记为cur（cur是一个引用），如果cur无左孩子，cur向右移动。 如果cur有左孩子，找到cur左子树上最右的节点，记为mostright。  如果mostright的右指针指向空，则让其指向cur，cur向左移动。 如果mostrig">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/005BYqpgly1g1klzt86h2g30dw06i78j.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/005BYqpgly1g1klzfsmjzj31400u0wqg.jpg">
 <meta property="og:updated_time" content="2019-03-30T02:25:31.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Morris遍历">
-<meta name="twitter:description" content="Morris遍历 问题描述：利用Morris遍历实现二叉树的先序，中序，后续遍历，时间复杂度O(N)，额外空间复杂度O(1)。   算法描述 来到的当前节点记为cur（cur是一个引用），如果cur无左孩子，cur向右移动。 如果cur有左孩子，找到cur左子树上最右的节点，记为mostright。 如果mostright的右指针指向空，则让其指向cur，cur向左移动。 如果mostright的">
+<meta name="twitter:description" content="Morris遍历  问题描述：利用Morris遍历实现二叉树的先序，中序，后续遍历，时间复杂度O(N)，额外空间复杂度O(1)。   算法描述  来到的当前节点记为cur（cur是一个引用），如果cur无左孩子，cur向右移动。 如果cur有左孩子，找到cur左子树上最右的节点，记为mostright。  如果mostright的右指针指向空，则让其指向cur，cur向左移动。 如果mostrig">
 <meta name="twitter:image" content="https://ws3.sinaimg.cn/large/005BYqpgly1g1klzt86h2g30dw06i78j.jpg">
 
 
@@ -530,23 +530,29 @@
       
 
       
-        <h2 id="Morris遍历"><a href="#Morris遍历" class="headerlink" title="Morris遍历"></a>Morris遍历</h2><blockquote>
+        <h2 id="morris遍历">Morris遍历</h2>
+<blockquote>
 <p>问题描述：利用Morris遍历实现二叉树的先序，中序，后续遍历，时间复杂度O(N)，额外空间复杂度O(1)。</p>
 </blockquote>
-<p><img src="https://ws3.sinaimg.cn/large/005BYqpgly1g1klzt86h2g30dw06i78j.jpg" alt></p>
-<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><ol>
+<p><img src="https://ws3.sinaimg.cn/large/005BYqpgly1g1klzt86h2g30dw06i78j.jpg"></p>
+<h4 id="算法描述">算法描述</h4>
+<ol type="1">
 <li>来到的当前节点记为cur（cur是一个引用），如果cur无左孩子，cur向右移动。</li>
-<li>如果cur有左孩子，找到cur左子树上最右的节点，记为mostright。<ol>
+<li>如果cur有左孩子，找到cur左子树上最右的节点，记为mostright。
+<ol start="3" type="1">
 <li>如果mostright的右指针指向空，则让其指向cur，cur向左移动。</li>
 <li>如果mostright的右指针指向cur，则让其指向空，cur向右移动。</li>
+</ol></li>
 </ol>
-</li>
-</ol>
-<h4 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h4><p><img src="https://ws3.sinaimg.cn/large/005BYqpgly1g1klzfsmjzj31400u0wqg.jpg" alt></p>
-<h4 id="算法解析"><a href="#算法解析" class="headerlink" title="算法解析"></a>算法解析</h4><p>如果一个节点有左子树，则回到这个节点两次，若没有，则回到这个节点一次。递归版遍历无论如何可以三次来到一个节点，根据处理时机的不同分为三种顺序的遍历。而Morris遍历是根据一个节点左子树最右指针的指向来判断是第一次来到这个节点还是第二次。第一次来到这个节点处理时记为先序，第二次来到这个节点处理时记为中序。</p>
+<h4 id="图解">图解</h4>
+<p><img src="https://ws3.sinaimg.cn/large/005BYqpgly1g1klzfsmjzj31400u0wqg.jpg"></p>
+<h4 id="算法解析">算法解析</h4>
+<p>如果一个节点有左子树，则回到这个节点两次，若没有，则回到这个节点一次。递归版遍历无论如何可以三次来到一个节点，根据处理时机的不同分为三种顺序的遍历。而Morris遍历是根据一个节点左子树最右指针的指向来判断是第一次来到这个节点还是第二次。第一次来到这个节点处理时记为先序，第二次来到这个节点处理时记为中序。</p>
 <p>在第二次来到这个节点时逆序打印它左子树的右边界，最后单独打印整棵树的右边界，记为后序遍历。</p>
-<h4 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h4><p>整棵树可以分解成由右边界组成，算法有限次的遍历了右边界，所以时间复杂度是O(N)。</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 递归版遍历，方便理解</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">process_recursive</span><span class="params">(root, res=None)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> root <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">        <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">if</span> res <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">        res = []</span><br><span class="line">    <span class="comment"># 1</span></span><br><span class="line">    <span class="comment"># res.append(root.val)</span></span><br><span class="line">    process_recursive(root.left, res)</span><br><span class="line">    <span class="comment"># 2</span></span><br><span class="line">    <span class="comment"># res.append(root.val)</span></span><br><span class="line">    process_recursive(root.right, res)</span><br><span class="line">    <span class="comment"># 3</span></span><br><span class="line">    <span class="comment"># res.append(root.val)</span></span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<h4 id="算法复杂度">算法复杂度</h4>
+<p>整棵树可以分解成由右边界组成，算法有限次的遍历了右边界，所以时间复杂度是O(N)。</p>
+<h4 id="code">Code</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 递归版遍历，方便理解</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">process_recursive</span><span class="params">(root, res=None)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> root <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">        <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">if</span> res <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">        res = []</span><br><span class="line">    <span class="comment"># 1</span></span><br><span class="line">    <span class="comment"># res.append(root.val)</span></span><br><span class="line">    process_recursive(root.left, res)</span><br><span class="line">    <span class="comment"># 2</span></span><br><span class="line">    <span class="comment"># res.append(root.val)</span></span><br><span class="line">    process_recursive(root.right, res)</span><br><span class="line">    <span class="comment"># 3</span></span><br><span class="line">    <span class="comment"># res.append(root.val)</span></span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Morris版遍历</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">preorder_morris</span><span class="params">(root)</span>:</span></span><br><span class="line">    res = []</span><br><span class="line">    cur = root</span><br><span class="line">    <span class="keyword">while</span> cur:</span><br><span class="line">        <span class="keyword">if</span> cur.left <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            res.append(cur.val)</span><br><span class="line">            cur = cur.right</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            node = cur.left</span><br><span class="line">            <span class="keyword">while</span> node.right <span class="keyword">and</span> node.right != cur:</span><br><span class="line">                node = node.right</span><br><span class="line">            <span class="keyword">if</span> node.right <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">                res.append(cur.val)</span><br><span class="line">                node.right = cur</span><br><span class="line">                cur = cur.left</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                node.right = <span class="keyword">None</span></span><br><span class="line">                cur = cur.right</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder_morris</span><span class="params">(root)</span>:</span></span><br><span class="line">    res = []</span><br><span class="line">    cur = root </span><br><span class="line">    <span class="keyword">while</span> cur:</span><br><span class="line">        <span class="keyword">if</span> cur.left <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            res.append(cur.val)</span><br><span class="line">            cur = cur.right</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            node = cur.left</span><br><span class="line">            <span class="keyword">while</span> node.right <span class="keyword">and</span> node.right != cur:</span><br><span class="line">                node = node.right</span><br><span class="line">            <span class="keyword">if</span> node.right <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">                node.right = cur</span><br><span class="line">                cur = cur.left</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res.append(cur.val)</span><br><span class="line">                node.right = <span class="keyword">None</span></span><br><span class="line">                cur = cur.right</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">postorder_morris</span><span class="params">(root: Node)</span> -&gt; list:</span></span><br><span class="line">    dummy = Node(<span class="number">0</span>)</span><br><span class="line">    dummy.left = root</span><br><span class="line">    res = []</span><br><span class="line">    cur = dummy</span><br><span class="line">    <span class="keyword">while</span> cur:</span><br><span class="line">        <span class="keyword">if</span> cur.left <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            cur = cur.right</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            node = cur.left</span><br><span class="line">            <span class="keyword">while</span> node.right <span class="keyword">and</span> node.right != cur:</span><br><span class="line">                node = node.right</span><br><span class="line">            <span class="keyword">if</span> node.right <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">                node.right = cur</span><br><span class="line">                cur = cur.left</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res += traceBack(cur.left, node)</span><br><span class="line">                node.right = <span class="keyword">None</span></span><br><span class="line">                cur = cur.right</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">traceBack</span><span class="params">(frm, to)</span>:</span></span><br><span class="line">    res = []</span><br><span class="line">    cur = frm</span><br><span class="line">    <span class="keyword">while</span> cur <span class="keyword">is</span> <span class="keyword">not</span> to:</span><br><span class="line">        res.append(cur.val)</span><br><span class="line">        cur = cur.right</span><br><span class="line">    res.append(to.val)</span><br><span class="line">    res.reverse()</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
 
       
@@ -861,7 +867,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Morris遍历"><span class="nav-text">Morris遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图解"><span class="nav-text">图解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法解析"><span class="nav-text">算法解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法复杂度"><span class="nav-text">算法复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#morris遍历"><span class="nav-text">Morris遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图解"><span class="nav-text">图解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法解析"><span class="nav-text">算法解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法复杂度"><span class="nav-text">算法复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#code"><span class="nav-text">Code</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -894,7 +900,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">48k</span>
+    <span title="站点总字数">50k</span>
   
 
   
@@ -903,7 +909,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">44 分钟</span>
+    <span title="站点阅读时长">45 分钟</span>
   
 </div>
 
