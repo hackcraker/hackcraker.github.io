@@ -97,19 +97,20 @@
 
 
 
-  <meta name="description" content="第五讲 栈和队列 Stack &amp;amp; Queue栈 Stack什么是栈(stack)栈是一种后进先出(last in first out，LIFO)的线性数据结构  学习目标 implement a stack ○ http://www.lintcode.com/en/problem/implement-stack/    valid parentheses ○ http://www.lint">
+  <meta name="description" content="第五讲 栈和队列 Stack &amp;amp; Queue栈 Stack学习目标 implement a stack ○ http://www.lintcode.com/en/problem/implement-stack/    valid parentheses ○ http://www.lintcode.com/en/problem/valid-parentheses/  什么是栈(stack)栈">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【九章算法】02 Java语言">
 <meta property="og:url" content="http://hackcraker.github.io/2019/12/30/【九章算法】02-Java语言/index.html">
 <meta property="og:site_name" content="源泉">
-<meta property="og:description" content="第五讲 栈和队列 Stack &amp;amp; Queue栈 Stack什么是栈(stack)栈是一种后进先出(last in first out，LIFO)的线性数据结构  学习目标 implement a stack ○ http://www.lintcode.com/en/problem/implement-stack/    valid parentheses ○ http://www.lint">
+<meta property="og:description" content="第五讲 栈和队列 Stack &amp;amp; Queue栈 Stack学习目标 implement a stack ○ http://www.lintcode.com/en/problem/implement-stack/    valid parentheses ○ http://www.lintcode.com/en/problem/valid-parentheses/  什么是栈(stack)栈">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【九章算法】02-Java语言/image-20191230205927164.png">
-<meta property="og:updated_time" content="2019-12-30T13:47:11.458Z">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【九章算法】02-Java语言/image-20191231004257760.png">
+<meta property="og:updated_time" content="2019-12-30T16:43:23.142Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【九章算法】02 Java语言">
-<meta name="twitter:description" content="第五讲 栈和队列 Stack &amp;amp; Queue栈 Stack什么是栈(stack)栈是一种后进先出(last in first out，LIFO)的线性数据结构  学习目标 implement a stack ○ http://www.lintcode.com/en/problem/implement-stack/    valid parentheses ○ http://www.lint">
+<meta name="twitter:description" content="第五讲 栈和队列 Stack &amp;amp; Queue栈 Stack学习目标 implement a stack ○ http://www.lintcode.com/en/problem/implement-stack/    valid parentheses ○ http://www.lintcode.com/en/problem/valid-parentheses/  什么是栈(stack)栈">
 <meta name="twitter:image" content="http://hackcraker.github.io/2019/12/30/【九章算法】02-Java语言/image-20191230205927164.png">
 
 
@@ -419,12 +420,24 @@
                 
               
 
-              <time title="创建时间：2019-12-30 17:24:06 / 修改时间：21:47:11" itemprop="dateCreated datePublished" datetime="2019-12-30T17:24:06+08:00">2019-12-30</time>
+              <time title="创建时间：2019-12-30 17:24:06" itemprop="dateCreated datePublished" datetime="2019-12-30T17:24:06+08:00">2019-12-30</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-31 00:43:23" itemprop="dateModified" datetime="2019-12-31T00:43:23+08:00">2019-12-31</time>
               
             
           </span>
@@ -483,7 +496,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2k</span>
+                <span title="本文字数">3.3k</span>
               
 
               
@@ -497,7 +510,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -517,9 +530,9 @@
       
 
       
-        <h1 id="第五讲-栈和队列-Stack-amp-Queue"><a href="#第五讲-栈和队列-Stack-amp-Queue" class="headerlink" title="第五讲 栈和队列 Stack &amp; Queue"></a>第五讲 栈和队列 Stack &amp; Queue</h1><h2 id="栈-Stack"><a href="#栈-Stack" class="headerlink" title="栈 Stack"></a>栈 <strong>Stack</strong></h2><h3 id="什么是栈-stack"><a href="#什么是栈-stack" class="headerlink" title="什么是栈(stack)"></a>什么是栈(stack)</h3><p>栈是一种后进先出(last in first out，LIFO)的线性数据结构 </p>
-<h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><p> implement a stack<br> ○ <a href="http://www.lintcode.com/en/problem/implement-stack/" target="_blank" rel="noopener">http://www.lintcode.com/en/problem/implement-stack/</a> </p>
+        <h1 id="第五讲-栈和队列-Stack-amp-Queue"><a href="#第五讲-栈和队列-Stack-amp-Queue" class="headerlink" title="第五讲 栈和队列 Stack &amp; Queue"></a>第五讲 栈和队列 Stack &amp; Queue</h1><h2 id="栈-Stack"><a href="#栈-Stack" class="headerlink" title="栈 Stack"></a>栈 <strong>Stack</strong></h2><h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><p> implement a stack<br> ○ <a href="http://www.lintcode.com/en/problem/implement-stack/" target="_blank" rel="noopener">http://www.lintcode.com/en/problem/implement-stack/</a> </p>
 <p>  valid parentheses<br> ○ <a href="http://www.lintcode.com/en/problem/valid-parentheses/" target="_blank" rel="noopener">http://www.lintcode.com/en/problem/valid-parentheses/</a> </p>
+<h3 id="什么是栈-stack"><a href="#什么是栈-stack" class="headerlink" title="什么是栈(stack)"></a>什么是栈(stack)</h3><p>栈是一种后进先出(last in first out，LIFO)的线性数据结构 </p>
 <h3 id="栈的操作"><a href="#栈的操作" class="headerlink" title="栈的操作"></a>栈的操作</h3><ul>
 <li>push </li>
 <li>pop</li>
@@ -541,6 +554,22 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ArrayList实现的栈</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StackImpArrayList</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> List&lt;Integer&gt; array;</span><br><span class="line">	</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">StackImpArrayList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    array = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Push a new item into the stack</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">    array.add(val);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Pop the top of the stack</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> size = array.size();</span><br><span class="line">    <span class="keyword">return</span> array.remove(size - <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Return the top of the stack</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">peek</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">int</span> size = array.size();</span><br><span class="line">      <span class="keyword">return</span> array.get(size - <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Check the stack is empty or not.</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> array.isEmpty();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>pop操作如何实现？<br>一般情况下是 dummy -&gt; 20 -&gt;10 -&gt; null   dummy.next为栈底，这样pop时复杂度为O(N)，<br>在这里实现为 dummy -&gt; 10 -&gt;20 -&gt; null    dummy.next设为栈顶，这样pop时复杂度为O(1)。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// LinkedList实现的栈</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">int</span> val;</span><br><span class="line">  <span class="keyword">public</span> Node next;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.val = value;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StackImpListNode</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">public</span> Node dummy;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">StackImpListNode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    dummy = <span class="keyword">new</span> Node(-<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">    Node node = <span class="keyword">new</span> Node(val);</span><br><span class="line">    </span><br><span class="line">    node.next = dummy.next;</span><br><span class="line">    dummy.next = node;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ele = dummy.next.val;</span><br><span class="line">    dummy.next = dummy.next.next;</span><br><span class="line">    <span class="keyword">return</span> ele;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">peek</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ele = dummy.next.val;</span><br><span class="line">    <span class="keyword">return</span> ele;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> dummy.next == <span class="keyword">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="LintCode-valid-parentheses"><a href="#LintCode-valid-parentheses" class="headerlink" title="LintCode: valid parentheses"></a><a href="http://www.lintcode.com/en/problem/valid-parentheses/" target="_blank" rel="noopener">LintCode: valid parentheses</a></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> s A string</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> whether the string is a valid parentheses</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValidParentheses</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Write your code here</span></span><br><span class="line">        Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> c : s.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">'('</span> || c == <span class="string">'['</span> || c == <span class="string">'&#123;'</span>) &#123;</span><br><span class="line">                stack.push(c);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">')'</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (stack.isEmpty() || stack.pop() != <span class="string">'('</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">']'</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (stack.isEmpty() || stack.pop() != <span class="string">'['</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">'&#125;'</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (stack.isEmpty() || stack.pop() != <span class="string">'&#123;'</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一般对栈操作前都要先判栈非空</p>
+<h2 id="队列-queue"><a href="#队列-queue" class="headerlink" title="队列(queue)"></a>队列(queue)</h2><h3 id="学习目标-1"><a href="#学习目标-1" class="headerlink" title="学习目标"></a>学习目标</h3><ul>
+<li>Implement a queue 实现队列</li>
+</ul>
+<h3 id="什么是队列-queue"><a href="#什么是队列-queue" class="headerlink" title="什么是队列(queue)"></a>什么是队列(queue)</h3><p>队列是一种先进先出(first in first out，FIFO)的线性数据结构</p>
+<h3 id="队列的操作"><a href="#队列的操作" class="headerlink" title="队列的操作"></a>队列的操作</h3><ul>
+<li>enqueue</li>
+<li>dequeue</li>
+<li>peek (getHead)</li>
+<li>isEmpty</li>
+</ul>
+<p><img src="/2019/12/30/【九章算法】02-Java语言/image-20191231004257760.png" alt="image-20191231004257760"></p>
+<h2 id="待学"><a href="#待学" class="headerlink" title="待学"></a>待学</h2><ul>
+<li>优先级队列</li>
+</ul>
 
       
     </div>
@@ -854,7 +883,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第五讲-栈和队列-Stack-amp-Queue"><span class="nav-text">第五讲 栈和队列 Stack &amp; Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#栈-Stack"><span class="nav-text">栈 Stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是栈-stack"><span class="nav-text">什么是栈(stack)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标"><span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈的操作"><span class="nav-text">栈的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈的实现"><span class="nav-text">栈的实现</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第五讲-栈和队列-Stack-amp-Queue"><span class="nav-text">第五讲 栈和队列 Stack &amp; Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#栈-Stack"><span class="nav-text">栈 Stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标"><span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是栈-stack"><span class="nav-text">什么是栈(stack)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈的操作"><span class="nav-text">栈的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈的实现"><span class="nav-text">栈的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LintCode-valid-parentheses"><span class="nav-text">LintCode: valid parentheses</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#队列-queue"><span class="nav-text">队列(queue)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标-1"><span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是队列-queue"><span class="nav-text">什么是队列(queue)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列的操作"><span class="nav-text">队列的操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待学"><span class="nav-text">待学</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -887,7 +916,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">47k</span>
+    <span title="站点总字数">48k</span>
   
 
   
@@ -896,7 +925,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">43 分钟</span>
+    <span title="站点阅读时长">44 分钟</span>
   
 </div>
 
