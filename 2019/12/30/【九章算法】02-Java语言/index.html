@@ -98,7 +98,6 @@
 
 
   <meta name="description" content="第五讲 栈和队列 Stack &amp;amp; Queue 栈 Stack 学习目标 implement a stack ○ http://www.lintcode.com/en/problem/implement-stack/ valid parentheses ○ http://www.lintcode.com/en/problem/valid-parentheses/ 什么是栈(stack) 栈是">
-<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【九章算法】02 Java语言">
 <meta property="og:url" content="http://hackcraker.github.io/2019/12/30/【九章算法】02-Java语言/index.html">
@@ -112,7 +111,8 @@
 <meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【九章算法】02-Java语言/image-20191231143517466.png">
 <meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【九章算法】02-Java语言/image-20191231143727279.png">
 <meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【九章算法】02-Java语言/image-20191231194545850.png">
-<meta property="og:updated_time" content="2019-12-31T11:45:50.674Z">
+<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【九章算法】02-Java语言/image-20191231204721224.png">
+<meta property="og:updated_time" content="2019-12-31T14:14:23.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【九章算法】02 Java语言">
 <meta name="twitter:description" content="第五讲 栈和队列 Stack &amp;amp; Queue 栈 Stack 学习目标 implement a stack ○ http://www.lintcode.com/en/problem/implement-stack/ valid parentheses ○ http://www.lintcode.com/en/problem/valid-parentheses/ 什么是栈(stack) 栈是">
@@ -442,7 +442,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-12-31 19:45:50" itemprop="dateModified" datetime="2019-12-31T19:45:50+08:00">2019-12-31</time>
+                <time title="修改时间：2019-12-31 22:14:23" itemprop="dateModified" datetime="2019-12-31T22:14:23+08:00">2019-12-31</time>
               
             
           </span>
@@ -501,7 +501,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">5.2k</span>
+                <span title="本文字数">8.9k</span>
               
 
               
@@ -515,7 +515,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">5 分钟</span>
+                <span title="阅读时长">8 分钟</span>
               
             </div>
           
@@ -636,6 +636,96 @@
 <figure>
 <img src="/2019/12/30/【九章算法】02-Java语言/image-20191231194545850.png" alt="image-20191231194545850"><figcaption>image-20191231194545850</figcaption>
 </figure>
+<h3 id="二叉树-binary-tree">二叉树 <strong>Binary Tree</strong></h3>
+<ul>
+<li>每个节点最多有两个子节点</li>
+<li>两个子节点分别被称为左孩子(left child)和右孩子(right child)</li>
+<li>叶子节点：没有孩子节点的节点</li>
+</ul>
+<h3 id="子树sub-tree">子树(sub-tree)</h3>
+<p>树中的每个节点代表以它为根的一棵树 左孩子所代表的树成为左子树(left sub-tree) 右孩子所代表的树成为右子树(right sub-tree)</p>
+<h3 id="树结构举例">树结构举例</h3>
+<ul>
+<li><p>文件系统 B+树</p></li>
+<li><p>数据库的索引-第七节课</p></li>
+<li><p>字典树，平衡树等 - 高级数据结构</p></li>
+</ul>
+<h3 id="剖析lintcode-treenode">剖析LintCode TreeNode</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123; </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> val;</span><br><span class="line">    <span class="keyword">public</span> TreeNode left, right; </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TreeNode</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.val = val; </span><br><span class="line">        <span class="keyword">this</span>.left = <span class="keyword">this</span>.right = <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>TreeNode类</strong></p>
+<ol type="1">
+<li>left和right分别对应左右子节点</li>
+<li>val表示node的值</li>
+</ol>
+<h2 id="递归-recursion">递归 <strong>Recursion</strong></h2>
+<h3 id="什么是递归-recursion">什么是递归 (Recursion)?</h3>
+<ul>
+<li><p>数据结构的递归</p>
+<ul>
+<li>树就是一种递归的数据结构</li>
+</ul></li>
+<li>算法(程序)的递归
+<ul>
+<li>函数自己调用自己</li>
+</ul></li>
+</ul>
+<h3 id="递归三要素">递归三要素</h3>
+<ul>
+<li>递归的定义
+<ul>
+<li>首先这个问题或者数据结构得是递归定义的</li>
+</ul></li>
+<li>递归的出口
+<ul>
+<li>什么时候递归终止</li>
+</ul></li>
+<li>递归的拆解
+<ul>
+<li>递归不终止的时候，如何分解问题</li>
+</ul></li>
+</ul>
+<h3 id="coding-打印出一个树的中序遍历">Coding 打印出一个树的中序遍历</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    print(root.left);</span><br><span class="line">    System.out.println(root.val + <span class="string">" "</span>);</span><br><span class="line">    print(root.right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="学习目标-2">学习目标</h2>
+<ul>
+<li>获取所有叶子节点的和 Get leaf sum</li>
+<li>获取树的高度 Get tree height</li>
+<li>获取所有root到叶子节点的路径 Get root-to-leaf paths</li>
+</ul>
+<h3 id="lintcodebinary-tree-leaf-sum"><a href="https://www.jiuzhang.com/solution/binary-tree-leaf-sum/" target="_blank" rel="noopener">LintCode:Binary Tree Leaf Sum</a></h3>
+<p><strong>Recursion</strong> 获取叶子节点的和</p>
+<p>访问一个Node:</p>
+<ul>
+<li>如果这个Node是叶子节点，则sum就是他本身</li>
+<li>如果这个Node不是叶子节点，则sum等于左子树的叶子节点和 + 右子树之和</li>
+</ul>
+<figure>
+<img src="/2019/12/30/【九章算法】02-Java语言/image-20191231204721224.png" alt="image-20191231204721224"><figcaption>image-20191231204721224</figcaption>
+</figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @param root: the root of the binary tree</span></span><br><span class="line"><span class="comment">     * @return: An integer</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">leafSum</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> root.val;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> leafSum(root.left) + leafSum(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="lintcodemaximum-depth-of-binary-tree"><a href="http://www.lintcode.com/en/problem/maximum-depth-of-binary-tree/" target="_blank" rel="noopener">LintCode:Maximum Depth of Binary Tree</a></h3>
+<p>为什么函数调用了<code>2n + 1</code>次？</p>
+<p>因为每一个节点有左右两个指针，n个节点共有2n个链域，而n个节点只需用n-1个指针就可互连（因为连接n个点只需n-1条直线），所以还剩下2n-(n-1)=n+1个空指针域，n个节点和n+1个空指针域一共为2n+1个，所以函数调用了<code>2n + 1</code>次。</p>
+<h3 id="leetcodebinary-tree-paths"><a href="https://leetcode.com/problems/binary-tree-paths/" target="_blank" rel="noopener">LeetCode:Binary Tree Paths</a></h3>
+<p><strong>Recursion</strong> 获取树中<strong>root</strong>到<strong>leaf</strong>的所有路径</p>
+<div data-align="left">
+<pre><code>&lt;img src=&quot;【九章算法】02-Java语言/5EF034508409D2F51C9B60FA385B2C63.jpg&quot; &gt;</code></pre>
+</div>
+<p>比如，对于上面这个二叉树，它所有的路径为：</p>
+<p>8 -&gt; 3 -&gt; 1</p>
+<p>8 -&gt; 2 -&gt; 6 -&gt; 4</p>
+<p>8 -&gt; 3 -&gt; 6 -&gt; 7</p>
+<p>8 -&gt; 10 -&gt; 14 -&gt; 13</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">construct_paths</span><span class="params">(TreeNode root, String path, LinkedList&lt;String&gt; paths)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root != <span class="keyword">null</span>) &#123;</span><br><span class="line">            path += Integer.toString(root.val);</span><br><span class="line">            <span class="keyword">if</span> ((root.left == <span class="keyword">null</span>) &amp;&amp; (root.right == <span class="keyword">null</span>))  <span class="comment">// 当前节点是叶子节点</span></span><br><span class="line">                paths.add(path);  <span class="comment">// 把路径加入到答案中</span></span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                path += <span class="string">"-&gt;"</span>;  <span class="comment">// 当前节点不是叶子节点，继续递归遍历</span></span><br><span class="line">                construct_paths(root.left, path, paths);</span><br><span class="line">                construct_paths(root.right, path, paths);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">binaryTreePaths</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        LinkedList&lt;String&gt; paths = <span class="keyword">new</span> LinkedList();</span><br><span class="line">        construct_paths(root, <span class="string">""</span>, paths);</span><br><span class="line">        <span class="keyword">return</span> paths;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="lintcode-identical-binary-tree"><a href="http://www.lintcode.com/en/problem/identical-binary-tree/" target="_blank" rel="noopener">LintCode: Identical Binary Tree</a></h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> a, b, the root of binary trees.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> true if they are identical, or false.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isIdentical</span><span class="params">(TreeNode a, TreeNode b)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Write your code here</span></span><br><span class="line">        <span class="keyword">if</span> (a == <span class="keyword">null</span> &amp;&amp; b == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (a != <span class="keyword">null</span> &amp;&amp; b != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> a.val == b.val &amp;&amp; isIdentical(a.left, b.left)</span><br><span class="line">                    &amp;&amp; isIdentical(a.right, b.right);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="lintcode-树的遍历问题"><strong>LintCode</strong> 树的遍历问题</h3>
+<p>Binary Tree Preorder Traversal</p>
+<p>http://www.lintcode.com/en/problem/binary-tree-preorder-traversal/</p>
+<p>Binary Tree Inorder Traversal</p>
+<p>http://www.lintcode.com/en/problem/binary-tree-inorder-traversal/</p>
+<p>Binary Tree Postorder Traversal</p>
+<p>http://www.lintcode.com/en/problem/binary-tree-postorder-traversal/</p>
 
       
     </div>
@@ -709,12 +799,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Java/" rel="tag"># Java</a>
-          
-        </div>
       
 
       
@@ -812,7 +896,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -949,7 +1033,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第五讲-栈和队列-stack-queue"><span class="nav-text">第五讲 栈和队列 Stack &amp; Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#栈-stack"><span class="nav-text">栈 Stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标"><span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是栈stack"><span class="nav-text">什么是栈(stack)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈的操作"><span class="nav-text">栈的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈的实现"><span class="nav-text">栈的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lintcode-valid-parentheses"><span class="nav-text">LintCode: valid parentheses</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#队列queue"><span class="nav-text">队列(queue)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标-1"><span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是队列queue"><span class="nav-text">什么是队列(queue)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列的操作"><span class="nav-text">队列的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列操作的实现细节"><span class="nav-text">队列操作的实现细节</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基于listnode的queue"><span class="nav-text">基于ListNode的queue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#enqueue-插入一个value-10"><span class="nav-text">Enqueue 插入一个Value-10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dequeue-取出队列头部元素的值"><span class="nav-text">Dequeue 取出队列头部元素的值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#isempty-判断对列为空"><span class="nav-text">isEmpty 判断对列为空</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列的实现"><span class="nav-text">队列的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列的应用"><span class="nav-text">队列的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lintcodeimplement-queue-by-interface"><span class="nav-text">LintCode:Implement Queue by Interface</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待做"><span class="nav-text">待做</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第六讲-树和递归-tree-recursion"><span class="nav-text">第六讲 树和递归 Tree &amp; Recursion</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#树-tree"><span class="nav-text">树 Tree</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第五讲-栈和队列-stack-queue"><span class="nav-text">第五讲 栈和队列 Stack &amp; Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#栈-stack"><span class="nav-text">栈 Stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标"><span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是栈stack"><span class="nav-text">什么是栈(stack)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈的操作"><span class="nav-text">栈的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈的实现"><span class="nav-text">栈的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lintcode-valid-parentheses"><span class="nav-text">LintCode: valid parentheses</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#队列queue"><span class="nav-text">队列(queue)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标-1"><span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是队列queue"><span class="nav-text">什么是队列(queue)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列的操作"><span class="nav-text">队列的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列操作的实现细节"><span class="nav-text">队列操作的实现细节</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基于listnode的queue"><span class="nav-text">基于ListNode的queue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#enqueue-插入一个value-10"><span class="nav-text">Enqueue 插入一个Value-10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dequeue-取出队列头部元素的值"><span class="nav-text">Dequeue 取出队列头部元素的值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#isempty-判断对列为空"><span class="nav-text">isEmpty 判断对列为空</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列的实现"><span class="nav-text">队列的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列的应用"><span class="nav-text">队列的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lintcodeimplement-queue-by-interface"><span class="nav-text">LintCode:Implement Queue by Interface</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待做"><span class="nav-text">待做</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第六讲-树和递归-tree-recursion"><span class="nav-text">第六讲 树和递归 Tree &amp; Recursion</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#树-tree"><span class="nav-text">树 Tree</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树-binary-tree"><span class="nav-text">二叉树 Binary Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子树sub-tree"><span class="nav-text">子树(sub-tree)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#树结构举例"><span class="nav-text">树结构举例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#剖析lintcode-treenode"><span class="nav-text">剖析LintCode TreeNode</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归-recursion"><span class="nav-text">递归 Recursion</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是递归-recursion"><span class="nav-text">什么是递归 (Recursion)?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归三要素"><span class="nav-text">递归三要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#coding-打印出一个树的中序遍历"><span class="nav-text">Coding 打印出一个树的中序遍历</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习目标-2"><span class="nav-text">学习目标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lintcodebinary-tree-leaf-sum"><span class="nav-text">LintCode:Binary Tree Leaf Sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lintcodemaximum-depth-of-binary-tree"><span class="nav-text">LintCode:Maximum Depth of Binary Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#leetcodebinary-tree-paths"><span class="nav-text">LeetCode:Binary Tree Paths</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lintcode-identical-binary-tree"><span class="nav-text">LintCode: Identical Binary Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lintcode-树的遍历问题"><span class="nav-text">LintCode 树的遍历问题</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -982,7 +1066,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">52k</span>
+    <span title="站点总字数">55k</span>
   
 
   
@@ -991,7 +1075,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">47 分钟</span>
+    <span title="站点阅读时长">50 分钟</span>
   
 </div>
 
