@@ -97,12 +97,12 @@
 
 
 
-  <meta name="description" content="Overview  分词  最大匹配算法正向最大匹配法分词目标：在词典中进行扫描，尽可能地选择与词典中最长单词匹配的词作为目标分词，然后进行下一次匹配。 算法流程：假设词典中最长的单词为 5 个（MAX_LENGTH），那么最大匹配的起始子串字数也为 5 个  扫描字典，测试读入的子串是否在字典中 如果存在，则从输入中删除掉该子串，重新按照规则取子串，重复 1 如果不存在于字典中，则从右向左减少子">
+  <meta name="description" content="Overview  nlpcamp_l3-02   nlpcamp_l3-03  分词  nlpcamp_l3-04   nlpcamp_l3-05  最大匹配算法 正向最大匹配法 分词目标： 在词典中进行扫描，尽可能地选择与词典中最长单词匹配的词作为目标分词，然后进行下一次匹配。 算法流程： 假设词典中最长的单词为 5 个（MAX_LENGTH），那么最大匹配的起始子串字数也为 5 个  扫描字">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【贪心学院nlp】03 笔记总结">
 <meta property="og:url" content="http://hackcraker.github.io/2019/12/27/【贪心学院nlp】03-笔记总结/index.html">
 <meta property="og:site_name" content="源泉">
-<meta property="og:description" content="Overview  分词  最大匹配算法正向最大匹配法分词目标：在词典中进行扫描，尽可能地选择与词典中最长单词匹配的词作为目标分词，然后进行下一次匹配。 算法流程：假设词典中最长的单词为 5 个（MAX_LENGTH），那么最大匹配的起始子串字数也为 5 个  扫描字典，测试读入的子串是否在字典中 如果存在，则从输入中删除掉该子串，重新按照规则取子串，重复 1 如果不存在于字典中，则从右向左减少子">
+<meta property="og:description" content="Overview  nlpcamp_l3-02   nlpcamp_l3-03  分词  nlpcamp_l3-04   nlpcamp_l3-05  最大匹配算法 正向最大匹配法 分词目标： 在词典中进行扫描，尽可能地选择与词典中最长单词匹配的词作为目标分词，然后进行下一次匹配。 算法流程： 假设词典中最长的单词为 5 个（MAX_LENGTH），那么最大匹配的起始子串字数也为 5 个  扫描字">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://hackcraker.github.io/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-02.jpg">
 <meta property="og:image" content="http://hackcraker.github.io/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-03.jpg">
@@ -136,7 +136,7 @@
 <meta property="og:updated_time" content="2019-12-30T09:31:11.396Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【贪心学院nlp】03 笔记总结">
-<meta name="twitter:description" content="Overview  分词  最大匹配算法正向最大匹配法分词目标：在词典中进行扫描，尽可能地选择与词典中最长单词匹配的词作为目标分词，然后进行下一次匹配。 算法流程：假设词典中最长的单词为 5 个（MAX_LENGTH），那么最大匹配的起始子串字数也为 5 个  扫描字典，测试读入的子串是否在字典中 如果存在，则从输入中删除掉该子串，重新按照规则取子串，重复 1 如果不存在于字典中，则从右向左减少子">
+<meta name="twitter:description" content="Overview  nlpcamp_l3-02   nlpcamp_l3-03  分词  nlpcamp_l3-04   nlpcamp_l3-05  最大匹配算法 正向最大匹配法 分词目标： 在词典中进行扫描，尽可能地选择与词典中最长单词匹配的词作为目标分词，然后进行下一次匹配。 算法流程： 假设词典中最长的单词为 5 个（MAX_LENGTH），那么最大匹配的起始子串字数也为 5 个  扫描字">
 <meta name="twitter:image" content="http://hackcraker.github.io/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-02.jpg">
 
 
@@ -522,7 +522,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">920</span>
+                <span title="本文字数">1.4k</span>
               
 
               
@@ -556,83 +556,154 @@
       
 
       
-        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-02.jpg" alt="nlpcamp_l3-02"></p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-03.jpg" alt="nlpcamp_l3-03"></p>
-<h2 id="分词"><a href="#分词" class="headerlink" title="分词"></a>分词</h2><p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-04.jpg" alt="nlpcamp_l3-04"></p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-05.jpg" alt="nlpcamp_l3-05"></p>
-<h3 id="最大匹配算法"><a href="#最大匹配算法" class="headerlink" title="最大匹配算法"></a>最大匹配算法</h3><h4 id="正向最大匹配法"><a href="#正向最大匹配法" class="headerlink" title="正向最大匹配法"></a>正向最大匹配法</h4><p><strong>分词目标：</strong><br>在词典中进行扫描，尽可能地选择与词典中最长单词匹配的词作为目标分词，然后进行下一次匹配。</p>
-<p><strong>算法流程：</strong><br>假设词典中最长的单词为 5 个（MAX_LENGTH），那么最大匹配的起始子串字数也为 5 个</p>
-<ol>
+        <h2 id="overview">Overview</h2>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-02.jpg" alt="nlpcamp_l3-02"><figcaption>nlpcamp_l3-02</figcaption>
+</figure>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-03.jpg" alt="nlpcamp_l3-03"><figcaption>nlpcamp_l3-03</figcaption>
+</figure>
+<h2 id="分词">分词</h2>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-04.jpg" alt="nlpcamp_l3-04"><figcaption>nlpcamp_l3-04</figcaption>
+</figure>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-05.jpg" alt="nlpcamp_l3-05"><figcaption>nlpcamp_l3-05</figcaption>
+</figure>
+<h3 id="最大匹配算法">最大匹配算法</h3>
+<h4 id="正向最大匹配法">正向最大匹配法</h4>
+<p><strong>分词目标：</strong> 在词典中进行扫描，尽可能地选择与词典中最长单词匹配的词作为目标分词，然后进行下一次匹配。</p>
+<p><strong>算法流程：</strong> 假设词典中最长的单词为 5 个（MAX_LENGTH），那么最大匹配的起始子串字数也为 5 个</p>
+<ol type="1">
 <li>扫描字典，测试读入的子串是否在字典中</li>
 <li>如果存在，则从输入中删除掉该子串，重新按照规则取子串，重复 1</li>
 <li>如果不存在于字典中，则从右向左减少子串长度，重复1</li>
 </ol>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-06.jpg" alt="nlpcamp_l3-06"></p>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-06.jpg" alt="nlpcamp_l3-06"><figcaption>nlpcamp_l3-06</figcaption>
+</figure>
 <ul>
 <li>贪心算法：选择当前最优解</li>
 <li>DP：选择全局最优解</li>
 </ul>
-<p>max-len通常为<code>5~10</code><br>可以根据单词长度的不同做一个分析已选择最合适的max-len。</p>
-<h4 id="逆向最大匹配法"><a href="#逆向最大匹配法" class="headerlink" title="逆向最大匹配法"></a>逆向最大匹配法</h4><p><strong>分词目标：</strong><br>在词典中进行扫描，尽可能地选择与词典中最长单词匹配的词作为目标分词，然后进行下一次匹配。<br>在实践中，逆向最大匹配算法性能优于正向最大匹配算法。</p>
-<p><strong>算法流程：</strong><br>假设词典中最长的单词为 5 个（MAX_LENGTH），那么最大匹配的起始子串字数也为 5 个</p>
-<ol>
+<p>max-len通常为<code>5~10</code> 可以根据单词长度的不同做一个分析已选择最合适的max-len。</p>
+<h4 id="逆向最大匹配法">逆向最大匹配法</h4>
+<p><strong>分词目标：</strong> 在词典中进行扫描，尽可能地选择与词典中最长单词匹配的词作为目标分词，然后进行下一次匹配。 在实践中，逆向最大匹配算法性能优于正向最大匹配算法。</p>
+<p><strong>算法流程：</strong> 假设词典中最长的单词为 5 个（MAX_LENGTH），那么最大匹配的起始子串字数也为 5 个</p>
+<ol type="1">
 <li>扫描字典，测试读入的子串是否在字典中</li>
 <li>如果存在，则从输入中删除掉该子串，重新按照规则取子串，重复 1</li>
 <li>如果不存在于字典中，则从左向右减少子串长度，重复 1</li>
 </ol>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-07.jpg" alt="nlpcamp_l3-07"></p>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-07.jpg" alt="nlpcamp_l3-07"><figcaption>nlpcamp_l3-07</figcaption>
+</figure>
 <p>90%情况前向和后向分词结果相同，10%不同。如<em>南京市长江大桥</em></p>
-<h4 id="最大匹配缺点"><a href="#最大匹配缺点" class="headerlink" title="最大匹配缺点"></a>最大匹配缺点</h4><ul>
+<h4 id="最大匹配缺点">最大匹配缺点</h4>
+<ul>
 <li>细分可能更优</li>
 <li>局部最优</li>
 <li>没有考虑语义(单词-&gt;syntactic-&gt;semantic)</li>
 </ul>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-08.jpg" alt="nlpcamp_l3-08"></p>
-<h3 id="考虑语义模型-LM"><a href="#考虑语义模型-LM" class="headerlink" title="考虑语义模型(LM)"></a>考虑语义模型(LM)</h3><p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-09.jpg" alt="nlpcamp_l3-09"></p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-10.jpg" alt="nlpcamp_l3-10"></p>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-08.jpg" alt="nlpcamp_l3-08"><figcaption>nlpcamp_l3-08</figcaption>
+</figure>
+<h3 id="考虑语义模型lm">考虑语义模型(LM)</h3>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-09.jpg" alt="nlpcamp_l3-09"><figcaption>nlpcamp_l3-09</figcaption>
+</figure>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-10.jpg" alt="nlpcamp_l3-10"><figcaption>nlpcamp_l3-10</figcaption>
+</figure>
 <p>Unigram Language Model语言模型选择所有分割情况中最好的</p>
 <ul>
 <li>通过统计的方式写出每个单词出现的概率</li>
 <li>给定一个句子分词后可以用联合概率算出的概率用作评判是否符合语义的标准</li>
 </ul>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-22.jpg" alt="nlpcamp_l3-22"></p>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-22.jpg" alt="nlpcamp_l3-22"><figcaption>nlpcamp_l3-22</figcaption>
+</figure>
 <p>计算时取对数防溢出</p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-21.jpg" alt="nlpcamp_l3-21"></p>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-21.jpg" alt="nlpcamp_l3-21"><figcaption>nlpcamp_l3-21</figcaption>
+</figure>
 <p>生成组合太多，算法复杂度过高，解决方法使用维特比算法</p>
-<h3 id="维特比算法"><a href="#维特比算法" class="headerlink" title="维特比算法"></a>维特比算法</h3><p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-11.jpg" alt="nlpcamp_l3-11"></p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-12.jpg" alt="nlpcamp_l3-12"></p>
+<h3 id="维特比算法">维特比算法</h3>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-11.jpg" alt="nlpcamp_l3-11"><figcaption>nlpcamp_l3-11</figcaption>
+</figure>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-12.jpg" alt="nlpcamp_l3-12"><figcaption>nlpcamp_l3-12</figcaption>
+</figure>
 <p>伪代码</p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-20.jpg" alt="nlpcamp_l3-20"></p>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-20.jpg" alt="nlpcamp_l3-20"><figcaption>nlpcamp_l3-20</figcaption>
+</figure>
 <p>数学公式</p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-19.jpg" alt="nlpcamp_l3-19"></p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/9E038A12ECCE3D003FAA2C06F6B311F9.jpg" alt="9E038A12ECCE3D003FAA2C06F6B311F9"></p>
-<h3 id="分词算法总结"><a href="#分词算法总结" class="headerlink" title="分词算法总结"></a>分词算法总结</h3><p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-13.jpg" alt="nlpcamp_l3-13"></p>
-<h2 id="拼写错误纠正"><a href="#拼写错误纠正" class="headerlink" title="拼写错误纠正"></a>拼写错误纠正</h2><p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-14.jpg" alt="nlpcamp_l3-14"></p>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-19.jpg" alt="nlpcamp_l3-19"><figcaption>nlpcamp_l3-19</figcaption>
+</figure>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/9E038A12ECCE3D003FAA2C06F6B311F9.jpg" alt="9E038A12ECCE3D003FAA2C06F6B311F9"><figcaption>9E038A12ECCE3D003FAA2C06F6B311F9</figcaption>
+</figure>
+<h3 id="分词算法总结">分词算法总结</h3>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-13.jpg" alt="nlpcamp_l3-13"><figcaption>nlpcamp_l3-13</figcaption>
+</figure>
+<h2 id="拼写错误纠正">拼写错误纠正</h2>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-14.jpg" alt="nlpcamp_l3-14"><figcaption>nlpcamp_l3-14</figcaption>
+</figure>
 <p>两种错误情况：</p>
-<ol>
+<ol type="1">
 <li>错别字</li>
 <li>不是错别字，不适合</li>
 </ol>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-15.jpg" alt="nlpcamp_l3-15"></p>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-15.jpg" alt="nlpcamp_l3-15"><figcaption>nlpcamp_l3-15</figcaption>
+</figure>
 <p>计算编辑距离（DP算法）三种操作：</p>
-<ol>
+<ol type="1">
 <li>insert</li>
 <li>delete</li>
 <li>replace</li>
 </ol>
 <p>然后再在编辑距离最小的之中根据上下文，词频选择一个</p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-16.jpg" alt="nlpcamp_l3-16"></p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-17.jpg" alt="nlpcamp_l3-17"></p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-164446.png" alt="QQ20191230-164446"></p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-164600.png" alt="QQ20191230-164600"></p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-164649.png" alt="QQ20191230-164649"></p>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-16.jpg" alt="nlpcamp_l3-16"><figcaption>nlpcamp_l3-16</figcaption>
+</figure>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/nlpcamp_l3-17.jpg" alt="nlpcamp_l3-17"><figcaption>nlpcamp_l3-17</figcaption>
+</figure>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-164446.png" alt="QQ20191230-164446"><figcaption>QQ20191230-164446</figcaption>
+</figure>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-164600.png" alt="QQ20191230-164600"><figcaption>QQ20191230-164600</figcaption>
+</figure>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-164649.png" alt="QQ20191230-164649"><figcaption>QQ20191230-164649</figcaption>
+</figure>
 <p>一个独立的问题</p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-164912.png" alt="QQ20191230-164912"></p>
-<h2 id="停用词过滤"><a href="#停用词过滤" class="headerlink" title="停用词过滤"></a>停用词过滤</h2><p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-164950.png" alt="QQ20191230-164950"></p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-165228.png" alt="QQ20191230-165228"></p>
-<h2 id="Stemming操作"><a href="#Stemming操作" class="headerlink" title="Stemming操作"></a>Stemming操作</h2><p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-165347.png" alt="QQ20191230-165347"></p>
-<p><img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-165503.png" alt="QQ20191230-165503"></p>
-<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ol>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-164912.png" alt="QQ20191230-164912"><figcaption>QQ20191230-164912</figcaption>
+</figure>
+<h2 id="停用词过滤">停用词过滤</h2>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-164950.png" alt="QQ20191230-164950"><figcaption>QQ20191230-164950</figcaption>
+</figure>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-165228.png" alt="QQ20191230-165228"><figcaption>QQ20191230-165228</figcaption>
+</figure>
+<h2 id="stemming操作">Stemming操作</h2>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-165347.png" alt="QQ20191230-165347"><figcaption>QQ20191230-165347</figcaption>
+</figure>
+<figure>
+<img src="/2019/12/27/【贪心学院nlp】03-笔记总结/QQ20191230-165503.png" alt="QQ20191230-165503"><figcaption>QQ20191230-165503</figcaption>
+</figure>
+<h2 id="推荐阅读">推荐阅读</h2>
+<ol type="1">
 <li><a href="https://blog.csdn.net/selinda001/article/details/79345072" target="_blank" rel="noopener">分词中的最大匹配算法</a></li>
 <li><a href="https://people.cs.clemson.edu/~bcdean/dp_practice/" target="_blank" rel="noopener">DP经典练习题</a></li>
 </ol>
@@ -729,8 +800,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/12/29/【九章算法】01-Java语言/" rel="prev" title="【九章算法】01 Java语言">
-                【九章算法】01 Java语言 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/29/【九章算法】01-Java语言/" rel="prev" title="【Java语言】 01 基础知识">
+                【Java语言】 01 基础知识 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -806,7 +877,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -943,7 +1014,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分词"><span class="nav-text">分词</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最大匹配算法"><span class="nav-text">最大匹配算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#正向最大匹配法"><span class="nav-text">正向最大匹配法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逆向最大匹配法"><span class="nav-text">逆向最大匹配法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最大匹配缺点"><span class="nav-text">最大匹配缺点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#考虑语义模型-LM"><span class="nav-text">考虑语义模型(LM)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#维特比算法"><span class="nav-text">维特比算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分词算法总结"><span class="nav-text">分词算法总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拼写错误纠正"><span class="nav-text">拼写错误纠正</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#停用词过滤"><span class="nav-text">停用词过滤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stemming操作"><span class="nav-text">Stemming操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐阅读"><span class="nav-text">推荐阅读</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分词"><span class="nav-text">分词</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最大匹配算法"><span class="nav-text">最大匹配算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#正向最大匹配法"><span class="nav-text">正向最大匹配法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逆向最大匹配法"><span class="nav-text">逆向最大匹配法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最大匹配缺点"><span class="nav-text">最大匹配缺点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#考虑语义模型lm"><span class="nav-text">考虑语义模型(LM)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#维特比算法"><span class="nav-text">维特比算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分词算法总结"><span class="nav-text">分词算法总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拼写错误纠正"><span class="nav-text">拼写错误纠正</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#停用词过滤"><span class="nav-text">停用词过滤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stemming操作"><span class="nav-text">Stemming操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐阅读"><span class="nav-text">推荐阅读</span></a></li></ol></div>
             
 
           </div>
@@ -976,7 +1047,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">54k</span>
+    <span title="站点总字数">49k</span>
   
 
   
@@ -985,7 +1056,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">49 分钟</span>
+    <span title="站点阅读时长">45 分钟</span>
   
 </div>
 
