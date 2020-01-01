@@ -97,53 +97,24 @@
 
 
 
-  <meta name="description" content="文本的表示   文本的相似度     Tf-idf 文本表示  词向量介绍        生成词向量      问答系统回顾   倒排表">
+  <meta name="description" content="dentational semantics">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【贪心学院nlp】04 笔记总结">
-<meta property="og:url" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/index.html">
+<meta property="og:title" content="【CS224n】01 Word Vectors">
+<meta property="og:url" content="http://hackcraker.github.io/2020/01/01/【CS224n】01-Word-Vectors/index.html">
 <meta property="og:site_name" content="源泉">
-<meta property="og:description" content="文本的表示   文本的相似度     Tf-idf 文本表示  词向量介绍        生成词向量      问答系统回顾   倒排表">
+<meta property="og:description" content="dentational semantics">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-02.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-03.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-04.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-05.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-06.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-07.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-08.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-09.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-10.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-11.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-12.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-13.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-14.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-15.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-16.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-17.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-18.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-19.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-20.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-21.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-22.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-23.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-24.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-25.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-26.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-27.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-28.jpg">
-<meta property="og:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-29.jpg">
-<meta property="og:updated_time" content="2019-12-30T09:23:16.831Z">
+<meta property="og:updated_time" content="2020-01-01T06:06:53.420Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【贪心学院nlp】04 笔记总结">
-<meta name="twitter:description" content="文本的表示   文本的相似度     Tf-idf 文本表示  词向量介绍        生成词向量      问答系统回顾   倒排表">
-<meta name="twitter:image" content="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-02.jpg">
+<meta name="twitter:title" content="【CS224n】01 Word Vectors">
+<meta name="twitter:description" content="dentational semantics">
 
 
 
 
 
 
-  <link rel="canonical" href="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/">
+  <link rel="canonical" href="http://hackcraker.github.io/2020/01/01/【CS224n】01-Word-Vectors/">
 
 
 
@@ -153,7 +124,7 @@
   };
 </script>
 
-  <title>【贪心学院nlp】04 笔记总结 | 源泉</title>
+  <title>【CS224n】01 Word Vectors | 源泉</title>
   
 
 
@@ -402,7 +373,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/">
+    <link itemprop="mainEntityOfPage" href="http://hackcraker.github.io/2020/01/01/【CS224n】01-Word-Vectors/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lucas Chan">
@@ -419,7 +390,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【贪心学院nlp】04 笔记总结
+          <h1 class="post-title" itemprop="name headline">【CS224n】01 Word Vectors
 
               
             
@@ -445,7 +416,7 @@
                 
               
 
-              <time title="创建时间：2019-12-30 16:42:29 / 修改时间：17:23:16" itemprop="dateCreated datePublished" datetime="2019-12-30T16:42:29+08:00">2019-12-30</time>
+              <time title="创建时间：2020-01-01 13:54:30 / 修改时间：14:06:53" itemprop="dateCreated datePublished" datetime="2020-01-01T13:54:30+08:00">2020-01-01</time>
             
 
             
@@ -455,24 +426,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/贪心学院nlp/" itemprop="url" rel="index"><span itemprop="name">贪心学院nlp</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -486,8 +439,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/12/30/【贪心学院nlp】04-笔记总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/30/【贪心学院nlp】04-笔记总结/" itemprop="commentCount"></span>
+                <a href="/2020/01/01/【CS224n】01-Word-Vectors/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/01/01/【CS224n】01-Word-Vectors/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -509,7 +462,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">69</span>
+                <span title="本文字数">22</span>
               
 
               
@@ -543,34 +496,7 @@
       
 
       
-        <h2 id="文本的表示"><a href="#文本的表示" class="headerlink" title="文本的表示"></a>文本的表示</h2><p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-02.jpg" alt="nlpcamp_l4-02"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-03.jpg" alt="nlpcamp_l4-03"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-04.jpg" alt="nlpcamp_l4-04"></p>
-<h2 id="文本的相似度"><a href="#文本的相似度" class="headerlink" title="文本的相似度"></a>文本的相似度</h2><p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-05.jpg" alt="nlpcamp_l4-05"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-06.jpg" alt="nlpcamp_l4-06"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-07.jpg" alt="nlpcamp_l4-07"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-08.jpg" alt="nlpcamp_l4-08"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-09.jpg" alt="nlpcamp_l4-09"></p>
-<h2 id="Tf-idf-文本表示"><a href="#Tf-idf-文本表示" class="headerlink" title="Tf-idf 文本表示"></a>Tf-idf 文本表示</h2><p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-10.jpg" alt="nlpcamp_l4-10"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-11.jpg" alt="nlpcamp_l4-11"></p>
-<h2 id="词向量介绍"><a href="#词向量介绍" class="headerlink" title="词向量介绍"></a>词向量介绍</h2><p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-12.jpg" alt="nlpcamp_l4-12"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-13.jpg" alt="nlpcamp_l4-13"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-14.jpg" alt="nlpcamp_l4-14"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-15.jpg" alt="nlpcamp_l4-15"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-16.jpg" alt="nlpcamp_l4-16"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-17.jpg" alt="nlpcamp_l4-17"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-18.jpg" alt="nlpcamp_l4-18"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-19.jpg" alt="nlpcamp_l4-19"></p>
-<h2 id="生成词向量"><a href="#生成词向量" class="headerlink" title="生成词向量"></a>生成词向量</h2><p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-20.jpg" alt="nlpcamp_l4-20"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-21.jpg" alt="nlpcamp_l4-21"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-22.jpg" alt="nlpcamp_l4-22"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-23.jpg" alt="nlpcamp_l4-23"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-24.jpg" alt="nlpcamp_l4-24"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-25.jpg" alt="nlpcamp_l4-25"></p>
-<h2 id="问答系统回顾"><a href="#问答系统回顾" class="headerlink" title="问答系统回顾"></a>问答系统回顾</h2><p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-26.jpg" alt="nlpcamp_l4-26"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-27.jpg" alt="nlpcamp_l4-27"></p>
-<p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-28.jpg" alt="nlpcamp_l4-28"></p>
-<h2 id="倒排表"><a href="#倒排表" class="headerlink" title="倒排表"></a>倒排表</h2><p><img src="/2019/12/30/【贪心学院nlp】04-笔记总结/nlpcamp_l4-29.jpg" alt="nlpcamp_l4-29"></p>
+        <p>dentational semantics</p>
 
       
     </div>
@@ -634,7 +560,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/" title="【贪心学院nlp】04 笔记总结">http://hackcraker.github.io/2019/12/30/【贪心学院nlp】04-笔记总结/</a>
+    <a href="http://hackcraker.github.io/2020/01/01/【CS224n】01-Word-Vectors/" title="【CS224n】01 Word Vectors">http://hackcraker.github.io/2020/01/01/【CS224n】01-Word-Vectors/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -654,8 +580,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/29/【九章算法】01-Java语言/" rel="next" title="【九章算法】01 Java语言">
-                <i class="fa fa-chevron-left"></i> 【九章算法】01 Java语言
+              <a href="/2019/12/31/【九章算法】03-Java语言/" rel="next" title="【Java语言】03 数据结构">
+                <i class="fa fa-chevron-left"></i> 【Java语言】03 数据结构
               </a>
             
           </div>
@@ -663,10 +589,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/30/【九章算法】02-Java语言/" rel="prev" title="【Java语言】02 数据结构">
-                【Java语言】02 数据结构 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -714,17 +636,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -867,23 +780,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文本的表示"><span class="nav-text">文本的表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本的相似度"><span class="nav-text">文本的相似度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tf-idf-文本表示"><span class="nav-text">Tf-idf 文本表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#词向量介绍"><span class="nav-text">词向量介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成词向量"><span class="nav-text">生成词向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问答系统回顾"><span class="nav-text">问答系统回顾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#倒排表"><span class="nav-text">倒排表</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
