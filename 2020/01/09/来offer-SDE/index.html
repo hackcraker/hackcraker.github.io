@@ -106,7 +106,8 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/image-20200109155032491.png">
 <meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/image-20200109155248666.png">
-<meta property="og:updated_time" content="2020-01-09T09:08:33.830Z">
+<meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/C1493EE98849B4FD9AAD3A6F8B7979BF.jpg">
+<meta property="og:updated_time" content="2020-01-09T13:23:28.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="来offer SDE">
 <meta name="twitter:description" content="Data structure is a particular way of organizing data in a computer so that it can be used efficiently. Common data structure  Array Stack Queue Linked List Tree Heap Graph Hash table  E.g. int a[10">
@@ -419,7 +420,7 @@
                 
               
 
-              <time title="创建时间：2020-01-09 15:49:41 / 修改时间：17:08:33" itemprop="dateCreated datePublished" datetime="2020-01-09T15:49:41+08:00">2020-01-09</time>
+              <time title="创建时间：2020-01-09 15:49:41 / 修改时间：21:23:28" itemprop="dateCreated datePublished" datetime="2020-01-09T15:49:41+08:00">2020-01-09</time>
             
 
             
@@ -465,7 +466,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.7k</span>
+                <span title="本文字数">3.8k</span>
               
 
               
@@ -479,7 +480,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -541,10 +542,20 @@
 <ol>
 <li><strong>Merge sort</strong> </li>
 </ol>
-<p>a[n] = 1,3,5,7,9,8,6,4,2,0</p>
-<p>​                              1,3,5,7,9|,8,6,4,2,0   -&gt;    a[10] a[0]…a[4] MERGE a[5]…a[9] </p>
-<p>​                                  /                    \  </p>
-<p>  / / 1 5 1 79 79 86 /86420 864 20 / 4 2 0 3 5 79 86 4 20 5 79 86 4 20 1 / 468 02 1 / 135 /9 02468<br>  0123456789<br>  this level time complexity == 0(n)<br>  this level time complexity == 0(n) this level time complexity == 0(n) this level time complexity == 0(n) </p>
+<p>a[n] = 1,3,5,7,9,8,6,4,2,0<br><strong>Space = O(n) // look at the pink path</strong><br><strong>Time = O(nlogn)</strong></p>
+<p><img src="/2020/01/09/来offer-SDE/C1493EE98849B4FD9AAD3A6F8B7979BF.jpg" alt="C1493EE98849B4FD9AAD3A6F8B7979BF"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; mergeSort (<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; a, <span class="keyword">int</span> left, <span class="keyword">int</span> right) &#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; solution;</span><br><span class="line">    <span class="keyword">if</span> (left == right) &#123;</span><br><span class="line">        solution.push_back(<span class="built_in">array</span>[left]);</span><br><span class="line">        <span class="keyword">return</span> solution;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> mid = left + (right - left) / <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; solu_left = mergeSort(a, left, mid);</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; solu_right = mergeSort(a, mid + <span class="number">1</span>, right);</span><br><span class="line">    solution = combine(solu_left, solu_right);</span><br><span class="line">    <span class="keyword">return</span> solution;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Discussion:</strong><br>1) Could we use Merge Sort to sort a linked list?What is the time complexity if so?<br>可以，在使用快慢指针找到<code>linked list</code>的中点的时间复杂度为O(N)，所以在横线上的每一层都是O(N)的复杂度，但还是logn层，所以总的复杂度不变，仍为O(n logn)。</p>
+<p>2) 什么是面试中-一个类型的题?<br>(2.1) e.g   A1B2C3D4 -&gt; ABCD1234<br>性质:只是combine function的实现稍微不一样而已。<br>(2.2) <strong>(Advanced topic 1)</strong> ABCD1234 -&gt; A1B2C3D4<br>Way of thinking? How to relate 2.1 and 2.2?<br>Do not only focus on solving 1 problem and 1 problem only.<br>(2.3) <strong>(Advanced topic 2)</strong> K-way merge and its application in <strong>Mapreduce</strong><br>            e.g. how to merge TB/PB level data? <strong>Algorithm + System Design</strong><br>(2.4) <strong>(Advanced topic 3)</strong> count- array problem<br>Given an array A[N] with all positive integers from [1…N]. How to get an array B[N] such that B[i] represents how many elements A[j] (j &gt; i) in array A[] that are smaller than A[i]. For example, given A[N]={4, 1, 3, 2}, we should get B[N]={3, 0, 1, 0}. Requirement: Time = O(nlogn).<br>性质:在log(n)层中，combine function能够让每个element都会和其他所有的元素compare至少一次。总的时间复杂度依然是O(nlogn)</p>
+<font color="#FF0000">红色</font>
+
+
+
+
+
+
+
+<hr>
 
       
     </div>
@@ -855,7 +866,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">70k</span>
+    <span title="站点总字数">71k</span>
   
 
   
@@ -864,7 +875,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:03</span>
+    <span title="站点阅读时长">1:04</span>
   
 </div>
 
