@@ -106,7 +106,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/image-20200109155032491.png">
 <meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/image-20200109155248666.png">
-<meta property="og:updated_time" content="2020-01-09T08:56:13.318Z">
+<meta property="og:updated_time" content="2020-01-09T09:08:33.830Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="来offer SDE">
 <meta name="twitter:description" content="Data structure is a particular way of organizing data in a computer so that it can be used efficiently. Common data structure  Array Stack Queue Linked List Tree Heap Graph Hash table  E.g. int a[10">
@@ -419,7 +419,7 @@
                 
               
 
-              <time title="创建时间：2020-01-09 15:49:41 / 修改时间：16:56:13" itemprop="dateCreated datePublished" datetime="2020-01-09T15:49:41+08:00">2020-01-09</time>
+              <time title="创建时间：2020-01-09 15:49:41 / 修改时间：17:08:33" itemprop="dateCreated datePublished" datetime="2020-01-09T15:49:41+08:00">2020-01-09</time>
             
 
             
@@ -465,7 +465,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.3k</span>
+                <span title="本文字数">2.7k</span>
               
 
               
@@ -517,7 +517,7 @@
 <p>Big O notation: algorithm complexity (time complexity, space complexity)<br>e.g., <strong>time complexity</strong> O(n).<br>e.g., <strong>space complexity</strong>: how much memory does it need to run this algorithm. O(n)<br>e.g., <strong>auxiliary space complexity</strong>: is the extra space or temporary space used by an algorithm.</p>
 <p>Example: int[i]=(-1, -3, 4, 7) =&gt; (-3, -1, 4, 7) ascending order</p>
 <ol>
-<li>Selection Sort:<br>iteration 1: find global min -3 (-3, -1, 4, 7) insert 3 to the right place<br>iteration 2; find global min in the rest -3 (-1, 4, 7) =&gt; -3 -1 (4, 7)<br>iteration 3; find global min in the rest -3 -1 (4, 7) =&gt; -3 -1 4 (7)<br>iteration 4; find global min and done .</li>
+<li><strong>Selection Sort:</strong><br>iteration 1: find global min -3 (-3, -1, 4, 7) insert 3 to the right place<br>iteration 2; find global min in the rest -3 (-1, 4, 7) =&gt; -3 -1 (4, 7)<br>iteration 3; find global min in the rest -3 -1 (4, 7) =&gt; -3 -1 4 (7)<br>iteration 4; find global min and done .</li>
 </ol>
 <p><strong>讲解code要点:</strong><br>做题要求:<br>A complete answer will include the following:</p>
 <ol>
@@ -529,15 +529,22 @@
 <li>Only provide your best answer to each part of the question.</li>
 </ol>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// selection sort an array a[] with size n.</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SelectionSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> global, temp;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n<span class="number">-1</span>; i++) &#123;<span class="comment">// outer loop: how many iterations</span></span><br><span class="line">        global = i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; n; j++) &#123;<span class="comment">// inner loop: find the global min from the rest elements.</span></span><br><span class="line">            <span class="keyword">if</span> (a[j] &lt; a[global]) &#123;</span><br><span class="line">                <span class="comment">// record the index of the smallest element.</span></span><br><span class="line">                global = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// swap the global (a[index]) min with a[i];</span></span><br><span class="line">        temp = a[i];</span><br><span class="line">        a[i] = a[global];</span><br><span class="line">        a[global] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>时间复杂度分析:<br>for (int i = 0; i &lt; n-1; i++) {// outer loop:<br>        for (int j = i + 1; j &lt; n; j++) {// inner loop<br>iteration j = 0: inner     (0. .n-1)=4<br>iteration j = 1: inner  n-1   (1. . .n-1)=3<br>iteration j = 2: inner  n-2   (2. . .n-1)=2<br>iteration j = 3: inner  n-3    (3. . .n-1)=1<br>1+2+3+4+..+n = n(n+1)/2 -&gt; n^2^ → O(n^2^)</p>
-<p>==df==</p>
-<p>H~2~O</p>
-<ul>
-<li>dfl<ul>
-<li></li>
-</ul>
+<p>时间复杂度分析:<br>O(n^2^)</p>
+<p><strong>Discussion:</strong><br>什么是面试中一个类型的题?</p>
+<ol>
+<li><p>Given an array stored in Stack1, how to sort the numbers by using additional two<br>stacks (will be discussed later in stack class)</p>
 </li>
-</ul>
+<li><p>Follow up, what if only 1 additional stack can be used?</p>
+</li>
+</ol>
+<p>Stack1 ||   1 3 2 4 .           global_ min =<br>Stack2 ||<br>Stack3 ||<br>1, 2 Stack中选择出最小值放在Stack3中。</p>
+<ol>
+<li><strong>Merge sort</strong> </li>
+</ol>
+<p>a[n] = 1,3,5,7,9,8,6,4,2,0</p>
+<p>​                              1,3,5,7,9|,8,6,4,2,0   -&gt;    a[10] a[0]…a[4] MERGE a[5]…a[9] </p>
+<p>​                                  /                    \  </p>
+<p>  / / 1 5 1 79 79 86 /86420 864 20 / 4 2 0 3 5 79 86 4 20 5 79 86 4 20 1 / 468 02 1 / 135 /9 02468<br>  0123456789<br>  this level time complexity == 0(n)<br>  this level time complexity == 0(n) this level time complexity == 0(n) this level time complexity == 0(n) </p>
 
       
     </div>
@@ -848,7 +855,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">69k</span>
+    <span title="站点总字数">70k</span>
   
 
   
