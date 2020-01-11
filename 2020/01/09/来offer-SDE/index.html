@@ -115,7 +115,11 @@
 <meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/image-20200109215206503.png">
 <meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/image-20200109215413079.png">
 <meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/image-20200109222114151.png">
-<meta property="og:updated_time" content="2020-01-09T15:40:21.602Z">
+<meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/image-20200110205924072.png">
+<meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/image-20200111011805822.png">
+<meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/image-20200111101808263.png">
+<meta property="og:image" content="http://hackcraker.github.io/2020/01/09/来offer-SDE/image-20200111111819955.png">
+<meta property="og:updated_time" content="2020-01-11T03:37:04.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="来offer SDE">
 <meta name="twitter:description" content="OverviewData structure is a particular way of organizing data in a computer so that it can be used efficiently. Common data structure  Array Stack Queue Linked List Tree Heap Graph Hash table  Platf">
@@ -428,12 +432,24 @@
                 
               
 
-              <time title="创建时间：2020-01-09 15:49:41 / 修改时间：23:40:21" itemprop="dateCreated datePublished" datetime="2020-01-09T15:49:41+08:00">2020-01-09</time>
+              <time title="创建时间：2020-01-09 15:49:41" itemprop="dateCreated datePublished" datetime="2020-01-09T15:49:41+08:00">2020-01-09</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-01-11 11:37:04" itemprop="dateModified" datetime="2020-01-11T11:37:04+08:00">2020-01-11</time>
               
             
           </span>
@@ -474,7 +490,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">5.3k</span>
+                <span title="本文字数">13k</span>
               
 
               
@@ -488,7 +504,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">5 分钟</span>
+                <span title="阅读时长">11 分钟</span>
               
             </div>
           
@@ -576,10 +592,94 @@
 </ul>
 </li>
 </ul>
-<p>&nbsp;</p>
+<h2 id="Recursion-I"><a href="#Recursion-I" class="headerlink" title="Recursion I"></a>Recursion I</h2><p><strong>Recursion</strong> 需要掌握的知识点:<br>1) 表象上: function calls itself<br>2) 实质上: Boil down a big problem to smaller ones (size n depends on size n-1, or n-2 or…n/2)<br>3) <strong>Implementation</strong>上:<br>        a) <strong>1. Base case:</strong> smallest problem to solve<br>        b) <strong>2. Recursive rule.</strong>    how to make the problem smaller (if we can resolve the same problem but with             a smaller size, then what is left to do for the current problem size n)<br>4) to be continued …</p>
+<p><strong>Recursion Question 1: Fibonacci sequence</strong><br>Base case: F(0)= 0; F(1)= 1;<br>Recursive rule: F(n) = F(n-1) + F(n-2);</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Calculating Fibonacci value</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fibo</span> <span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Base case. (进入function之后首先check是否要停下来)</span></span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fibo(n<span class="number">-1</span>) + fibo(n<span class="number">-2</span>);  <span class="comment">// Recursive rule</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><a href="https://www.laioffer.com/zh/news/2017-06-22-what-is-call-stack/" target="_blank" rel="noopener">Call Stack</a></strong> (Term): was designed to record all local variables that are allocated in the stack.<br>content:<br>Level1: n = 4<br>Level2: n = 3<br>Level3: n = 2<br>Level4: n = 1<br><img src="/2020/01/09/来offer-SDE/image-20200110205924072.png" alt="image-20200110205924072"></p>
+<p>There are n levels in the recursion tree, and this recursion tree is a binary tree. Thus, there are totally at most O(2^n) nodes in the tree.<br><strong>Time = O(2^n)</strong><br><strong>Trick:</strong> 所有前面的node的个数的总和，都没有最后一层node的个数多，因此我们分析tree的time complexity,往往只看最后一层node的个数。<br><strong>Space = O(n)</strong> because there are n levels of recursion function call, and thus there are n levels of call<em> stack. In call</em> stack, each level only stores 1 local variable, that is, int n.</p>
+<p><strong>Recursion Question 2:</strong><br>How to calculate a^b (where a is an integer and b is also an integer, we do not care about the corner case where a = 0 or b &lt; 0 for now)<br>求 2^1000<br>a=2<br>b=1000</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">a_power_b</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> half_result = a_power_b(a, b/<span class="number">2</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (b % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> half_result * half_result;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> half_result * half_result * a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Binary-Search"><a href="#Binary-Search" class="headerlink" title="Binary Search"></a>Binary Search</h2><p>what is binary search in the context of an array?<br>1) Array has to be sorted. ascending or descending 1 2 3 5 7 9 … ??????<br>    <strong>Not necessarily the case.</strong><br>2) Problem to solve?</p>
+<p>Array    1 3 7 23 57 …  100 99 86 44 32 21  find the maximum<br><strong>Essentially, the principle</strong> of binary search is to reduce the search space by 1/2 of its original size. In the meantime, you must guarantee that the target must not be ruled out.</p>
+<p>—- to find an element/number in an array,  -&gt; sorted array.<br><strong>Example: a[7] = 1 2 4 5 7 8 9</strong> whether <strong>4</strong> is in this array or not.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A[7]</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><font color="purple">4</font></td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Iteration 1: L = 0, R = 6, M = 3     A[M] == A[3] == 5 &gt; target == 4, so R = M-1 = 2;<br>Iteration 2: L = 0, R = 2, M = 1     A[M] == A[1] == 2 &lt; target == 4, so L = M+1=2;<br>Iteration 3: L = 2, R = 2, M = 2     A[M] == A[2] == 4 == target       , so Done!!!</p>
+<p>n element -&gt; time complexity O(log(n));</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Classical Version 1.0</span></span><br><span class="line"><span class="comment">// return any target element's index</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binary_search</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> size, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> right = size - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = left + (right - left) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (a[mid] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (a[mid] &gt; target) &#123;</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Apply binary search in 2D space</strong><br><strong>Variant 1.0 application:</strong> 2D matrix, sorted on each row, first element of next row is larger (or equal) to the last element of previous row, now giving a target number, returning the position that the target locates within the matrix</p>
+<p>1   2   3   4</p>
+<p>5   6   <strong>7</strong>   8                  target == 7</p>
+<p>9  10 11 12 </p>
+<p><strong>Solution1:</strong><br>Step1: Run binary search in the 0-th column to find the possible row that contains target<br>Step2: Run 2nd binary search, in the particular row to find target (if any)<br>Time = O(logm + logn) = O(log(m*n))</p>
+<p><strong>Solution2:</strong><br>Run only 1 time of binary search<br>Left= [0] [0],  Right =[m-1]x[n-1], 1D =mxn-1<br>Mid[row] [col]= (left + right) / 2 = mid<em>size<br>row= mid</em> size / col;<br>col = mid_ size % col;<br>Time = O(log (m*n) )</p>
+<p><strong>Variant 1.1</strong> how to find an element in the array that is closest to the target number?<br>// e.g int a[5] = {1, 2, 3, 8, 9};   target = 4  should return 3<br> <img src="/2020/01/09/来offer-SDE/image-20200111011805822.png" alt="image-20200111011805822"><br>only need to contain the wanted target in the range, not rule out the target number.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binary_search</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> size, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> right = size - <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> (left + <span class="number">1</span> &lt; right) &#123; <span class="comment">// avoid infinite loop</span></span><br><span class="line">        <span class="keyword">int</span> mid = left + (right - left) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (a[mid] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (a[mid] &gt; target) &#123;</span><br><span class="line">            right = mid;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            left = mid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// post-processing</span></span><br><span class="line">    <span class="keyword">if</span> (Math.abs(a[left] - target) &lt; Math.abs(a[right] - target)) &#123;</span><br><span class="line">        <span class="keyword">return</span> left;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> right;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 line10 <code>right = mid</code> 不能改为 <code>right = mid - 1</code><br>其中 line11 <code>left = mid</code> 不能改为 <code>left = mid + 1</code><br>反例  [1, 2, 8, 10] target = 3   如果更改了right或left 有可能删掉了想要的index<br>其中 line5 <code>while</code> 循环条件 <code>start + 1 &lt; end</code> 可以保证循环内 <code>start</code> 和 <code>end</code> 不相邻，从而避免死循环</p>
+<p><strong>Variant 1.2</strong> return the index of the first occurrence of an element, say 5</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A[7]</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><strong>5</strong></td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Iteration 1: L = 0, R = 6, M = 3 A[M] == A[3] == 5 == target, so R = M = 3;<br>Iteration 2: L = 0, R = 3, M = 1 A[M] == A[1] == 5 == target, so R = M = 1;<br>因为左右边界相邻，我们 terminate binary search，再做 post processing.</p>
+<p><strong>Variant 1.3</strong> return the index of the last occurrence of an element<br>e.g.  inta[6] = [4, 5, 5, 5, 5, 5];<br>         if target == 5; then index 5 is returned;<br>         if target == 10; then -1 is returned;<br><img src="/2020/01/09/来offer-SDE/image-20200111101808263.png" alt="image-20200111101808263"></p>
+<p><strong>Variant 1.4</strong> how to find closest k elements in the array that is <strong>closest</strong> to the target number?<br>e.g int a[5] = {1, 2, 3, 8, 9}; Target == 4;<br>        k = 3, solu = {3, 2, 1}<br><strong>Solution:</strong><br>Step1: we first move L and R by using binary search to make it close to the target number, until there are two or less elements in between L and R.<br>Step2: 谁小移谁<br><strong>Time = O(logn+ k)</strong></p>
+<p><strong>Variant 1.5</strong> how to find the smallest element that is larger than a target number?</p>
+<p><strong>Binary Search Variant 2.0:</strong><br>Important Question: Given a sorted dictionary with unknown size, how to determine whether a word is in this dictionary or not.<br>Example: dictionary[x] = { 1 3 5 7 9 ….. 100 …. 1000000000 ….. }<br>Target == 9999<br>assumption if dictionary[index] == NULL then we know the size of dictionary is &lt; index;<br>Step1 jump out step = 2<br>Step2 jump out step = 2^2 = 4<br>Step3 jump out step = 2^3 = 8<br>Step4 jump out step = 2^4 = 16<br>Stepk until dictionary[2^k] &gt;= target OR dictionary[2^k] == null<br>// target can exist and its 2^(k-1) &lt; index &lt; 2^k</p>
+<p><strong>Further discussion about binary search:</strong><br>Why not jump<em> step = jump</em> step <em> 10, instead of jump<em> step = jump</em> step </em> 2<br><img src="/2020/01/09/来offer-SDE/image-20200111111819955.png" alt="image-20200111111819955"><br>10Times:  log_10 (n) + log_2 (10n)<br> 2 Times:  log_2 (n) + log_2 (2n)<br><strong>比较10 times - 2 times即可</strong></p>
+<p><strong>Discussion</strong> When to use binary search<br>1) very very classical problem: when the input is completely/partially sorted<br>    a. sorted array<br>    b. sorted array but shifted<br>    C. two sorted order array but<br>        Array 1 3 7 23 57 …. 100 99 86 44 32 21<br>2) has some logic rule under the hood. but you can figure out proof that you can disregard 1/2 searching range each time<br>ARRAY 1 XXXXXXXXXXXXXXXXXXX    m<br>ARRAY 2 YYYYYYYYYYYYYYYY            n<br>(m+n)/2 no no no!!!!<br>FIND THE K-th smallest element in the array<br>Yes: reduce the search range from k to k/2 </p>
 <hr>
 <font color="purple">&nbsp;&nbsp;End</font>
-
 
 
 
@@ -888,7 +988,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-and-Sorting-Algorithms"><span class="nav-text">Array and Sorting Algorithms</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Selection-Sort"><span class="nav-text">Selection Sort:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Merge-sort"><span class="nav-text">Merge sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Quick-sort"><span class="nav-text">Quick sort</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-and-Sorting-Algorithms"><span class="nav-text">Array and Sorting Algorithms</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Selection-Sort"><span class="nav-text">Selection Sort:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Merge-sort"><span class="nav-text">Merge sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Quick-sort"><span class="nav-text">Quick sort</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recursion-I"><span class="nav-text">Recursion I</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary-Search"><span class="nav-text">Binary Search</span></a></li></ol></div>
             
 
           </div>
@@ -921,7 +1021,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">72k</span>
+    <span title="站点总字数">80k</span>
   
 
   
@@ -930,7 +1030,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:06</span>
+    <span title="站点阅读时长">1:12</span>
   
 </div>
 
